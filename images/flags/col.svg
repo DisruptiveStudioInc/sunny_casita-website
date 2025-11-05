@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 30 30">
+  <!-- Generator: Adobe Illustrator 29.6.1, SVG Export Plug-In . SVG Version: 2.1.1 Build 9)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: #231f20;
+      }
+
+      .st1 {
+        fill: #053891;
+      }
+
+      .st2 {
+        fill: #cd1225;
+      }
+
+      .st3 {
+        fill: #fbd023;
+      }
+    </style>
+  </defs>
+  <polygon class="st0" points="15 29.9 15 29.9 15 29.9 15 29.9"/>
+  <path class="st2" d="M27.8,22.5H2.2c2.6,4.4,7.4,7.4,12.8,7.4h0c5.5,0,10.3-3,12.8-7.4Z"/>
+  <path class="st3" d="M.1,15H.1s29.7,0,29.7,0h0C29.9,6.8,23.2.2,15,.2S.1,6.8.1,15Z"/>
+  <path class="st1" d="M2.2,22.5h25.7c1.3-2.2,2-4.7,2-7.5H.1c0,2.7.7,5.3,2,7.5Z"/>
+</svg>

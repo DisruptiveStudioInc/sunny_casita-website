@@ -1,0 +1,286 @@
+<svg width="1920" height="300" viewBox="0 0 1920 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="lineGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:white;stop-opacity:0"/>
+      <stop offset="30%" style="stop-color:white;stop-opacity:0.9"/>
+      <stop offset="100%" style="stop-color:white;stop-opacity:0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Speed lines radiating from center -->
+  <g transform="translate(960, 150)">
+    <!-- Layer 1 - Main speed lines -->
+    <g>
+      <animateTransform
+        attributeName="transform"
+        type="scale"
+        values="0.5,0.5;2,2"
+        dur="2s"
+        repeatCount="indefinite"/>
+
+      <!-- Horizontal lines -->
+      <line x1="-800" y1="0" x2="-200" y2="0" stroke="url(#lineGradient)" stroke-width="2"/>
+      <line x1="200" y1="0" x2="800" y2="0" stroke="url(#lineGradient)" stroke-width="2"/>
+
+      <!-- Diagonal lines -->
+      <line x1="-566" y1="-566" x2="-141" y2="-141" stroke="url(#lineGradient)" stroke-width="1.5"/>
+      <line x1="141" y1="141" x2="566" y2="566" stroke="url(#lineGradient)" stroke-width="1.5"/>
+      <line x1="566" y1="-566" x2="141" y2="-141" stroke="url(#lineGradient)" stroke-width="1.5"/>
+      <line x1="-141" y1="141" x2="-566" y2="566" stroke="url(#lineGradient)" stroke-width="1.5"/>
+
+      <!-- Vertical lines -->
+      <line x1="0" y1="-300" x2="0" y2="-100" stroke="url(#lineGradient)" stroke-width="1.5"/>
+      <line x1="0" y1="100" x2="0" y2="300" stroke="url(#lineGradient)" stroke-width="1.5"/>
+
+      <!-- Additional angled lines -->
+      <line x1="-700" y1="-100" x2="-200" y2="-29" stroke="url(#lineGradient)" stroke-width="1"/>
+      <line x1="200" y1="29" x2="700" y2="100" stroke="url(#lineGradient)" stroke-width="1"/>
+      <line x1="-700" y1="100" x2="-200" y2="29" stroke="url(#lineGradient)" stroke-width="1"/>
+      <line x1="200" y1="-29" x2="700" y2="-100" stroke="url(#lineGradient)" stroke-width="1"/>
+
+      <!-- More diagonal variations -->
+      <line x1="-600" y1="-200" x2="-180" y2="-60" stroke="url(#lineGradient)" stroke-width="1"/>
+      <line x1="180" y1="60" x2="600" y2="200" stroke="url(#lineGradient)" stroke-width="1"/>
+      <line x1="600" y1="-200" x2="180" y2="-60" stroke="url(#lineGradient)" stroke-width="1"/>
+      <line x1="-180" y1="60" x2="-600" y2="200" stroke="url(#lineGradient)" stroke-width="1"/>
+
+      <!-- Steep angles -->
+      <line x1="-300" y1="-250" x2="-120" y2="-100" stroke="url(#lineGradient)" stroke-width="1"/>
+      <line x1="120" y1="100" x2="300" y2="250" stroke="url(#lineGradient)" stroke-width="1"/>
+      <line x1="300" y1="-250" x2="120" y2="-100" stroke="url(#lineGradient)" stroke-width="1"/>
+      <line x1="-120" y1="100" x2="-300" y2="250" stroke="url(#lineGradient)" stroke-width="1"/>
+    </g>
+
+    <!-- Layer 2 - Secondary speed lines with different timing -->
+    <g opacity="0.7">
+      <animateTransform
+        attributeName="transform"
+        type="scale"
+        values="0.3,0.3;1.5,1.5"
+        dur="2.5s"
+        begin="0.5s"
+        repeatCount="indefinite"/>
+
+      <!-- Additional lines for density -->
+      <line x1="-750" y1="-50" x2="-180" y2="-12" stroke="white" stroke-width="1" opacity="0.6"/>
+      <line x1="180" y1="12" x2="750" y2="50" stroke="white" stroke-width="1" opacity="0.6"/>
+      <line x1="-750" y1="50" x2="-180" y2="12" stroke="white" stroke-width="1" opacity="0.6"/>
+      <line x1="180" y1="-12" x2="750" y2="-50" stroke="white" stroke-width="1" opacity="0.6"/>
+
+      <!-- More varied angles -->
+      <line x1="-500" y1="-150" x2="-160" y2="-48" stroke="white" stroke-width="1" opacity="0.5"/>
+      <line x1="160" y1="48" x2="500" y2="150" stroke="white" stroke-width="1" opacity="0.5"/>
+      <line x1="500" y1="-150" x2="160" y2="-48" stroke="white" stroke-width="1" opacity="0.5"/>
+      <line x1="-160" y1="48" x2="-500" y2="150" stroke="white" stroke-width="1" opacity="0.5"/>
+
+      <!-- Near vertical -->
+      <line x1="-100" y1="-280" x2="-40" y2="-112" stroke="white" stroke-width="1" opacity="0.4"/>
+      <line x1="40" y1="112" x2="100" y2="280" stroke="white" stroke-width="1" opacity="0.4"/>
+      <line x1="100" y1="-280" x2="40" y2="-112" stroke="white" stroke-width="1" opacity="0.4"/>
+      <line x1="-40" y1="112" x2="-100" y2="280" stroke="white" stroke-width="1" opacity="0.4"/>
+    </g>
+
+    <!-- Layer 3 - Subtle background lines -->
+    <g opacity="0.3">
+      <animateTransform
+        attributeName="transform"
+        type="scale"
+        values="0;2.5"
+        dur="5s"
+        begin="1s"
+        repeatCount="indefinite"/>
+
+      <!-- Longer, thinner lines set 1 -->
+      <line x1="-900" y1="-25" x2="-150" y2="-4" stroke="white" stroke-width="0.5"/>
+      <line x1="150" y1="4" x2="900" y2="25" stroke="white" stroke-width="0.5"/>
+      <line x1="-900" y1="25" x2="-150" y2="4" stroke="white" stroke-width="0.5"/>
+      <line x1="150" y1="-4" x2="900" y2="-25" stroke="white" stroke-width="0.5"/>
+
+      <!-- Longer, thinner lines set 2 -->
+      <line x1="-850" y1="-45" x2="-142" y2="-7" stroke="white" stroke-width="0.5"/>
+      <line x1="142" y1="7" x2="850" y2="45" stroke="white" stroke-width="0.5"/>
+      <line x1="-850" y1="45" x2="-142" y2="7" stroke="white" stroke-width="0.5"/>
+      <line x1="142" y1="-7" x2="850" y2="-45" stroke="white" stroke-width="0.5"/>
+
+      <!-- Longer, thinner lines set 3 -->
+      <line x1="-920" y1="-15" x2="-153" y2="-2" stroke="white" stroke-width="0.5"/>
+      <line x1="153" y1="2" x2="920" y2="15" stroke="white" stroke-width="0.5"/>
+      <line x1="-920" y1="15" x2="-153" y2="2" stroke="white" stroke-width="0.5"/>
+      <line x1="153" y1="-2" x2="920" y2="-15" stroke="white" stroke-width="0.5"/>
+
+      <!-- Medium angle lines set 1 -->
+      <line x1="-400" y1="-120" x2="-140" y2="-42" stroke="white" stroke-width="0.5"/>
+      <line x1="140" y1="42" x2="400" y2="120" stroke="white" stroke-width="0.5"/>
+      <line x1="400" y1="-120" x2="140" y2="-42" stroke="white" stroke-width="0.5"/>
+      <line x1="-140" y1="42" x2="-400" y2="120" stroke="white" stroke-width="0.5"/>
+
+      <!-- Medium angle lines set 2 -->
+      <line x1="-420" y1="-105" x2="-147" y2="-37" stroke="white" stroke-width="0.5"/>
+      <line x1="147" y1="37" x2="420" y2="105" stroke="white" stroke-width="0.5"/>
+      <line x1="420" y1="-105" x2="147" y2="-37" stroke="white" stroke-width="0.5"/>
+      <line x1="-147" y1="37" x2="-420" y2="105" stroke="white" stroke-width="0.5"/>
+
+      <!-- Medium angle lines set 3 -->
+      <line x1="-380" y1="-135" x2="-133" y2="-47" stroke="white" stroke-width="0.5"/>
+      <line x1="133" y1="47" x2="380" y2="135" stroke="white" stroke-width="0.5"/>
+      <line x1="380" y1="-135" x2="133" y2="-47" stroke="white" stroke-width="0.5"/>
+      <line x1="-133" y1="47" x2="-380" y2="135" stroke="white" stroke-width="0.5"/>
+
+      <!-- Subtle vertical variations set 1 -->
+      <line x1="-60" y1="-240" x2="-30" y2="-120" stroke="white" stroke-width="0.5"/>
+      <line x1="30" y1="120" x2="60" y2="240" stroke="white" stroke-width="0.5"/>
+      <line x1="60" y1="-240" x2="30" y2="-120" stroke="white" stroke-width="0.5"/>
+      <line x1="-30" y1="120" x2="-60" y2="240" stroke="white" stroke-width="0.5"/>
+
+      <!-- Subtle vertical variations set 2 -->
+      <line x1="-140" y1="-210" x2="-70" y2="-105" stroke="white" stroke-width="0.5"/>
+      <line x1="70" y1="105" x2="140" y2="210" stroke="white" stroke-width="0.5"/>
+      <line x1="140" y1="-210" x2="70" y2="-105" stroke="white" stroke-width="0.5"/>
+      <line x1="-70" y1="105" x2="-140" y2="210" stroke="white" stroke-width="0.5"/>
+
+      <!-- Subtle vertical variations set 3 -->
+      <line x1="-20" y1="-200" x2="-10" y2="-100" stroke="white" stroke-width="0.5"/>
+      <line x1="10" y1="100" x2="20" y2="200" stroke="white" stroke-width="0.5"/>
+      <line x1="20" y1="-200" x2="10" y2="-100" stroke="white" stroke-width="0.5"/>
+      <line x1="-10" y1="100" x2="-20" y2="200" stroke="white" stroke-width="0.5"/>
+    </g>
+  </g>
+
+  <g transform="translate(960, 150)" style="transform-origin:center;rotate:21deg">
+    <!-- Layer 1 - Main speed lines -->
+    <g>
+      <animateTransform
+        attributeName="transform"
+        type="scale"
+        values="0.5,0.5;2,2"
+        dur="3s"
+        repeatCount="indefinite"/>
+
+      <!-- Horizontal lines -->
+      <line x1="-800" y1="0" x2="-200" y2="0" stroke="url(#lineGradient)" stroke-width="2"/>
+      <line x1="200" y1="0" x2="800" y2="0" stroke="url(#lineGradient)" stroke-width="2"/>
+
+      <!-- Diagonal lines -->
+      <line x1="-566" y1="-566" x2="-141" y2="-141" stroke="url(#lineGradient)" stroke-width="1.5"/>
+      <line x1="141" y1="141" x2="566" y2="566" stroke="url(#lineGradient)" stroke-width="1.5"/>
+      <line x1="566" y1="-566" x2="141" y2="-141" stroke="url(#lineGradient)" stroke-width="1.5"/>
+      <line x1="-141" y1="141" x2="-566" y2="566" stroke="url(#lineGradient)" stroke-width="1.5"/>
+
+      <!-- Vertical lines -->
+      <line x1="0" y1="-300" x2="0" y2="-100" stroke="url(#lineGradient)" stroke-width="1.5"/>
+      <line x1="0" y1="100" x2="0" y2="300" stroke="url(#lineGradient)" stroke-width="1.5"/>
+
+      <!-- Additional angled lines -->
+      <line x1="-700" y1="-100" x2="-200" y2="-29" stroke="url(#lineGradient)" stroke-width="1"/>
+      <line x1="200" y1="29" x2="700" y2="100" stroke="url(#lineGradient)" stroke-width="1"/>
+      <line x1="-700" y1="100" x2="-200" y2="29" stroke="url(#lineGradient)" stroke-width="1"/>
+      <line x1="200" y1="-29" x2="700" y2="-100" stroke="url(#lineGradient)" stroke-width="1"/>
+
+      <!-- More diagonal variations -->
+      <line x1="-600" y1="-200" x2="-180" y2="-60" stroke="url(#lineGradient)" stroke-width="1"/>
+      <line x1="180" y1="60" x2="600" y2="200" stroke="url(#lineGradient)" stroke-width="1"/>
+      <line x1="600" y1="-200" x2="180" y2="-60" stroke="url(#lineGradient)" stroke-width="1"/>
+      <line x1="-180" y1="60" x2="-600" y2="200" stroke="url(#lineGradient)" stroke-width="1"/>
+
+      <!-- Steep angles -->
+      <line x1="-300" y1="-250" x2="-120" y2="-100" stroke="url(#lineGradient)" stroke-width="1"/>
+      <line x1="120" y1="100" x2="300" y2="250" stroke="url(#lineGradient)" stroke-width="1"/>
+      <line x1="300" y1="-250" x2="120" y2="-100" stroke="url(#lineGradient)" stroke-width="1"/>
+      <line x1="-120" y1="100" x2="-300" y2="250" stroke="url(#lineGradient)" stroke-width="1"/>
+    </g>
+
+    <!-- Layer 2 - Secondary speed lines with different timing -->
+    <g opacity="0.7">
+      <animateTransform
+        attributeName="transform"
+        type="scale"
+        values="0.3,0.3;1.5,1.5"
+        dur="4s"
+        begin="1s"
+        repeatCount="indefinite"/>
+
+      <!-- Additional lines for density -->
+      <line x1="-750" y1="-50" x2="-180" y2="-12" stroke="white" stroke-width="1" opacity="0.6"/>
+      <line x1="180" y1="12" x2="750" y2="50" stroke="white" stroke-width="1" opacity="0.6"/>
+      <line x1="-750" y1="50" x2="-180" y2="12" stroke="white" stroke-width="1" opacity="0.6"/>
+      <line x1="180" y1="-12" x2="750" y2="-50" stroke="white" stroke-width="1" opacity="0.6"/>
+
+      <!-- More varied angles -->
+      <line x1="-500" y1="-150" x2="-160" y2="-48" stroke="white" stroke-width="1" opacity="0.5"/>
+      <line x1="160" y1="48" x2="500" y2="150" stroke="white" stroke-width="1" opacity="0.5"/>
+      <line x1="500" y1="-150" x2="160" y2="-48" stroke="white" stroke-width="1" opacity="0.5"/>
+      <line x1="-160" y1="48" x2="-500" y2="150" stroke="white" stroke-width="1" opacity="0.5"/>
+
+      <!-- Near vertical -->
+      <line x1="-100" y1="-280" x2="-40" y2="-112" stroke="white" stroke-width="1" opacity="0.4"/>
+      <line x1="40" y1="112" x2="100" y2="280" stroke="white" stroke-width="1" opacity="0.4"/>
+      <line x1="100" y1="-280" x2="40" y2="-112" stroke="white" stroke-width="1" opacity="0.4"/>
+      <line x1="-40" y1="112" x2="-100" y2="280" stroke="white" stroke-width="1" opacity="0.4"/>
+    </g>
+
+    <!-- Layer 3 - Subtle background lines -->
+    <g opacity="0.3">
+      <animateTransform
+        attributeName="transform"
+        type="scale"
+        values="0;2.5"
+        dur="7s"
+        begin="2s"
+        repeatCount="indefinite"/>
+
+      <!-- Longer, thinner lines set 1 -->
+      <line x1="-900" y1="-25" x2="-150" y2="-4" stroke="white" stroke-width="0.5"/>
+      <line x1="150" y1="4" x2="900" y2="25" stroke="white" stroke-width="0.5"/>
+      <line x1="-900" y1="25" x2="-150" y2="4" stroke="white" stroke-width="0.5"/>
+      <line x1="150" y1="-4" x2="900" y2="-25" stroke="white" stroke-width="0.5"/>
+
+      <!-- Longer, thinner lines set 2 -->
+      <line x1="-850" y1="-45" x2="-142" y2="-7" stroke="white" stroke-width="0.5"/>
+      <line x1="142" y1="7" x2="850" y2="45" stroke="white" stroke-width="0.5"/>
+      <line x1="-850" y1="45" x2="-142" y2="7" stroke="white" stroke-width="0.5"/>
+      <line x1="142" y1="-7" x2="850" y2="-45" stroke="white" stroke-width="0.5"/>
+
+      <!-- Longer, thinner lines set 3 -->
+      <line x1="-920" y1="-15" x2="-153" y2="-2" stroke="white" stroke-width="0.5"/>
+      <line x1="153" y1="2" x2="920" y2="15" stroke="white" stroke-width="0.5"/>
+      <line x1="-920" y1="15" x2="-153" y2="2" stroke="white" stroke-width="0.5"/>
+      <line x1="153" y1="-2" x2="920" y2="-15" stroke="white" stroke-width="0.5"/>
+
+      <!-- Medium angle lines set 1 -->
+      <line x1="-400" y1="-120" x2="-140" y2="-42" stroke="white" stroke-width="0.5"/>
+      <line x1="140" y1="42" x2="400" y2="120" stroke="white" stroke-width="0.5"/>
+      <line x1="400" y1="-120" x2="140" y2="-42" stroke="white" stroke-width="0.5"/>
+      <line x1="-140" y1="42" x2="-400" y2="120" stroke="white" stroke-width="0.5"/>
+
+      <!-- Medium angle lines set 2 -->
+      <line x1="-420" y1="-105" x2="-147" y2="-37" stroke="white" stroke-width="0.5"/>
+      <line x1="147" y1="37" x2="420" y2="105" stroke="white" stroke-width="0.5"/>
+      <line x1="420" y1="-105" x2="147" y2="-37" stroke="white" stroke-width="0.5"/>
+      <line x1="-147" y1="37" x2="-420" y2="105" stroke="white" stroke-width="0.5"/>
+
+      <!-- Medium angle lines set 3 -->
+      <line x1="-380" y1="-135" x2="-133" y2="-47" stroke="white" stroke-width="0.5"/>
+      <line x1="133" y1="47" x2="380" y2="135" stroke="white" stroke-width="0.5"/>
+      <line x1="380" y1="-135" x2="133" y2="-47" stroke="white" stroke-width="0.5"/>
+      <line x1="-133" y1="47" x2="-380" y2="135" stroke="white" stroke-width="0.5"/>
+
+      <!-- Subtle vertical variations set 1 -->
+      <line x1="-60" y1="-240" x2="-30" y2="-120" stroke="white" stroke-width="0.5"/>
+      <line x1="30" y1="120" x2="60" y2="240" stroke="white" stroke-width="0.5"/>
+      <line x1="60" y1="-240" x2="30" y2="-120" stroke="white" stroke-width="0.5"/>
+      <line x1="-30" y1="120" x2="-60" y2="240" stroke="white" stroke-width="0.5"/>
+
+      <!-- Subtle vertical variations set 2 -->
+      <line x1="-140" y1="-210" x2="-70" y2="-105" stroke="white" stroke-width="0.5"/>
+      <line x1="70" y1="105" x2="140" y2="210" stroke="white" stroke-width="0.5"/>
+      <line x1="140" y1="-210" x2="70" y2="-105" stroke="white" stroke-width="0.5"/>
+      <line x1="-70" y1="105" x2="-140" y2="210" stroke="white" stroke-width="0.5"/>
+
+      <!-- Subtle vertical variations set 3 -->
+      <line x1="-20" y1="-200" x2="-10" y2="-100" stroke="white" stroke-width="0.5"/>
+      <line x1="10" y1="100" x2="20" y2="200" stroke="white" stroke-width="0.5"/>
+      <line x1="20" y1="-200" x2="10" y2="-100" stroke="white" stroke-width="0.5"/>
+      <line x1="-10" y1="100" x2="-20" y2="200" stroke="white" stroke-width="0.5"/>
+    </g>
+  </g>
+</svg>
