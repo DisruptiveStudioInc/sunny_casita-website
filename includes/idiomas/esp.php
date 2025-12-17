@@ -14,6 +14,12 @@ $Menu_03 = "Experiencia $Company_Name";
 $Menu_04 = "Productos";
 $Menu_05 = "Tienda";
 
+$Shop_us = "USA";
+$Shop_mx = "MEX";
+$Shop_in = "INT";
+$Shop_co = "COL";
+$Shop_eu = "EUR";
+
 $Menu_log = "Login";
 $Menu_reg = "Regístrate";
 
@@ -243,6 +249,7 @@ $Satarted_sub_01 = "En {$Company_Name}, cada paso cuenta y tu fuerza se siente d
 
 $Bonus_flash_title = "Crece tu comunidad y ganas";
 $Bonus_flash_text01 = "Con el Pass 5D cada vez que alguien se une a tu comunidad, recibes una recompensa directa:";
+$Bonus_flash_text02 = "Recompensas por referidos:";
 $Bonus_flash_list_01 = "1er referido directo → \${$Bonuses['flash']['first_referal']} USD.";
 $Bonus_flash_list_02 = "Cada referido adicional → \${$Bonuses['flash']['regular_referal']} USD.";
 

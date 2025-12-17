@@ -1,8 +1,7 @@
 <?php
 
-//-------------------------------------------//
-// OBTENER PÁGINA ACTUAL Y PARÁMETROS
-//-------------------------------------------//
+// Access the global user_replica variable
+$user_replica = $GLOBALS['user_replica'] ?? null;
 
 $Actual_Page = !empty($_GET['p']) ? $_GET['p'] : '';
 $Actual_Page_Lan = $Actual_Page ? '&p=' . $Actual_Page : '';
@@ -15,10 +14,6 @@ $Hide = ($Actual_Page === 'home' || $Actual_Page === '') ? '' : 'none';
 
 $Company_Name  = "Client";
 $Company_Fullname = "Client full name";
-
-//-------------------------//
-// BONUSES
-//-------------------------//
 
 $Bonuses = array(
   'flash' => [
@@ -91,43 +86,77 @@ $link_02 = "immersion";
 $link_03 = "connection";
 $link_04 = "essence";
 
+$slugMap = [
+    'inspiration' => ['es' => 'inspiracion', 'en' => 'inspiration'],
+    'immersion' => ['es' => 'inmersion', 'en' => 'immersion'],
+    'connection' => ['es' => 'conexion', 'en' => 'connection'],
+    'essence' => ['es' => 'esencia', 'en' => 'essence']
+];
+
+$l = \Includes\Localization::getLang();
+$s_link_01 = $slugMap[$link_01][$l] ?? $link_01;
+$s_link_02 = $slugMap[$link_02][$l] ?? $link_02;
+$s_link_03 = $slugMap[$link_03][$l] ?? $link_03;
+$s_link_04 = $slugMap[$link_04][$l] ?? $link_04;
+
 // $Register = "https://my.domain.com/register/$user_replica";
 // $Login    = "https://my.domain.com/login";
 $Register = "#";
 $Login    = "#";
 
-// ---------------------------
-// Armar bloque HTML dinámico
-// ---------------------------
-
 $ref = isset($user_replica) ? "?ref=$user_replica" : '';
-
-//-------------------------//
-// VIDEO VIMEO
-//-------------------------//
-
-$Video_vimeo = "1112334525";
 
 //-------------------------//
 // MENU
 //-------------------------//
 
 $Menu = array(
-  array('#home','active',$Menu_01),
-  array('#odl','',$Menu_02),
-  array('#experience','',$Menu_03),
-  // array('?p=product&id=basic','',$Products_title_01)
-  // array('','', $Menu_05)
+  [
+    'link' => ($Actual_Page === 'home' || $Actual_Page === '') ? '#home' : \Includes\Localization::url('home'),
+    'status' => ($Actual_Page === 'home' || $Actual_Page === '') ? 'active' : '',
+    'title' => $Menu_01,
+    'show' => true,
+    'hasSubmenu' => false
+  ],
+  [
+    'link' => '#odl',
+    'status' => '',
+    'title' => $Menu_02,
+    'show' => ($Actual_Page === 'home' || $Actual_Page === '') ? true : false,
+    'hasSubmenu' => false
+  ],
+  [
+    'link' => '#experience',
+    'status' => ($Actual_Page === 'experience') ? 'active' : '',
+    'title' => $Menu_03,
+    'show' => ($Actual_Page === 'home' || $Actual_Page === '') ? true : false,
+    'hasSubmenu' => false
+  ],
+  [
+    'link' => '#',
+    'status' => '',
+    'title' => $Menu_04,
+    'show' => true,
+    'hasSubmenu' => true,
+    'submenu' => array(
+      [
+        'link' => \Includes\Localization::url('product', [$s_link_01]), // Use translated slug
+        'title' => $Products_title_01,
+        'slogan' => $Products_01
+      ],
+      [
+        'link' => \Includes\Localization::url('product', [$s_link_02]),
+        'title' => $Products_title_02,
+        'slogan' => $Products_02
+      ]
+    )
+  ]
 );
-
-//-------------------------//
-// SUBMENU
-//-------------------------//
 
 $Sub = array(
   array($Menu_03, array(
-    array($link_01, $Products_title_01, $Products_01),
-    array($link_02, $Products_title_02, $Products_02)
+    array(\Includes\Localization::url('product', [$s_link_01]), $Products_title_01, $Products_01),
+    array(\Includes\Localization::url('product', [$s_link_02]), $Products_title_02, $Products_02)
   ))
 );
 
@@ -138,10 +167,6 @@ $Sub_reg = array(
   array($Shop_co,'COL'),
   array($Shop_eu,'EUR')
 );
-
-//-------------------------//
-// CONDITIONS
-//-------------------------//
 
 $idiomas = [
   'eng' => 'Eng',
@@ -159,198 +184,7 @@ $Email = "client@gmail.com";
 // $Phone = "(888) 456 7890";
 // $Address = "Blvd. Kukulcan 1,<br>Puerto Juarez,<br>Zona Hotelera,<br>77500 Cancún, Q.R. México";
 
-//-------------------------//
-// LOOPS
-//-------------------------//
 
-$sec01 = array(
-  [
-    'title' => $Journey_button_1,
-    'text' => $Journey_text_1
-  ],
-  [
-    'title' => $Journey_button_2,
-    'text' => $Journey_text_2
-  ],
-  [
-    'title' => $Journey_button_3,
-    'text' => $Journey_text_3
-  ],
-  [
-    'title' => $Journey_button_4,
-    'text' => $Journey_text_4
-  ]
-);
-
-$verticalSlides = array(
-  [
-    'id' => 1,
-    'title' => $Letters_title_01,
-    'text' => $Letters_text_01
-  ],
-  [
-    'id' => 2,
-    'title' => $Letters_title_02,
-    'text' => $Letters_text_02
-  ],
-  [
-    'id' => 3,
-    'title' => $Letters_title_03,
-    'text' => $Letters_text_03
-  ],
-  [
-    'id' => 4,
-    'title' => $Letters_title_04,
-    'text' => $Letters_text_04
-  ],
-  [
-    'id' => 5,
-    'title' => $Letters_title_05,
-    'text' => $Letters_text_05
-  ]
-);
-
-$sec03 = array(
-  [
-    'id' => 1,
-    'title' => $Vision_title_01,
-    'text' => $Vision_text_01
-  ],
-  [
-    'id' => 2,
-    'title' => $Vision_title_02,
-    'text' => $Vision_text_02
-  ],
-  [
-    'id' => 3,
-    'title' => $Vision_title_03,
-    'text' => $Vision_text_03
-  ],
-  [
-    'id' => 4,
-    'title' => $Vision_title_04,
-    'text' => $Vision_text_04
-  ]
-);
-
-$Modal = array(
-	array(
-		$Products_title_01,
-		$Products_sub_01,
-		$Products_text_01
-	)
-);
-$homeProducts = array(
-  [
-    'id' => 1,
-    'number' => 'one',
-    'link' => $link_01,
-    'title' => $Products_title_01,
-    'text' => $Products_text_01
-  ],
-  [
-    'id' => 3,
-    'number' => 'two',
-    'link' => $link_02,
-    'title' => $Products_title_02,
-    'text' => $Products_text_02
-  ],
-  [
-    'id' => 3,
-    'number' => 'three',
-    'link' => $link_03,
-    'title' => $Products_title_03,
-    'text' => $Products_text_03
-  ],
-  [
-    'id' => 4,
-    'number' => 'four',
-    'link' => $link_04,
-    'title' => $Products_title_04,
-    'text' => $Products_text_04
-  ]
-);
-
-$sec04 = array(
-  [
-    'title' => $Slogan_title_01,
-    'text' => $Slogan_text_01
-  ],
-  [
-    'title' => $Slogan_title_02,
-    'text' => $Slogan_text_02
-  ],
-  [
-    'title' => $Slogan_title_03,
-    'text' => $Slogan_text_03
-  ]
-);
-
-$sec07 = array(
-  [
-    'id' => 1,
-    'title' => $Truth_title_01,
-    'text' => $Truth_text_01
-  ],
-  [
-    'id' => 2,
-    'title' => $Truth_title_02,
-    'text' => $Truth_text_02
-  ],
-  [
-    'id' => 3,
-    'title' => $Truth_title_03,
-    'text' => $Truth_text_03
-  ],
-  [
-    'id' => 4,
-    'title' => $Truth_title_04,
-    'text' => $Truth_text_04
-  ],
-  [
-    'id' => 5,
-    'title' => $Truth_title_05,
-    'text' => $Truth_text_05
-  ]
-);
-
-$sec08 = array(
-  [
-    'id' => 1,
-    'small_img' => 'revive.webp',
-    'name' => 'revive',
-    'title'=> $Spirit_title_01,
-    'list' => [$Spirit01_list_01,$Spirit01_list_02,$Spirit01_list_03,$Spirit01_list_04],
-    'list_type' => 'ul'
-  ],
-  [
-    'id' => 2,
-    'small_img' => 'rejuvenate.webp',
-    'name' => 'rejuvenate',
-    'title'=> $Spirit_title_02,
-    'list' => [$Spirit02_list_01,$Spirit02_list_02,$Spirit02_list_03,$Spirit02_list_04],
-    'list_type' => 'ul'
-  ],
-  [
-    'id' => 3,
-    'small_img' => 'restore.webp',
-    'name' => 'restore',
-    'title'=> $Spirit_title_03,
-    'list' => [$Spirit03_list_01,$Spirit03_list_02,$Spirit03_list_03,$Spirit03_list_04,$Spirit03_list_05,$Spirit03_list_06],
-    'list_type' => 'ol'
-  ],
-);
-
-$sec10 = array(
-  [
-    'year' => 2025,
-    'text' => $Roadmap_text_2025
-  ],
-  [
-    'year' => 2026,
-    'text' => $Roadmap_text_2026
-  ]
-);
 
 $productBonuses = array(
   'flash' => [

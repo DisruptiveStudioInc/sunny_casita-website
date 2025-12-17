@@ -14,6 +14,12 @@ $Menu_03 = "Subscription";
 $Menu_04 = "Products";
 $Menu_05 = "Store";
 
+$Shop_us = "USA";
+$Shop_mx = "MEX";
+$Shop_in = "INT";
+$Shop_co = "COL";
+$Shop_eu = "EUR";
+
 $Menu_log = "Login";
 $Menu_reg = "Sign up";
 
@@ -259,14 +265,14 @@ $Bonus_level_text02 = "What your team earns, you earn too.";
 $Bonus_infinity_title = "Infinity Bonus";
 $Bonus_infinity_text01 = "The bonus that never stops:";
 $Bonus_infinity_list_01 = "Every {$Bonuses['infinity']['people']} in your community = you get paid again.";
-$Bonus_infinity_text02 = "Here there’s no limit.";
+$Bonus_infinity_text02 = "Here there's no limit.";
 
 $Bonus_rewards_title = "Rewards Bonus";
 $Bonus_rewards_text01 = "Consistency that pays:";
 $Bonus_rewards_list_01 = "Extra bonuses for staying firm and active.";
 $Bonus_rewards_text02 = "Because your effort deserves celebration.";
 
-$Satarted_subpage_01 = "What’s coming is big and it includes you.";
+$Satarted_subpage_01 = "What's coming is big and it includes you.";
 
 //-------------------------//
 // Footer

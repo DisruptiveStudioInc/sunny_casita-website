@@ -1,0 +1,19 @@
+{
+    "name": "antigravity/website-template",
+    "description": "Refactored Website Template",
+    "type": "project",
+    "require": {
+        "bramus/router": "^1.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "Controllers\\": "controllers/",
+            "Includes\\": "includes/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Antigravity"
+        }
+    ]
+}
