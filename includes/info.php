@@ -113,11 +113,46 @@ $Video_vimeo = "1112334525";
 //-------------------------//
 
 $Menu = array(
-  array('#home','active',$Menu_01),
-  array('#odl','',$Menu_02),
-  array('#experience','',$Menu_03),
-  // array('?p=product&id=basic','',$Products_title_01)
-  // array('','', $Menu_05)
+  [
+    'link' => ($Actual_Page === 'home' || $Actual_Page === '') ? '#home' : './',
+    'status' => ($Actual_Page === 'home' || $Actual_Page === '') ? 'active' : '',
+    'title' => $Menu_01,
+    'show' => true,
+    'hasSubmenu' => false
+  ],
+  [
+    'link' => '#odl',
+    'status' => '',
+    'title' => $Menu_02,
+    'show' => ($Actual_Page === 'home' || $Actual_Page === '') ? true : false,
+    'hasSubmenu' => false
+  ],
+  [
+    'link' => '#experience',
+    'status' => ($Actual_Page === 'experience') ? 'active' : '',
+    'title' => $Menu_03,
+    'show' => ($Actual_Page === 'home' || $Actual_Page === '') ? true : false,
+    'hasSubmenu' => false
+  ],
+  [
+    'link' => '#',
+    'status' => '',
+    'title' => $Menu_04,
+    'show' => true,
+    'hasSubmenu' => true,
+    'submenu' => array(
+      [
+        'link' => "?p=product&id=$link_01",
+        'title' => $Products_title_01,
+        'slogan' => $Products_01
+      ],
+      [
+        'link' => "?p=product&id=$link_02",
+        'title' => $Products_title_02,
+        'slogan' => $Products_02
+      ]
+    )
+  ]
 );
 
 //-------------------------//

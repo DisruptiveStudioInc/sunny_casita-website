@@ -6,36 +6,36 @@
 
 
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="<?php echo $Lang; ?>" xml:lang="<?php echo $Lang; ?>">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="<?= $Lang; ?>" xml:lang="<?= $Lang; ?>">
 
 <head>
 
   <!-- X -->
   <meta name="twitter:card"        content="summary">
-  <meta name="twitter:site"        content="<?php echo $Host_Site; ?>">
-  <meta name="twitter:title"       content="<?php echo $Company_Name; ?>">
-  <meta name="twitter:description" content="<?php echo $Description_Site; ?>">
-  <meta name="twitter:creator"     content="<?php echo $Company_Name; ?>">
-  <meta name="twitter:image"       content="<?php echo $Host_Site; ?>/images/facebook/facebook-temp.jpg">
+  <meta name="twitter:site"        content="<?= $Host_Site; ?>">
+  <meta name="twitter:title"       content="<?= $Company_Name; ?>">
+  <meta name="twitter:description" content="<?= $Description_Site; ?>">
+  <meta name="twitter:creator"     content="<?= $Company_Name; ?>">
+  <meta name="twitter:image"       content="<?= $Host_Site; ?>/images/facebook/facebook-temp.jpg">
 
   <!-- FACEBOOK -->
-  <meta property="og:site_name"    content="<?php echo $Company_Name; ?>" />
-  <meta property="og:url"          content="<?php echo $Host_Site; ?>" />
-  <meta property="og:title"        content="<?php echo $Company_Name; ?>" />
+  <meta property="og:site_name"    content="<?= $Company_Name; ?>" />
+  <meta property="og:url"          content="<?= $Host_Site; ?>" />
+  <meta property="og:title"        content="<?= $Company_Name; ?>" />
   <meta property="og:type"         content="website" />
-  <meta property="og:description"  content="<?php echo $Description_Site; ?>" />
-  <meta property="og:image"        content="<?php echo $Host_Site; ?>/images/facebook/facebook-temp.jpg" />
+  <meta property="og:description"  content="<?= $Description_Site; ?>" />
+  <meta property="og:image"        content="<?= $Host_Site; ?>/images/facebook/facebook-temp.jpg" />
   <meta property="og:image:width"  content="1024" />
   <meta property="og:image:height" content="538" />
 
   <!-- METAS-->
   <meta name="viewport"            content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="Content-Type"  content="text/html; charset=UTF-8" />
-  <meta name="description"         content="<?php echo $Description_Site; ?>" />
-  <meta name="keywords"            content="<?php echo $Keywords_Site; ?>" />
-  <meta name="autor"               content="<?php echo $Company_Name; ?>" />
+  <meta name="description"         content="<?= $Description_Site; ?>" />
+  <meta name="keywords"            content="<?= $Keywords_Site; ?>" />
+  <meta name="autor"               content="<?= $Company_Name; ?>" />
 
-  <title><?php echo $Company_Name; ?></title>
+  <title><?= $Company_Name; ?></title>
 
   <!-- STYLES-->
   <link rel="stylesheet" type="text/css" href="./css/min/reset.min.css" />
