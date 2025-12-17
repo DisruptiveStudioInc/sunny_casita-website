@@ -1,6 +1,6 @@
 <?php
-  require('./controllers/productController.php');
-  $content = $productContent[$id];
+  // require('./controllers/productController.php'); // Removed
+  $content = $product ?? $productContent[$id] ?? [];
 ?>
 
 <!-- ============================================== -->
@@ -163,7 +163,7 @@
   </div>
 </section>
 
-<script src="./js/product.js"></script>
+<script src="/js/product.js"></script>
 
 
 

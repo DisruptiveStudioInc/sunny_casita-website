@@ -1,19 +1,14 @@
-  </main>
-
-<!-- ============================================== -->
-<!-- FOOTER -->
-<!-- ============================================== -->
+</main>
 
 <footer class="c-b-dark all-tc-0">
   <div class="mw-1440">
-
 
     <?php $Condicion_1 =(isset($user_replica))? 'g-30 jc-between':''; ?>
     <?php $Condicion =(isset($user_replica))? '':'ai-center t-c fd-col'; ?>
     <div class="med-fd-col ai-start jc-center <?= $Condicion_1; ?>">
       <div class="w-50 small-w-100 jc-center <?= $Condicion; ?>">
 
-        <img src="./images/logo/logo_low.png" class="mw-200 med-m-center" alt="Only Doctor Leadres">
+        <img src="/images/logo/logo_low.png" class="mw-200 med-m-center" alt="Only Doctor Leadres">
         <ul class="fw-wrap med-jc-center g-10 mt-20">
           <li><a target="_blank" href="https://www.facebook.com/stellumglobal" class="v-white icon small br-2 icon-facebook"></a></li>
           <li><a target="_blank" href="https://www.instagram.com/stellumglobal" class="v-white icon small br-2 icon-instagram"></a></li>
@@ -53,12 +48,7 @@
   </div>
 </footer>
 
-<!-- ============================================== -->
-<!-- SCRIPTS -->
-<!-- ============================================== -->
-
-<script src="./js/lozad.min.js"></script>
-<script src="./js/script.js"></script>
-
+<script src="/js/lozad.min.js"></script>
+<script src="/js/script.js"></script>
 </body>
 </html>

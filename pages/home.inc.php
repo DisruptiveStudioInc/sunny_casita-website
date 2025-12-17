@@ -168,7 +168,7 @@
         <img src="./images/body/blank_4_3.svg" class="product m-center cursor-pointer" alt="<?= $item['link']; ?>" onclick="openModal('Modal<?= $item['id']; ?>')"/>
         <div class="abs product-plus-wrap d-flex fd-col ai-center g-20">
           <button type="button" class="v-white c-pri icon br-50 icon-more pointer-e-none"></button>
-          <!-- <a href="?p=product&id=<?= $item['link']; ?>" class="btn c-ter br-50"><?= $Btn_view; ?></a> -->
+          <a href="?p=product&id=<?= $item['link']; ?>" class="btn c-ter br-50"><?= $Btn_view; ?></a>
         </div>
       </div>
     </div>
@@ -347,8 +347,8 @@
 	</div>
 </section>
 
-<script src="./js/slider.js"></script>
-<script src="./js/home.js"></script>
+<script src="/js/slider.js"></script>
+<script src="/js/home.js"></script>
 
 
 
