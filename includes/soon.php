@@ -1,5 +1,11 @@
 <?php
+  use Includes\Localization;
+
   include("info.php");
+  Localization::loadLanguage();
+  $Description_Site = $GLOBALS['Soon_Text'];
+  $Keywords_Site = $GLOBALS['Keywords_Site'];
+  $Soon_Text = $GLOBALS['Soon_Text'];
 ?>
 
 <!DOCTYPE html>
