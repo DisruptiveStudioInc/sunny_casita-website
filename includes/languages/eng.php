@@ -1,7 +1,4 @@
 <?php
-
-error_log("Loading language file: eng.php");
-
 $Lang = "en";
 $Description = "Only Doctor Leaders (ODL) is an international experience platform where the world's most visionary doctors learn, certify, connect, and experience the magic of a production designed to awaken their senses and leadership.";
 $Keywords = "evolution, education, growth, community, exclusivity, leadership, trading, business, knowledge, transformation, wellness, membership, success, innovation, learning, opportunities, freedom, vision, experiences, connection";
