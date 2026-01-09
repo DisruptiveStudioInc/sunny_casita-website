@@ -16,7 +16,7 @@ $router->set404(function() {
 
   // Set Language context
   Localization::setLang($lang);
-  $_SESSION['language'] = Localization::getLegacyLang();
+  Localization::loadLanguage();
 
   include __DIR__ . '/header.php';
   include __DIR__ . '/../pages/404.inc.php';

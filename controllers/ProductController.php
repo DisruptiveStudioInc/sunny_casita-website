@@ -22,18 +22,13 @@ class ProductController extends BaseController {
   }
 
   private function loadData($id) {
-    // Legacy compatibility
-    $_GET['p'] = 'product';
-    $_GET['id'] = $id;
-
     Localization::setCurrentRoute('product', [$id]);
-
-    $vars = $this->loadLegacyData();
-    extract($vars);
 
     $dataPath = __DIR__ . '/../includes/pagesData/product_data.php';
 
     if (file_exists($dataPath)) {
+      // Extract global language variables into local scope BEFORE including
+      extract($GLOBALS, EXTR_SKIP);
       include $dataPath;
     }
 

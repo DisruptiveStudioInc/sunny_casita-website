@@ -349,7 +349,3 @@
 
 <script src="/js/slider.js"></script>
 <script src="/js/home.js"></script>
-
-
-
-

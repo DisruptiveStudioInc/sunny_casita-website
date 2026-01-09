@@ -8,8 +8,6 @@ class PageController extends BaseController {
   private function setup($lang, $pageName) {
     $this->setLang($lang);
     Localization::setCurrentRoute($pageName);
-    // Legacy: header/info.php relies on $_GET['p'] for menu highlighting
-    $_GET['p'] = $pageName;
   }
 
   public function home($lang) {
@@ -20,7 +18,8 @@ class PageController extends BaseController {
 
   public function about($lang) {
     $this->setup($lang, 'about');
-    $this->view('about');
+    $data['page_title'] = $GLOBALS['Journey_title'];
+    $this->view('about', $data);
   }
 
   public function privacy($lang) {
@@ -41,12 +40,10 @@ class PageController extends BaseController {
   }
 
   private function loadPageData( $path ) {
-    $vars = $this->loadLegacyData();
-
-    extract($vars);
-
     $dataPath = __DIR__ . "/../includes/pagesData/$path";
     if (file_exists($dataPath)) {
+      // Extract global language variables into local scope BEFORE including
+      extract($GLOBALS, EXTR_SKIP);
       include $dataPath;
     }
 

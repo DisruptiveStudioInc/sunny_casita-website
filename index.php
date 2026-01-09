@@ -2,6 +2,11 @@
 session_start();
 require __DIR__ . '/vendor/autoload.php';
 
+require __DIR__ . '/includes/helpers.php';
+$constants = require __DIR__ . '/includes/constants.php';
+foreach ($constants as $key => $value) {
+  $GLOBALS[$key] = $value;
+}
 $config = require __DIR__ . '/config.php';
 $bypassMaintenance = $_GET['dev'] ?? null;
 
@@ -16,8 +21,6 @@ else{
 
 // Make $user_replica available globally throughout the application
 $GLOBALS['user_replica'] = $user_replica;
-
-error_log('User replica: ' . $user_replica);
 
 // Maintenance Mode
 if (isset($config['maintenance_mode']) && $config['maintenance_mode'] === true && !isset($bypassMaintenance)) {

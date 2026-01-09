@@ -10,15 +10,15 @@
   <!-- X -->
   <meta name="twitter:card"        content="summary">
   <meta name="twitter:site"        content="<?= $Host_Site; ?>">
-  <meta name="twitter:title"       content="<?= $Company_Name; ?>">
+  <meta name="twitter:title"       content="<?= $company_name; ?>">
   <meta name="twitter:description" content="<?= $Description_Site; ?>">
-  <meta name="twitter:creator"     content="<?= $Company_Name; ?>">
+  <meta name="twitter:creator"     content="<?= $company_name; ?>">
   <meta name="twitter:image"       content="<?= $Host_Site; ?>/images/facebook/facebook-temp.jpg">
 
   <!-- FACEBOOK -->
-  <meta property="og:site_name"    content="<?= $Company_Name; ?>" />
+  <meta property="og:site_name"    content="<?= $company_name; ?>" />
   <meta property="og:url"          content="<?= $Host_Site; ?>" />
-  <meta property="og:title"        content="<?= $Company_Name; ?>" />
+  <meta property="og:title"        content="<?= $company_name; ?>" />
   <meta property="og:type"         content="website" />
   <meta property="og:description"  content="<?= $Description_Site; ?>" />
   <meta property="og:image"        content="<?= $Host_Site; ?>/images/facebook/facebook-temp.jpg" />
@@ -30,9 +30,9 @@
   <meta http-equiv="Content-Type"  content="text/html; charset=UTF-8" />
   <meta name="description"         content="<?= $Description_Site; ?>" />
   <meta name="keywords"            content="<?= $Keywords_Site; ?>" />
-  <meta name="autor"               content="<?= $Company_Name; ?>" />
+  <meta name="autor"               content="<?= $company_name; ?>" />
 
-  <title><?= $Company_Name; ?></title>
+  <title><?= $company_name; ?></title>
 
   <!-- STYLES-->
   <link rel="stylesheet" type="text/css" href="/css/min/reset.min.css" />

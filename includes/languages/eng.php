@@ -1,5 +1,7 @@
 <?php
 
+error_log("Loading language file: eng.php");
+
 $Lang = "en";
 $Description = "Only Doctor Leaders (ODL) is an international experience platform where the world's most visionary doctors learn, certify, connect, and experience the magic of a production designed to awaken their senses and leadership.";
 $Keywords = "evolution, education, growth, community, exclusivity, leadership, trading, business, knowledge, transformation, wellness, membership, success, innovation, learning, opportunities, freedom, vision, experiences, connection";
@@ -48,7 +50,7 @@ $Soon_Description3 = "You can't miss it!";
 // Hero
 //-------------------------//
 
-$Hero_upper = "$Company_Name - $Company_Fullname";
+$Hero_upper = "$company_name - $company_fullname";
 $Hero_01 = "Where science merges with emotion";
 $Hero_02 = "A new generation of medical congresses that combine training, innovation, and immersive experiences at the level of Cirque du Soleil.";
 
@@ -56,7 +58,7 @@ $Hero_02 = "A new generation of medical congresses that combine training, innova
 // Journey
 //-------------------------//
 
-$Journey_title = "About us</span>";
+$Journey_title = "About us";
 
 $Journey_button_1 = "Who we are";
 $Journey_button_2 = "Mission";
@@ -72,19 +74,19 @@ $Journey_text_4 = "Innovation • Inspiration • Disruption • Excellence • 
 // Letters
 //-------------------------//
 
-$Letters_title_01 = "{$Company_Name} Live";
+$Letters_title_01 = "{$company_name} Live";
 $Letters_text_01 = "International tour of immersive congresses.";
 
-$Letters_title_02 = "{$Company_Name} Learning";
+$Letters_title_02 = "{$company_name} Learning";
 $Letters_text_02 = "The Netflix of medical education.";
 
-$Letters_title_03 = "{$Company_Name} E-commerce";
+$Letters_title_03 = "{$company_name} E-commerce";
 $Letters_text_03 = "Exclusive marketplace.";
 
-$Letters_title_04 = "{$Company_Name} Awards & Travel";
+$Letters_title_04 = "{$company_name} Awards & Travel";
 $Letters_text_04 = "Recognitions and trips.";
 
-$Letters_title_05 = "{$Company_Name} Community";
+$Letters_title_05 = "{$company_name} Community";
 $Letters_text_05 = "Global network of medical leaders.";
 
 //-------------------------//
@@ -125,28 +127,28 @@ $Products_title_01 = "Inspiration";
 $Products_01 = "Your direct pass";
 $Products_sub_01 = "100 USDT";
 $Products_text_01 = "Master talks, workshops, and certifications.";
-$Products_text_inner_01 = "Everything you need to grow, earn, and live in {$Company_Name}.";
+$Products_text_inner_01 = "Everything you need to grow, earn, and live in {$company_name}.";
 $Products_price_01 = "Subscription: 1000 USDT";
 
 $Products_title_02 = "Immersion";
 $Products_02 = "Your direct pass";
 $Products_sub_02 = "100 USDT";
 $Products_text_02 = "Thematic stages with immersive production.";
-$Products_text_inner_02 = "Everything you need to grow, earn, and live in {$Company_Name}.";
+$Products_text_inner_02 = "Everything you need to grow, earn, and live in {$company_name}.";
 $Products_price_02 = "Subscription: 1000 USDT";
 
 $Products_title_03 = "Connection";
 $Products_03 = "Your direct pass";
 $Products_sub_03 = "100 USDT";
 $Products_text_03 = "Recognitions and networking.";
-$Products_text_inner_03 = "Everything you need to grow, earn, and live in {$Company_Name}.";
+$Products_text_inner_03 = "Everything you need to grow, earn, and live in {$company_name}.";
 $Products_price_03 = "Subscription: 1000 USDT";
 
 $Products_title_04 = "Essence";
 $Products_04 = "Your direct pass";
 $Products_sub_04 = "100 USDT";
 $Products_text_04 = "Multisensory body-mind-spirit experiences.";
-$Products_text_inner_04 = "Everything you need to grow, earn, and live in {$Company_Name}.";
+$Products_text_inner_04 = "Everything you need to grow, earn, and live in {$company_name}.";
 $Products_price_04 = "Subscription: 1000 USDT";
 
 //-------------------------//
@@ -228,7 +230,7 @@ $Ingredients_01_06 = "Growth";
 
 $Benefits = "Benefits";
 
-$Benefits_sub_01 = "What only {$Company_Name} gives you";
+$Benefits_sub_01 = "What only {$company_name} gives you";
 $Benefits_01_tit_01 = "5D Backoffice";
 $Benefits_01_01 = "Everything on your phone, easy to use and ready to scale globally.";
 $Benefits_01_tit_02 = "Exclusive academy";
@@ -243,8 +245,8 @@ $Benefits_01_04 = "Here no one is left behind: everyone vibes and moves forward.
 //-------------------------//
 
 
-$Satarted_title_01 = "{$Company_Name} Power";
-$Satarted_sub_01 = "From day one, your effort vibes in {$Company_Name}.";
+$Satarted_title_01 = "{$company_name} Power";
+$Satarted_sub_01 = "From day one, your effort vibes in {$company_name}.";
 $Bonus_flash_title = "Flash Bonus";
 $Bonus_flash_text01 = "Earn NOW";
 $Bonus_flash_list_01 = "{$Bonuses['flash']['first_referal']} USD with your first referral.";

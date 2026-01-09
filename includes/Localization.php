@@ -6,6 +6,7 @@ class Localization {
   public static $lang = 'es';
   public static $currentRoute = 'home';
   public static $currentParams = [];
+  private static $langLoaded = false;
 
   // Unified Route Definition
   public static $routes = [
@@ -55,11 +56,6 @@ class Localization {
     ]
   ];
 
-  public static $legacyMap = [
-    'es' => 'esp',
-    'en' => 'eng'
-  ];
-
   public static function detectLangFromUri($uri) {
     $configPath = __DIR__ . '/../config.php';
     $availableLangs = ['es', 'en']; // Fallback
@@ -72,14 +68,14 @@ class Localization {
     }
 
     foreach ($availableLangs as $lang) {
-      if ($lang === 'es') continue;
+      if ($lang === $config['default_lang']) continue;
       if (preg_match('#^/' . preg_quote($lang) . '(/|$)#', $uri)) {
         return $lang;
       }
     }
 
     // Default
-    return 'es';
+    return $config['default_lang'] ?? 'es';
   }
 
   public static function setLang($lang) {
@@ -90,13 +86,48 @@ class Localization {
     return self::$lang;
   }
 
-  public static function getLegacyLang() {
-    return self::$legacyMap[self::$lang] ?? 'esp';
+  public static function loadLanguage() {
+    if (self::$langLoaded) {
+      return; // Already loaded
+    }
+
+    $langMap = [
+      'es' => 'esp.php',
+      'en' => 'eng.php'
+    ];
+
+    $langFile = $langMap[self::$lang] ?? 'esp.php';
+    $langPath = __DIR__ . '/languages/' . $langFile;
+
+    if (file_exists($langPath)) {
+      self::includeInGlobalScope($langPath);
+      self::$langLoaded = true;
+    }
+  }
+
+  private static function includeInGlobalScope($filePath) {
+    // Extract current globals so they're available in the included file
+    extract($GLOBALS, EXTR_REFS | EXTR_SKIP);
+
+    // Include the file - variables will be created in this function's scope
+    include $filePath;
+
+    // Get all newly defined variables and push them to global scope
+    $vars = get_defined_vars();
+    unset($vars['filePath'], $vars['GLOBALS']);
+
+    foreach ($vars as $key => $value) {
+      $GLOBALS[$key] = $value;
+    }
   }
 
   public static function setCurrentRoute($key, $params = []) {
     self::$currentRoute = $key;
     self::$currentParams = $params;
+  }
+
+  public static function getCurrentRoute() {
+    return self::$currentRoute;
   }
 
   public static function getCurrentUrl($lang) {

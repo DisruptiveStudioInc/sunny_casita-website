@@ -1,5 +1,7 @@
 <?php
 
+error_log("Loading language file: esp.php");
+
 $Lang = "es";
 $Description = "Only Doctor Leaders (ODL) es una plataforma internacional de experiencias donde los doctores más visionarios del planeta aprenden, se certifican, se conectan y viven la magia de una producción diseñada para despertar sus sentidos y liderazgo.";
 $Keywords = "evolución, educación, crecimiento, comunidad, exclusividad, liderazgo, trading, negocios, conocimiento, transformación, bienestar, membresía, éxito, innovación, aprendizaje, oportunidades, libertad, visión, experiencias, conexión";
@@ -9,8 +11,8 @@ $Keywords = "evolución, educación, crecimiento, comunidad, exclusividad, lider
   //-------------------------//
 
 $Menu_01 = "Inicio";
-$Menu_02 = $Company_Name;
-$Menu_03 = "Experiencia $Company_Name";
+$Menu_02 = $company_name;
+$Menu_03 = "Experiencia $company_name";
 $Menu_04 = "Productos";
 $Menu_05 = "Tienda";
 
@@ -48,7 +50,7 @@ $Soon_Description3 = "¡No te lo puedes perder!";
 // Hero
 //-------------------------//
 
-$Hero_upper = "$Company_Name - $Company_Fullname";
+$Hero_upper = "$company_name - $company_fullname";
 $Hero_01 = "Donde la ciencia se fusiona con la emoción";
 $Hero_02 = "Una nueva generación de congresos médicos que combinan formación, innovación y experiencias inmersivas al nivel de Cirque du Soleil.";
 
@@ -56,7 +58,7 @@ $Hero_02 = "Una nueva generación de congresos médicos que combinan formación,
 // Journey
 //-------------------------//
 
-$Journey_title = "Nosotros</span>";
+$Journey_title = "Nosotros";
 
 $Journey_button_1 = "Quiénes somos";
 $Journey_button_2 = "Misión";
@@ -72,19 +74,19 @@ $Journey_text_4 = "Innovación • Inspiración • Disrupción • Excelencia �
 // Letters
 //-------------------------//
 
-$Letters_title_01 = "{$Company_Name} Live";
+$Letters_title_01 = "{$company_name} Live";
 $Letters_text_01 = "Gira internacional de congresos inmersivos.";
 
-$Letters_title_02 = "{$Company_Name} Learning";
+$Letters_title_02 = "{$company_name} Learning";
 $Letters_text_02 = "Netflix de la educación médica.";
 
-$Letters_title_03 = "{$Company_Name} E-commerce";
+$Letters_title_03 = "{$company_name} E-commerce";
 $Letters_text_03 = "Marketplace exclusivo.";
 
-$Letters_title_04 = "{$Company_Name} Awards & Travel";
+$Letters_title_04 = "{$company_name} Awards & Travel";
 $Letters_text_04 = "Reconocimientos y viajes.";
 
-$Letters_title_05 = "{$Company_Name} Community";
+$Letters_title_05 = "{$company_name} Community";
 $Letters_text_05 = "Red global de líderes médicos.";
 
 //-------------------------//
@@ -126,28 +128,28 @@ $Products_title_01 = "Inspiración";
 $Products_01 = "Tu pase directo";
 $Products_sub_01 = "100 USDT";
 $Products_text_01 = "Charlas magistrales, talleres y certificaciones.";
-$Products_text_inner_01 = "Todo lo que necesitas para crecer, ganar y vivir en {$Company_Name}.";
+$Products_text_inner_01 = "Todo lo que necesitas para crecer, ganar y vivir en {$company_name}.";
 $Products_price_01 = "Suscripción: 1000 USDT";
 
 $Products_title_02 = "Inmersión";
 $Products_02 = "Tu pase directo";
 $Products_sub_02 = "100 USDT";
 $Products_text_02 = "Escenarios temáticos con producción inmersiva.";
-$Products_text_inner_02 = "Todo lo que necesitas para crecer, ganar y vivir en {$Company_Name}.";
+$Products_text_inner_02 = "Todo lo que necesitas para crecer, ganar y vivir en {$company_name}.";
 $Products_price_02 = "Suscripción: 1000 USDT";
 
 $Products_title_03 = "Conexión";
 $Products_03 = "Tu pase directo";
 $Products_sub_03 = "100 USDT";
 $Products_text_03 = "Reconocimientos y networking.";
-$Products_text_inner_03 = "Todo lo que necesitas para crecer, ganar y vivir en {$Company_Name}.";
+$Products_text_inner_03 = "Todo lo que necesitas para crecer, ganar y vivir en {$company_name}.";
 $Products_price_03 = "Suscripción: 1000 USDT";
 
 $Products_title_04 = "Esencia";
 $Products_04 = "Tu pase directo";
 $Products_sub_04 = "100 USDT";
 $Products_text_04 = "Experiencias multisensoriales cuerpo-mente-espíritu.";
-$Products_text_inner_04 = "Todo lo que necesitas para crecer, ganar y vivir en {$Company_Name}.";
+$Products_text_inner_04 = "Todo lo que necesitas para crecer, ganar y vivir en {$company_name}.";
 $Products_price_04 = "Suscripción: 1000 USDT";
 
 //-------------------------//
@@ -215,7 +217,7 @@ $Roadmap_text_2026 = "Expansión LATAM, alianzas globales y cierre mundial ODL c
 // Ingredients
 //-------------------------//
 
-$Ingredients_01 = "Enciende tu modo en {$Company_Name}";
+$Ingredients_01 = "Enciende tu modo en {$company_name}";
 $Ingredients_01_01 = "Impulso";
 $Ingredients_01_02 = "Acceso";
 $Ingredients_01_03 = "Progreso";
@@ -229,7 +231,7 @@ $Ingredients_01_06 = "Crecimiento";
 
 $Benefits = "Beneficios";
 
-$Benefits_sub_01 = "Lo que solo {$Company_Name} te da";
+$Benefits_sub_01 = "Lo que solo {$company_name} te da";
 $Benefits_01_tit_01 = "Backoffice 5D";
 $Benefits_01_01 = "Lleva tu negocio contigo: práctico, ágil y hecho para crecer.";
 $Benefits_01_tit_02 = "Academia exclusiva";
@@ -244,8 +246,8 @@ $Benefits_01_04 = "El lugar donde todos vibran, crecen y avanzan.";
 //-------------------------//
 
 
-$Satarted_title_01 = "Poder {$Company_Name}";
-$Satarted_sub_01 = "En {$Company_Name}, cada paso cuenta y tu fuerza se siente desde el inicio.";
+$Satarted_title_01 = "Poder {$company_name}";
+$Satarted_sub_01 = "En {$company_name}, cada paso cuenta y tu fuerza se siente desde el inicio.";
 
 $Bonus_flash_title = "Crece tu comunidad y ganas";
 $Bonus_flash_text01 = "Con el Pass 5D cada vez que alguien se une a tu comunidad, recibes una recompensa directa:";

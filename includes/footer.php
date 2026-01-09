@@ -33,7 +33,7 @@
           <?php endif; ?>
           <ul class="menu-list link">
             <h3><?= $Footer_title_03; ?></h3>
-            <li><?= $Email; ?></li>
+            <li><?= $email; ?></li>
             <?php if(false): ?>
               <li><?= $Phone; ?></li>
               <li><?= $Address; ?></li>

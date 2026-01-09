@@ -14,28 +14,8 @@ class BaseController {
   protected function setLang($lang) {
     $this->lang = $lang;
     Localization::setLang($lang);
-
-    // Legacy Compatibility
-    $_SESSION['language'] = Localization::getLegacyLang();
+    Localization::loadLanguage();
   }
-
-  protected function loadLegacyData() {
-    // Load the language file essentially to define variables in current scope
-
-    $langCode = Localization::getLegacyLang();
-    $path = __DIR__ . "/../includes/idiomas/{$langCode}.php";
-
-    if (file_exists($path)) {
-      require $path;
-      // Get all defined variables in this scope
-      $vars = get_defined_vars();
-      // Remove internal vars
-      unset($vars['langCode'], $vars['path']);
-      return $vars;
-    }
-    return [];
-  }
-
 
   protected function view($viewName, $data = []) {
     // Expose variables to the view
