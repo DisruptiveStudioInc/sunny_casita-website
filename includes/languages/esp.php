@@ -73,19 +73,19 @@ $Video_title = "Así trabajamos en Sunny Casitas";
 // Letters
 //-------------------------//
 
-$Letters_title_01 = "De 3 a 6 meses sin pagos";
+$Letters_title_01 = "De 3 a 6 meses <span class='tc-acc'>sin pagos</span>";
 $Letters_text_01 = "Empieza sin presión: disfruta hasta seis meses sin pagos iniciales tranquilo.";
 
-$Letters_title_02 = "Diseños modernos";
+$Letters_title_02 = "Diseños <span class='tc-acc'>modernos</span>";
 $Letters_text_02 = "Que optimizan espacio, funcionalidad y estética para tu hogar.";
 
-$Letters_title_03 = "Materiales de alta calidad";
+$Letters_title_03 = "Materiales de <span class='tc-acc'>alta calidad</span>";
 $Letters_text_03 = "Garantizan durabilidad, seguridad y valor a largo plazo.";
 
-$Letters_title_04 = "Bajos o nulos costos de cierre";
+$Letters_title_04 = "<span class='tc-acc'>Bajos o nulos</span> costos de cierre";
 $Letters_text_04 = "Facilitan una decisión accesible segura.";
 
-$Letters_title_05 = "No pagos de inicio";
+$Letters_title_05 = "<span class='tc-acc'>No pagos</span> de inicio";
 $Letters_text_05 = "Construye sin pago de inicio y da el primer paso hoy.";
 
 //-------------------------//
@@ -104,7 +104,7 @@ $Vision_04 = "Construcción e inspecciones";
 // Slogan
 //-------------------------//
 
-$Slogan_title = "Esto es más que una casita. Es nuestro compromiso con tu tranquilidad.";
+$Slogan_title = "Esto es más que una casita. Es <span class='tc-pri'>nuestro compromiso</span> con tu tranquilidad.";
 $Slogan_text = "Construye con tranquilidad.";
 
 //-------------------------//
@@ -199,7 +199,7 @@ $Spirit_text_04 = "Entregar a tiempo pero lo mas importante completo y funcionan
 // Traits
 //-------------------------//
 
-$Traits_title = "Tu casita empieza con una conversación.";
+$Traits_title = "<span class='tc-acc'>Tu casita empieza</span> con una conversación.";
 
 //-------------------------//
 // Be part of - Inner page

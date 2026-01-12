@@ -14,19 +14,14 @@
 </section>
 
 <!-- BELIEVE -->
-<section class="c-0">
-  <div class="mw-1280 min-h-dvh d-flex ai-center jc-center">
-    <div class="d-flex fd-row med-fd-col-rev br-20 of-h c-ter">
-      <div class="w-55 med-w-100 p-50 med-p-30">
-        <h2 class="h2 tc-sec"><?= $PartOf_text1 ?></h2>
-        <p class="tc-gray"><?= $PartOf_text2 ?></p>
-        <p class="tc-gray"><?= $PartOf_text3 ?></p>
-        <p class="tc-gray"><?= $PartOf_text4 ?></p>
-      </div>
-      <div class="w-45 med-w-100 rel med-min-h-40dvh">
-        <img src="/images/body/blank_square.svg" alt="" class="background visible">
-      </div>
-    </div>
+<section class="d-flex fd-row med-fd-col jc-end">
+  <div class="p-60 all-tc-0 half med-w-100 c-pri-h br-believe">
+    <h2 class="h1 mt-0 mb-20 small-mb-10"><?= $PartOf_text1 ?></h2>
+    <p class="mt-0 mb-20 small-mb-10"><?= $PartOf_text2 ?></p>
+    <p class="m-0"><?= $PartOf_text3 ?></p>
+  </div>
+  <div class="w-50 med-w-100 rel med-min-h-40dvh">
+    <img src="/images/body/blank_square.svg" alt="" class="background visible">
   </div>
 </section>
 

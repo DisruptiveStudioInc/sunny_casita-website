@@ -487,54 +487,32 @@ document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener("resize", handleInitObserver);
   }
 
-  class CrossfadeSlider {
-    constructor(selector, options = {}) {
-      this.elements = document.querySelectorAll(selector);
-      this.transitionDuration = options.transitionDuration || 1000; // ms
-      this.displayDuration = options.displayDuration || 3000; // ms
-      this.currentIndex = 0;
+  /* ==============================================
+      PROCESS TEXTS
+    ============================================== */
 
-      if (this.elements.length === 0) {
-        console.warn("No elements found with selector:", selector);
-        return;
-      }
+  const textsHome = document.querySelectorAll(".texts-home");
 
-      this.init();
-    }
+  if (textsHome.length > 0) {
+    textsHome.forEach((element) => {
+      // Store original background color
+      const originalBgColor = window.getComputedStyle(element).backgroundColor;
 
-    init() {
-      // Hide all elements initially
-      this.elements.forEach((el, index) => {
-        el.style.transition = `opacity ${this.transitionDuration}ms ease-in-out`;
-        el.style.opacity = index === 0 ? "1" : "0";
-        el.style.position = "absolute";
+      element.addEventListener("mouseenter", () => {
+        // Set all other elements to transparent
+        textsHome.forEach((el) => {
+          if (el !== element) {
+            el.style.backgroundColor = "transparent";
+          }
+        });
       });
 
-      this.start();
-    }
-
-    start() {
-      // Wait display time minus half transition for crossfade overlap
-      const cycleTime = this.displayDuration - this.transitionDuration / 2;
-
-      setInterval(() => {
-        const currentEl = this.elements[this.currentIndex];
-        const nextIndex = (this.currentIndex + 1) % this.elements.length;
-        const nextEl = this.elements[nextIndex];
-
-        // Start fading out current
-        currentEl.style.opacity = "0";
-
-        // Start fading in next (creates crossfade overlap)
-        nextEl.style.opacity = "1";
-
-        this.currentIndex = nextIndex;
-      }, cycleTime);
-    }
+      element.addEventListener("mouseleave", () => {
+        // Restore original background color for all elements
+        textsHome.forEach((el) => {
+          el.style.backgroundColor = "";
+        });
+      });
+    });
   }
-
-  const slider = new CrossfadeSlider(".slogan-content", {
-    transitionDuration: 800,
-    displayDuration: 7000,
-  });
 });

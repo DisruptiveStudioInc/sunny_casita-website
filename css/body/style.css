@@ -106,6 +106,10 @@
   .sticky {
     position: sticky;
   }
+  .half {
+    width: 50%;
+    max-width: calc(1440px * 0.5);
+  }
 }
 @media only screen and (max-width: 1080px) {
   .med-min-h-auto {
@@ -125,12 +129,22 @@
   }
 }
 
+@media only screen and (max-width: 768px) {
+  .banner-padding {
+    padding-top: 80px !important;
+    padding-bottom: 80px !important;
+  }
+}
+
 /* ============================================== */
 /* COLOR */
 /* ============================================== */
 
 .c-pri {
   background: var(--color-pri);
+}
+.c-pri-h {
+  background: var(--color-pri-h);
 }
 .c-sec {
   background: var(--color-sec);
@@ -146,6 +160,9 @@
 }
 .c-acc {
   background: var(--color-acc);
+}
+.c-acc-h {
+  background: var(--color-acc-h);
 }
 .c-b-dark {
   background: var(--color-brand-dark);
@@ -418,7 +435,7 @@ section {
 
 .vertical-slides::after {
   content: "";
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(9, 25, 48, 0.7);
   position: absolute;
   z-index: calc(var(--total-items) + 1);
   width: 100%;
@@ -982,19 +999,22 @@ section {
   border-radius: 10px;
   cursor: pointer;
   transition: all 250ms ease;
+  &:first-of-type {
+    background-color: var(--color-ter);
+  }
 }
 .text_spirit div:hover {
-  background: var(--color-ter);
+  background-color: var(--color-ter);
 }
 
 .text_spirit.premium div:hover {
-  background: var(--color-premium);
+  background-color: var(--color-premium);
 }
 .text_spirit.black div:hover {
-  background: var(--color-black);
+  background-color: var(--color-black);
 }
 .text_spirit.basic div:hover {
-  background: var(--color-basic);
+  background-color: var(--color-basic);
 }
 
 .text_spirit ol {
@@ -1961,10 +1981,6 @@ ul.textos li span img {
   transform: rotateY(180deg);
 }
 
-.item :is(h5, p) {
-  margin: 0;
-}
-
 /*.people:hover .item {
   animation-play-state: paused;
 }*/
@@ -2137,5 +2153,11 @@ ul.textos li span img {
     .radio-check-path {
       opacity: 1;
     }
+  }
+}
+
+@media only screen and (min-width: 1081px) {
+  .br-believe {
+    border-bottom-left-radius: 20px;
   }
 }

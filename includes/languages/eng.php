@@ -77,19 +77,19 @@ $Video_title = "This is how we work at Sunny Casitas";
 // Letters
 //-------------------------//
 
-$Letters_title_01 = "3 to 6 months without payments";
+$Letters_title_01 = "3 to 6 months <span class='tc-acc'>without payments</span>";
 $Letters_text_01 = "Start without pressure: enjoy up to six months without initial payments peacefully.";
 
-$Letters_title_02 = "Modern designs";
+$Letters_title_02 = "<span class='tc-acc'>Modern</span> designs";
 $Letters_text_02 = "That optimize space, functionality, and aesthetics for your home.";
 
-$Letters_title_03 = "High-quality materials";
+$Letters_title_03 = "<span class='tc-acc'>High-quality</span> materials";
 $Letters_text_03 = "Ensure durability, safety, and long-term value.";
 
-$Letters_title_04 = "Low or no closing costs";
+$Letters_title_04 = "<span class='tc-acc'>Low or no</span> closing costs";
 $Letters_text_04 = "Make an accessible and secure decision easier.";
 
-$Letters_title_05 = "No initial payments";
+$Letters_title_05 = "<span class='tc-acc'>No initial</span> payments";
 $Letters_text_05 = "Build without an initial payment and take the first step today.";
 
 //-------------------------//
@@ -108,7 +108,7 @@ $Vision_04 = "Construction and inspections";
 // Slogan
 //-------------------------//
 
-$Slogan_title = "This is more than a little house. It's our commitment to your peace of mind.";
+$Slogan_title = "This is more than a little house. It's <span class='tc-pri'>our commitment</span> to your peace of mind.";
 $Slogan_text = "Build with peace of mind.";
 
 //-------------------------//
@@ -203,7 +203,7 @@ $Spirit_text_04 = "Deliver on time but most importantly complete and functional"
 // Traits
 //-------------------------//
 
-$Traits_title = "Your little house starts with a conversation.";
+$Traits_title = "<span class='tc-acc'>Your little house starts</span> with a conversation.";
 
 //-------------------------//
 // Be part of - Inner page

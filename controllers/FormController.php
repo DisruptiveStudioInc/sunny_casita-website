@@ -57,6 +57,8 @@ class FormController extends BaseController {
     // Load constants
     $constants = include __DIR__ . '/../includes/constants.php';
 
+    error_log("Submission data:");
+    error_log(print_r($_POST, true));
     // Send email
     $emailSent = $this->sendEmail($name, $phone, $email, $usertype, $message, $constants);
 
@@ -81,6 +83,7 @@ class FormController extends BaseController {
   private function sendEmail($name, $phone, $email, $usertype, $message, $constants) {
     $mailer = new PHPMailer(true);
 
+    error_log('Sendgrid key: ' . $_ENV['SENDGRID_KEY']);
     try {
       // SendGrid SMTP configuration
       $mailer->isSMTP();
@@ -88,9 +91,15 @@ class FormController extends BaseController {
       $mailer->SMTPAuth = true;
       $mailer->Username = 'apikey';
       $mailer->Password = $_ENV['SENDGRID_KEY'];
-      $mailer->SMTPSecure = 'tls';
+      $mailer->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
       $mailer->Port = 587;
       $mailer->CharSet = 'UTF-8';
+
+      // Enable verbose debug output
+      $mailer->SMTPDebug = 2;
+      $mailer->Debugoutput = function($str, $level) {
+        error_log("SMTP Debug level $level: $str");
+      };
 
       // Sender and recipient
       $mailer->setFrom(

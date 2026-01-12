@@ -4,7 +4,7 @@
 
   <div class="dh of-h rel">
     <div class="video-placeholder h-full">
-      <img class="background visible" src="/images/body/blank_full.svg" alt="Placeholder" />
+      <img class="background visible" src="/images/hero/hero.webp" alt="Placeholder" />
     </div>
 
     <div class="video-iframe-wrapper">
@@ -88,8 +88,7 @@
     </div>
     <?php foreach($verticalSlides as $k => $slide): ?>
 		<div class="letter-wrap" style="--item-index:<?= $k; ?>">
-      <!-- <img class="letter-bg img_0<?= $slide['id']; ?>" src="./images/body/letters/<?= $slide['id']; ?>.webp" alt="<?= $slide['title']; ?>"> -->
-      <img class="letter-bg img_0<?= $slide['id']; ?>" src="./images/body/blank_full.svg" alt="<?= $slide['title']; ?>">
+      <img class="letter-bg img_0<?= $slide['id']; ?>" src="./images/body/letters/<?= $slide['id']; ?>.webp" alt="<?= $slide['title']; ?>">
       <div class="letter-content word_0<?= $slide['id']; ?> abs w-100 p-40 med-p-10-20 med-pt-50 med-pb-50 t-c">
         <h2 class="letter-title tc-0"><?= $slide['title']; ?></h2>
         <p class="h4 letter-text t-pretty h3 tc-0"><?= $slide['text']; ?></p>
@@ -111,9 +110,9 @@
 		<h2 class="h1-special short tc-sec mt-0 mb-50 med-mb-30"><?= $Vision_text; ?></h2>
     <ul class="d-flex fw-wrap jc-center mw-1080 g-40 med-g-20 pt-0 pb-0">
       <?php foreach($sec03 as $k => $item): ?>
-        <li class="box step rel d-flex fd-col jc-center ai-center g-0 p-20 br-20 w-100 c-0 box_<?= $item['id']; ?>">
-          <h3 class="h5 uppercase box-number m-0"><?= $Vision_step ?> <?= $k + 1; ?></h3>
-          <p class="h2 tc-gray m-0"><?= $item['text']; ?></p>
+        <li class="box step rel d-flex fd-col jc-center ai-center g-0 p-30 pt-20 pb-20 br-999 w-100 c-pri box_<?= $item['id']; ?>">
+          <h3 class="h5 uppercase box-number m-0 tc-acc"><?= $Vision_step ?> <?= $k + 1; ?></h3>
+          <p class="h2 tc-0 m-0"><?= $item['text']; ?></p>
         </li>
       <?php endforeach; ?>
     </ul>
@@ -130,7 +129,7 @@
       <p class="t-l mb-20 tc-gray"><?= $item['text']?></p>
       <ul class="modal-list t-l">
         <?php foreach($item['list'] as $li): ?>
-          <li class="p-10 br-10 c-ter tc-gray"><?= $li; ?></li>
+          <li class="p-10 br-10 c-ter tc-gray t-c"><?= $li; ?></li>
         <?php endforeach; ?>
       </ul>
     </div>
@@ -152,7 +151,7 @@
     <?php foreach($homeProducts as $item): ?>
       <div class="box_product img-<?= $item['number']; ?> rel flex ai-center jc-center fd-col">
         <div class="rel t-c">
-          <img src="/images/body/<?= $item['image']; ?>" class="product m-center cursor-pointer" alt="<?= $item['title']; ?>" onclick="openModal('Modal<?= $item['id']; ?>')"/>
+          <img src="/images/body/products/<?= $item['image']; ?>" class="product m-center cursor-pointer" alt="<?= $item['title']; ?>" onclick="openModal('Modal<?= $item['id']; ?>')"/>
           <div class="abs product-plus-wrap d-flex fd-col ai-center g-20">
             <button type="button" class="v-white c-pri icon br-50 icon-more pointer-e-none"></button>
             <?php if(false): ?>
@@ -179,7 +178,7 @@
 	</div>
 
 	<div class="mw-1440 t-c h-100 med-h-0 jc-center fd-col med-pt-100 med-pb-100">
-    <h2 class="h1-special short tc-sec m-0"><?= $Slogan_title ?></h2>
+    <h2 class="h1-special short tc-sec mt-0 mb-40 small-mb-20"><?= $Slogan_title ?></h2>
     <p class="h3 tc-gray"><?= $Slogan_text; ?></p>
 	</div>
 </section>
@@ -193,8 +192,8 @@
       ?>
         <li class='item c-0 p-20 br-10' style="--item-index:<?= $k + 1; ?>">
           <img src='/images/body/evolvers/<?= $item['id']; ?>.webp' alt='<?= $item['name']; ?>'>
-          <p class="tc-gray h5"><?= $item['text']; ?></p>
-          <h5><?= $item['name']; ?></h5>
+          <p class="tc-gray h5 mt-0 mb-10"><?= $item['text']; ?></p>
+          <h5 class="m-0"><?= $item['name']; ?></h5>
         </li>
       <?php endforeach; ?>
     </ul>
@@ -254,10 +253,10 @@
 			<img src="./images/body/blank_full.svg" class="mw-300 br-20 m-center med-d-block d-none" alt="all products" loading="lazy"/>
 
 			<!-- Textos -->
-			<div class="text_spirit">
-				<h2 class="h2 tc-sec med-t-c"><?= $Spirit_title; ?></h2>
+			<div class="text_spirit" id="text-spirit-wrap">
+				<h2 class="h2 tc-sec med-t-c mb-30 small-mb-20"><?= $Spirit_title; ?></h2>
         <?php foreach($sec08 as $item): ?>
-          <div class="text_<?= $item['id']?>">
+          <div class="texts-home text_<?= $item['id']?>">
             <h3 class="h4 tc-gray"><?= $item['title']?></h3>
             <p class="tc-gray"><?= $item['text']?></p>
           </div>
@@ -269,14 +268,14 @@
 </section>
 
 <!-- BANNER -->
-<section class="c-pri">
+<section class="c-pri rel">
 
 	<div class="section-arrows">
-	    <button class="arrow up"></button>
-      <button class="arrow down"></button>
+    <button class="arrow up"></button>
 	</div>
 
-	<div class="mw-1280 t-c big">
+  <img src="/images/hero/hero.webp" alt="" class="background" style="opacity:0.1">
+	<div class="mw-1280 t-c big rel banner-padding">
 		<h2 class="h1 m-center tc-0"><?= $Traits_title; ?></h2>
     <a href="<?= \Includes\Localization::url('join') ?>" class="btn big c-acc br-50 mt-40 small-mt-20"><?= $Btn_connect; ?></a>
 	</div>
