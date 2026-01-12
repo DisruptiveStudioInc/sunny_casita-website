@@ -109,6 +109,15 @@
   .half {
     width: 50%;
     max-width: calc(1440px * 0.5);
+    &.inner {
+      width: 100%;
+    }
+    &.left {
+      padding-left: 30px;
+    }
+    &.right {
+      padding-right: 30px;
+    }
   }
 }
 @media only screen and (max-width: 1080px) {
@@ -2156,8 +2165,37 @@ ul.textos li span img {
   }
 }
 
+/* ============================================== */
+/* BE PART OF - INNER PAGE */
+/* ============================================== */
+
+.c-join-deg {
+  background-image: linear-gradient(to bottom, white, transparent);
+}
+
+.image-meaning {
+  width: calc(100% - 30px);
+  bottom: 50px;
+  max-height: 760px;
+  object-fit: cover;
+  @media only screen and (max-width: 1080px) {
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    max-height: none;
+    max-width: 420px;
+    margin-inline: auto;
+  }
+}
+
 @media only screen and (min-width: 1081px) {
   .br-believe {
     border-bottom-left-radius: 20px;
+  }
+  .pl-believe {
+    padding-left: 50px;
+  }
+  .br-l-20 {
+    border-radius: 0 20px 20px 0;
   }
 }

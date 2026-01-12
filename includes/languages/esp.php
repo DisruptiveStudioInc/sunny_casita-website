@@ -212,7 +212,7 @@ $PartOf_heroText = "Construimos casitas, pero sobre todo acompañamos personas."
 $PartOf_text1 = "Creemos que construir una casita puede ser un proceso claro, tranquilo y bien acompañado.";
 $PartOf_text2 = "Por eso, en Sunny Casitas abrimos la puerta a personas que quieren crecer, ayudar y construir algo con propósito.";
 $PartOf_text3 = "Ser parte de Sunny Casitas es formar parte de una comunidad que acompaña a familias a mejorar su hogar, con procesos legales, opciones accesibles y apoyo real en cada paso.";
-$PartOf_text4 = "Aquí no se trata solo de construir. Se trata de acompañar decisiones importantes, generar confianza y crear oportunidades reales para más familias.";
+$PartOf_text4 = "<span class='fw-700'>Aquí no se trata solo de construir.</span> Se trata de acompañar decisiones importantes, generar confianza y crear oportunidades reales para más familias.";
 
 $PartOf_meaningTitle = "¿Qué significa formar parte?";
 $PartOf_meaningList1 = "Acompañar a personas en el proceso de su casita.";
