@@ -3,7 +3,9 @@
     "description": "Refactored Website Template",
     "type": "project",
     "require": {
-        "bramus/router": "^1.6"
+        "bramus/router": "^1.6",
+        "vlucas/phpdotenv": "^5.6",
+        "phpmailer/phpmailer": "^7.0"
     },
     "autoload": {
         "psr-4": {

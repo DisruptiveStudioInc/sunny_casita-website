@@ -2,6 +2,10 @@
 session_start();
 require __DIR__ . '/vendor/autoload.php';
 
+// Load environment variables
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->load();
+
 require __DIR__ . '/includes/helpers.php';
 $constants = require __DIR__ . '/includes/constants.php';
 foreach ($constants as $key => $value) {
