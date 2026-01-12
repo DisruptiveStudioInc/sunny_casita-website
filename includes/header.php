@@ -43,29 +43,11 @@
   <link rel="stylesheet" type="text/css" href="/css/min/root.min.css" />
 
   <link rel="stylesheet" type="text/css" href="/css/body/style.css" />
-  <link rel="stylesheet" type="text/css" href="/css/body/navigation.min.css" />
+  <link rel="stylesheet" type="text/css" href="/css/body/navigation.css" />
   <link rel="stylesheet" type="text/css" href="/css/body/slick.min.css" />
 
   <!-- FAVICON -->
-  <link rel="apple-touch-icon" sizes="57x57" href="/images/favicon/apple-icon-57x57.png">
-  <link rel="apple-touch-icon" sizes="60x60" href="/images/favicon/apple-icon-60x60.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="/images/favicon/apple-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="76x76" href="/images/favicon/apple-icon-76x76.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="/images/favicon/apple-icon-114x114.png">
-  <link rel="apple-touch-icon" sizes="120x120" href="/images/favicon/apple-icon-120x120.png">
-  <link rel="apple-touch-icon" sizes="144x144" href="/images/favicon/apple-icon-144x144.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="/images/favicon/apple-icon-152x152.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192"  href="/images/favicon/android-icon-192x192.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="96x96" href="/images/favicon/favicon-96x96.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
-  <link rel="manifest" href="/images/favicon/manifest.json">
-  <meta name="msapplication-config" content="/images/favicon/browserconfig.xml" />
-  <meta name="msapplication-TileColor" content="#ffffff">
-  <meta name="msapplication-TileImage" content="/images/favicon/ms-icon-144x144.png">
-  <meta name="theme-color" content="#ffffff">
-  <Link rel="shortcut icon" href="/images/favicon/favicon.ico" />
+  <link rel="icon" type="image/svg+xml" href="/images/logo/favicon.svg">
 
   <!-- jQuery y Slick -->
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
@@ -99,7 +81,7 @@
 
         <div class="jc-center ai-center g-20">
           <div class="logo">
-            <a href="/"><img src="/images/logo/logo_low.png" alt="Only Doctor Leadres"></a>
+            <a href="/"><img src="/images/logo/logo.svg" alt="<?= $company_name; ?>"></a>
           </div>
           <div class="rel">
             <div class="btn-lan <?= strtolower($availableLangs[$Current_lang]); ?>"><?= $availableLangs[$Current_lang]; ?></div>
@@ -139,11 +121,11 @@
 
             <div class="d-none med-d-block mt-20">
               <div class="mb-10">
-                <a href="<?= $Login; ?>" target="_blank" class="btn c-ter br-30 small-w-100"><?= $Menu_log; ?></a>
+                <a href="<?= $Login; ?>" target="_blank" class="btn c-pri br-30 small-w-100"><?= $Menu_log; ?></a>
               </div>
               <?php if($user_replica): ?>
                 <div>
-                  <a href="<?= $Register ?>" target="_blank" class="btn c-sec br-30 small-w-100"><?= $Menu_reg; ?></a>
+                  <a href="<?= $Register ?>" target="_blank" class="btn c-acc br-30 small-w-100"><?= $Menu_reg; ?></a>
                 </div>
               <?php endif; ?>
             </div>
@@ -152,7 +134,7 @@
 
         <div class="jc-center ai-center">
           <div class="btns m-0 g-10 med-d-none">
-            <a href='<?= $Login; ?>' target="_blank" class="btn c-ter br-30"><?= $Menu_log; ?></a>
+            <a href='<?= $Login; ?>' target="_blank" class="btn c-pri br-30"><?= $Menu_log; ?></a>
             <?php if($user_replica): ?>
               <a href='<?= $Register; ?>' target="_blank" class="btn c-acc br-30"><?= $Menu_reg; ?></a>
             <?php endif; ?>

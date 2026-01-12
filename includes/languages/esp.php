@@ -1,7 +1,7 @@
 <?php
 $Lang = "es";
-$Description = "Only Doctor Leaders (ODL) es una plataforma internacional de experiencias donde los doctores más visionarios del planeta aprenden, se certifican, se conectan y viven la magia de una producción diseñada para despertar sus sentidos y liderazgo.";
-$Keywords = "evolución, educación, crecimiento, comunidad, exclusividad, liderazgo, trading, negocios, conocimiento, transformación, bienestar, membresía, éxito, innovación, aprendizaje, oportunidades, libertad, visión, experiencias, conexión";
+$Description = "Sunny Casitas te acompaña a construir la casita de tus sueños con procesos legales, opciones accesibles y apoyo real en cada paso. Construye con tranquilidad.";
+$Keywords = "casitas, construcción, viviendas accesibles, planos, permisos, acompañamiento, sin pagos iniciales, tranquilidad, confianza, Sunny Casitas";
 
   //-------------------------//
   // Menu
@@ -9,15 +9,8 @@ $Keywords = "evolución, educación, crecimiento, comunidad, exclusividad, lider
 
 $Menu_01 = "Inicio";
 $Menu_02 = $company_name;
-$Menu_03 = "Experiencia $company_name";
-$Menu_04 = "Productos";
-$Menu_05 = "Tienda";
-
-$Shop_us = "USA";
-$Shop_mx = "MEX";
-$Shop_in = "INT";
-$Shop_co = "COL";
-$Shop_eu = "EUR";
+$Menu_03 = "Soluciones";
+$Menu_04 = "Forma parte";
 
 $Menu_log = "Login";
 $Menu_reg = "Regístrate";
@@ -30,259 +23,217 @@ $Btn_view = "Ver más";
 $Btn_buy = "Empieza HOY";
 $Btn_start = "Únete hoy";
 $Btn_store = "Visita nuestra tienda";
-$Btn_live = "Empieza ya";
+$Btn_connect = "Hablemos ahora";
 $Btn_part = "Trasciende HOY";
-$Btn_started = "Conecta AHORA";
+$Btn_started = "Comienza AHORA";
 
 //-------------------------//
 // Coming Soon
 //-------------------------//
 
 $Soon_Text = "Próximamente";
-$Soon_Description1 = "Este domingo 7 de septiembre";
-$Soon_Description2 = "Conéctate en Zoom 07:00 p.m. (CDMX)";
-$Soon_Description3 = "¡No te lo puedes perder!";
-
-//-------------------------//
-// Hero
-//-------------------------//
-
-$Hero_upper = "$company_name - $company_fullname";
-$Hero_01 = "Donde la ciencia se fusiona con la emoción";
-$Hero_02 = "Una nueva generación de congresos médicos que combinan formación, innovación y experiencias inmersivas al nivel de Cirque du Soleil.";
-
-//-------------------------//
-// Journey
-//-------------------------//
-
-$Journey_title = "Nosotros";
-
-$Journey_button_1 = "Quiénes somos";
-$Journey_button_2 = "Misión";
-$Journey_button_3 = "Visión";
-$Journey_button_4 = "ADN";
-
-$Journey_text_1 = "Plataforma internacional donde los doctores más visionarios aprenden, se certifican, se conectan y viven experiencias que inspiran su liderazgo.";
-$Journey_text_2 = "Transformar el aprendizaje médico en una experiencia inmersiva, emocional y tecnológica.";
-$Journey_text_3 = "Crear una comunidad internacional de doctores líderes.";
-$Journey_text_4 = "Innovación • Inspiración • Disrupción • Excelencia • Fe • Conexión Humana.";
-
-//-------------------------//
-// Letters
-//-------------------------//
-
-$Letters_title_01 = "{$company_name} Live";
-$Letters_text_01 = "Gira internacional de congresos inmersivos.";
-
-$Letters_title_02 = "{$company_name} Learning";
-$Letters_text_02 = "Netflix de la educación médica.";
-
-$Letters_title_03 = "{$company_name} E-commerce";
-$Letters_text_03 = "Marketplace exclusivo.";
-
-$Letters_title_04 = "{$company_name} Awards & Travel";
-$Letters_text_04 = "Reconocimientos y viajes.";
-
-$Letters_title_05 = "{$company_name} Community";
-$Letters_text_05 = "Red global de líderes médicos.";
-
-//-------------------------//
-// Vision
-//-------------------------//
-
-$Vision_text = "Nuestra diferencia";
-
-$Vision_title_01 = "Producciones";
-$Vision_text_01 = "Producciones tipo Cirque du Soleil con storytelling, pantallas 360°, mapping, y arte visual.";
-
-$Vision_title_02 = "Mágico";
-$Vision_text_02 = "Ambiente mágico desde el registro hasta el coffee break.";
-
-$Vision_title_03 = "Experiencia";
-$Vision_text_03 = "Experiencia emocional + precisión académica.";
-
-$Vision_title_04 = "ROI";
-$Vision_text_04 = "Producción impecable y ROI medible para patrocinadores.";
-
-
-//-------------------------//
-// Slogan
-//-------------------------//
-
-$Slogan_title_01 = "ODL no organiza congresos.";
-$Slogan_text_01 = "Crea experiencias que transforman vidas.";
-$Slogan_title_02 = "Cada evento es un espectáculo,";
-$Slogan_text_02 = "una historia, una revolución.";
-$Slogan_title_03 = "Los doctores no solo asisten:";
-$Slogan_text_03 = "se convierten en protagonistas.";
-$Slogan_text = "La ciencia evoluciona. Tú también.";
-
-//-------------------------//
-// Products
-//-------------------------//
-
-$Products_title_01 = "Inspiración";
-$Products_01 = "Tu pase directo";
-$Products_sub_01 = "100 USDT";
-$Products_text_01 = "Charlas magistrales, talleres y certificaciones.";
-$Products_text_inner_01 = "Todo lo que necesitas para crecer, ganar y vivir en {$company_name}.";
-$Products_price_01 = "Suscripción: 1000 USDT";
-
-$Products_title_02 = "Inmersión";
-$Products_02 = "Tu pase directo";
-$Products_sub_02 = "100 USDT";
-$Products_text_02 = "Escenarios temáticos con producción inmersiva.";
-$Products_text_inner_02 = "Todo lo que necesitas para crecer, ganar y vivir en {$company_name}.";
-$Products_price_02 = "Suscripción: 1000 USDT";
-
-$Products_title_03 = "Conexión";
-$Products_03 = "Tu pase directo";
-$Products_sub_03 = "100 USDT";
-$Products_text_03 = "Reconocimientos y networking.";
-$Products_text_inner_03 = "Todo lo que necesitas para crecer, ganar y vivir en {$company_name}.";
-$Products_price_03 = "Suscripción: 1000 USDT";
-
-$Products_title_04 = "Esencia";
-$Products_04 = "Tu pase directo";
-$Products_sub_04 = "100 USDT";
-$Products_text_04 = "Experiencias multisensoriales cuerpo-mente-espíritu.";
-$Products_text_inner_04 = "Todo lo que necesitas para crecer, ganar y vivir en {$company_name}.";
-$Products_price_04 = "Suscripción: 1000 USDT";
-
-//-------------------------//
-// Truth
-//-------------------------//
-
-$Truth_title = "Modelo de negocio";
-
-$Truth_title_01 = "Accesos";
-$Truth_text_01 = "Venta de boletos y accesos VIP";
-
-$Truth_title_02 = "Alianzas";
-$Truth_text_02 = "Patrocinios corporativos";
-
-$Truth_title_03 = "Experiencias";
-$Truth_text_03 = "Activaciones experienciales";
-
-$Truth_title_04 = "Certificación";
-$Truth_text_04 = "Certificaciones premium";
-
-$Truth_title_05 = "Membresías";
-$Truth_text_05 = "Suscripciones digitales y viajes exclusivos";
-
-//-------------------------//
-// Spirit
-//-------------------------//
-
-$Spirit_title = "Tecnología, alianzas y método";
-
-$Spirit_title_01 = "Innovación y tecnología";
-$Spirit01_list_01 = 'Hologramas, XR, IA interactiva.';
-$Spirit01_list_02 = 'Plataformas digitales post-evento.';
-$Spirit01_list_03 = 'App ODL con networking y recompensas.';
-$Spirit01_list_04 = 'Streaming híbrido internacional.';
-
-$Spirit_title_02 = "Para los patrocinadores";
-$Spirit02_list_01 = 'Asociarse con la élite médica internacional.';
-$Spirit02_list_02 = 'Exposición ante médicos de alto poder adquisitivo.';
-$Spirit02_list_03 = 'Integración de marca en escenografía, storytelling y contenido digital.';
-$Spirit02_list_04 = 'Activaciones con métricas de retorno.';
-
-$Spirit_title_03 = "Metodología";
-$Spirit03_list_01 = 'Diagnóstico';
-$Spirit03_list_02 = 'Creatividad';
-$Spirit03_list_03 = 'Tecnología';
-$Spirit03_list_04 = 'Producción';
-$Spirit03_list_05 = 'Ejecución';
-$Spirit03_list_06 = 'Medición';
-
-//-------------------------//
-// Traits
-//-------------------------//
-
-$Traits_title = "Only Doctor Leaders es el futuro de los congresos médicos: donde la innovación, la emoción y el liderazgo se encuentran.";
-
-//-------------------------//
-// Roadmap
-//-------------------------//
-
-$Roadmap_title = "Roadmap";
-$Roadmap_text_2025 = "Tour nacional ODL en México, Festival de Innovación Médica, lanzamiento Learning y E-Commerce.";
-$Roadmap_text_2026 = "Expansión LATAM, alianzas globales y cierre mundial ODL con +4,000 doctores.";
-
-//-------------------------//
-// Ingredients
-//-------------------------//
-
-$Ingredients_01 = "Enciende tu modo en {$company_name}";
-$Ingredients_01_01 = "Impulso";
-$Ingredients_01_02 = "Acceso";
-$Ingredients_01_03 = "Progreso";
-$Ingredients_01_04 = "Experiencias";
-$Ingredients_01_05 = "Conexiones";
-$Ingredients_01_06 = "Crecimiento";
-
-//-------------------------//
-// Benefits
-//-------------------------//
-
-$Benefits = "Beneficios";
-
-$Benefits_sub_01 = "Lo que solo {$company_name} te da";
-$Benefits_01_tit_01 = "Backoffice 5D";
-$Benefits_01_01 = "Lleva tu negocio contigo: práctico, ágil y hecho para crecer.";
-$Benefits_01_tit_02 = "Academia exclusiva";
-$Benefits_01_02 = "Skills reales que transforman: liderazgo, marketing, IA, finanzas y más.";
-$Benefits_01_tit_03 = "Recompensas premium";
-$Benefits_01_03 = "Tu constancia cuenta: premios y bonos que reconocen tu trayectoria.";
-$Benefits_01_tit_04 = "Comunidad global";
-$Benefits_01_04 = "El lugar donde todos vibran, crecen y avanzan.";
-
-//-------------------------//
-// Started - Product bonuses
-//-------------------------//
-
-
-$Satarted_title_01 = "Poder {$company_name}";
-$Satarted_sub_01 = "En {$company_name}, cada paso cuenta y tu fuerza se siente desde el inicio.";
-
-$Bonus_flash_title = "Crece tu comunidad y ganas";
-$Bonus_flash_text01 = "Con el Pass 5D cada vez que alguien se une a tu comunidad, recibes una recompensa directa:";
-$Bonus_flash_text02 = "Recompensas por referidos:";
-$Bonus_flash_list_01 = "1er referido directo → \${$Bonuses['flash']['first_referal']} USD.";
-$Bonus_flash_list_02 = "Cada referido adicional → \${$Bonuses['flash']['regular_referal']} USD.";
-
-$Bonus_speed_title = "Speed Bonus";
-$Bonus_speed_text01 = "Al éxito le gusta la velocidad:";
-$Bonus_speed_list_01 = "Refiere {$Bonuses['speed']['people']} personas en tus primeros {$Bonuses['speed']['initial_days']} días.";
-$Bonus_speed_list_02 = "Ganas \${$Bonuses['speed']['amount']} USD extra.";
-$Bonus_speed_text02 = "El que se mueve rápido, gana más.";
-
-$Bonus_level_title = "Level Bonus";
-$Bonus_level_text01 = "Ganar juntos = Crecer juntos:";
-$Bonus_level_list_level = "Nivel";
-$Bonus_level_text02 = "Lo que gana tu equipo, lo ganas tú.";
-
-$Bonus_infinity_title = "Infinity Bonus";
-$Bonus_infinity_text01 = "El bono que nunca se detiene:";
-$Bonus_infinity_list_01 = "Cada {$Bonuses['infinity']['people']} en tu comunidad = vuelves a cobrar.";
-$Bonus_infinity_text02 = "Aquí no hay límite.";
-
-$Bonus_rewards_title = "Rewards Bonus";
-$Bonus_rewards_text01 = "Constancia que paga:";
-$Bonus_rewards_list_01 = "Bonos extra por seguir firme y activo.";
-$Bonus_rewards_text02 = "Porque tu esfuerzo merece celebrarse.";
-
-$Satarted_subpage_01 = "Lo que viene es grande y es contigo.";
 
 //-------------------------//
 // Footer
 //-------------------------//
 
-$Footer_title_01 = "Horario";
-$Footer_title_02 = "Legal";
-$Footer_title_03 = "Nosotros";
+$Footer_title_01 = "Legal";
 
-$Footer_link_01 = "IBO Terms";
-$Footer_link_02 = "Políticas y Procedimientos";
-$Footer_link_03 = "Política de Privacidad";
+$Footer_link_01 = "Política de Privacidad";
+
+//-------------------------//
+// Hero
+//-------------------------//
+
+$Hero_01 = "Construimos tus sueños en una casita";
+
+//-------------------------//
+// Journey
+//-------------------------//
+
+$Journey_title = "Quiénes somos";
+
+$Journey_button_1 = "Nosotros";
+$Journey_button_2 = "Misión";
+$Journey_button_3 = "Visión";
+$Journey_button_4 = "Valores";
+
+$Journey_text_1 = "Somos líderes con propósito que transforman vidas juntos.";
+$Journey_text_2 = "Impulsamos independencia y seguridad a través de vivienda accesible.";
+$Journey_text_3 = "Ser el movimiento que transforma vidas y comunidades.";
+$Journey_text_4 = "Servicio con propósito • Liderazgo con ejemplo • Crecimiento compartido • Innovación y calidad • Abundancia y gratitud";
+
+//-------------------------//
+// Video
+//-------------------------//
+
+$Video_title = "Así trabajamos en Sunny Casitas";
+
+//-------------------------//
+// Letters
+//-------------------------//
+
+$Letters_title_01 = "De 3 a 6 meses sin pagos";
+$Letters_text_01 = "Empieza sin presión: disfruta hasta seis meses sin pagos iniciales tranquilo.";
+
+$Letters_title_02 = "Diseños modernos";
+$Letters_text_02 = "Que optimizan espacio, funcionalidad y estética para tu hogar.";
+
+$Letters_title_03 = "Materiales de alta calidad";
+$Letters_text_03 = "Garantizan durabilidad, seguridad y valor a largo plazo.";
+
+$Letters_title_04 = "Bajos o nulos costos de cierre";
+$Letters_text_04 = "Facilitan una decisión accesible segura.";
+
+$Letters_title_05 = "No pagos de inicio";
+$Letters_text_05 = "Construye sin pago de inicio y da el primer paso hoy.";
+
+//-------------------------//
+// Vision
+//-------------------------//
+
+$Vision_text = "Expertos contigo en cada paso";
+
+$Vision_step = "Paso";
+$Vision_01 = "Programas correctos";
+$Vision_02 = "Planos y permisos";
+$Vision_03 = "Planificación";
+$Vision_04 = "Construcción e inspecciones";
+
+//-------------------------//
+// Slogan
+//-------------------------//
+
+$Slogan_title = "Esto es más que una casita. Es nuestro compromiso con tu tranquilidad.";
+$Slogan_text = "Construye con tranquilidad.";
+
+//-------------------------//
+// Products
+//-------------------------//
+
+$Product1_title = "Adus";
+$Product1_phrase = "Construye tu casita sin complicaciones";
+$Product1_text = "Creamos casitas legales, modernas y accesibles para dueños de casa con espacio disponible. Nos encargamos de planos, permisos y gestión completa, ofreciendo opciones flexibles que evitan pagos iniciales y presión financiera, para avanzar con claridad, confianza y acompañamiento real en cada paso del proceso.";
+$Product1_list1 = "Planos y permisos.";
+$Product1_list2 = "Gestión completa.";
+$Product1_list3 = "Opciones flexibles.";
+$Product1_list4 = "Acompañamiento claro.";
+
+$Product2_title = "Remodelaciones";
+$Product2_phrase = "Renueva tu hogar sin estrés";
+$Product2_text = "Transformamos espacios cuidando tiempos, presupuesto y calidad, acompañándote de inicio a fin con procesos claros que eliminan complicaciones y te permiten decidir con confianza y tranquilidad en cada etapa del proyecto completo siempre contigo.";
+$Product2_list1 = "Diseño funcional.";
+$Product2_list2 = "Control presupuestal.";
+$Product2_list3 = "Gestión completa.";
+$Product2_list4 = "Acompañamiento claro.";
+
+$Product3_title = "Techos";
+$Product3_phrase = "Protección y durabilidad para tu hogar";
+$Product3_text = "Instalamos y renovamos techos con materiales adecuados y procesos confiables que protegen tu hogar y tu inversión. Coordinamos todo el trabajo con orden y claridad, cuidando calidad, tiempos y seguridad para que avances sin preocupaciones y con resultados duraderos en cada proyecto.";
+$Product3_list1 = "Instalación y renovación.";
+$Product3_list2 = "Materiales confiables.";
+$Product3_list3 = "Ejecución ordenada.";
+$Product3_list4 = "Resultados duraderos.";
+
+$Product4_title = "Aires acondicionados";
+$Product4_phrase = "Confort todo el año";
+$Product4_text = "Instalamos y renovamos sistemas de aire acondicionado que mejoran el confort de tu hogar de forma eficiente y confiable. Te acompañamos en la elección y ejecución, cuidando consumo, calidad y funcionamiento para que disfrutes un clima ideal sin complicaciones ni sorpresas.";
+$Product4_list1 = "Instalación y reemplazo.";
+$Product4_list2 = "Equipos eficientes.";
+$Product4_list3 = "Funcionamiento óptimo.";
+$Product4_list4 = "Acompañamiento claro.";
+
+$Product5_title = "Mejoras del hogar";
+$Product5_phrase = "Pequeños cambios, grandes resultados";
+$Product5_text = "Realizamos mejoras generales para optimizar, mantener y actualizar tu hogar de forma práctica y ordenada. Te acompañamos en cada ajuste o proyecto, cuidando calidad, tiempos y presupuesto para que tu casa funcione mejor sin complicaciones ni decisiones innecesarias.";
+$Product5_list1 = "Ajustes generales.";
+$Product5_list2 = "Mejora funcional.";
+$Product5_list3 = "Ejecución ordenada.";
+$Product5_list4 = "Acompañamiento claro.";
+
+//-------------------------//
+// Testimonials
+//-------------------------//
+
+$Testimonial1 = "Pensé que sería un proceso complicado, pero Sunny Casitas nos acompañó en todo. Hoy nuestra casita ya es una realidad.";
+$Testimonial2 = "Lo que más valoré fue la claridad. Desde el inicio supimos qué seguía y nunca nos sentimos solos.";
+$Testimonial3 = "Nos ayudaron con todo lo legal y el diseño quedó justo como lo imaginamos. Fue una experiencia muy tranquila.";
+$Testimonial4 = "Construir sin pagos iniciales nos dio mucha paz. Sunny Casitas hizo posible algo que veíamos muy lejano.";
+$Testimonial5 = "Siempre estuvieron disponibles para resolver dudas. Se siente el acompañamiento real, no solo una promesa.";
+$Testimonial6 = "Todo fue transparente, bien explicado y sin sorpresas. Volveríamos a elegirlos sin pensarlo.";
+
+//-------------------------//
+// Truth
+//-------------------------//
+
+$Truth_title = "Así cumplimos nuestro compromiso de construir con tranquilidad.";
+
+$Truth_title_01 = "Tranquilidad";
+$Truth_text_01 = "Construir sin estrés ni sorpresas";
+
+$Truth_title_02 = "Claridad";
+$Truth_text_02 = "Proceso claro de inicio a fin";
+
+$Truth_title_03 = "Acompañamiento";
+$Truth_text_03 = "Estamos contigo en cada paso";
+
+$Truth_title_04 = "Seguridad";
+$Truth_text_04 = "Proceso legal y seguro";
+
+//-------------------------//
+// Spirit
+//-------------------------//
+
+$Spirit_title = "Nuestro proceso";
+
+$Spirit_title_01 = "Plano del proyecto";
+$Spirit_text_01 = "Nuestro proceso de construcción comienza con un plan de proyecto detallado,";
+$Spirit_title_02 = "Preparación del sitio";
+$Spirit_text_02 = "Proceso de preparación de un terreno para la construcción.";
+$Spirit_title_03 = "Ejecución";
+$Spirit_text_03 = "Actividades de construcción que tienen lugar en el sitio del proyecto";
+$Spirit_title_04 = "Entregar proyecto completo";
+$Spirit_text_04 = "Entregar a tiempo pero lo mas importante completo y funcionando";
+
+//-------------------------//
+// Traits
+//-------------------------//
+
+$Traits_title = "Tu casita empieza con una conversación.";
+
+//-------------------------//
+// Be part of - Inner page
+//-------------------------//
+
+$PartOf_pageTitle = "Forma parte";
+$PartOf_heroTitle = "Forma parte de Sunny Casitas";
+$PartOf_heroText = "Construimos casitas, pero sobre todo acompañamos personas.";
+
+$PartOf_text1 = "Creemos que construir una casita puede ser un proceso claro, tranquilo y bien acompañado.";
+$PartOf_text2 = "Por eso, en Sunny Casitas abrimos la puerta a personas que quieren crecer, ayudar y construir algo con propósito.";
+$PartOf_text3 = "Ser parte de Sunny Casitas es formar parte de una comunidad que acompaña a familias a mejorar su hogar, con procesos legales, opciones accesibles y apoyo real en cada paso.";
+$PartOf_text4 = "Aquí no se trata solo de construir. Se trata de acompañar decisiones importantes, generar confianza y crear oportunidades reales para más familias.";
+
+$PartOf_meaningTitle = "¿Qué significa formar parte?";
+$PartOf_meaningList1 = "Acompañar a personas en el proceso de su casita.";
+$PartOf_meaningList2 = "Compartir información clara y sin presión.";
+$PartOf_meaningList3 = "Crecer dentro de una comunidad con propósito.";
+$PartOf_meaningList4 = "Construir relaciones basadas en confianza y tranquilidad.";
+
+$PartOf_whoTitle = "¿Para quién es?";
+$PartOf_whoText = "Para personas que creen en el trabajo bien hecho, en el acompañamiento humano y en crear impacto positivo, una casita a la vez.";
+
+$Form_subtitle = "Déjanos tus datos y conversemos con calma.";
+$Form_name = "Nombre";
+$Form_phone = "Teléfono / WhatsApp";
+$Form_email = "Correo electrónico";
+$Form_typeUser = "¿Cómo te gustaría formar parte?";
+$Form_typeUser_option1 = "Representante";
+$Form_typeUser_option2 = "Colaborador";
+$Form_typeUser_option3 = "Quiero conocer opciones";
+$Form_message = "Mensaje";
+$Form_optional = "opcional";
+$Form_messagePlaceholder = "Cuéntanos brevemente por qué te interesa";
+$Form_btn = "Enviar solicitud";
+$Form_success = "¡Gracias por contactarnos! Te responderemos pronto.";
+$Form_error = "Hubo un error al enviar el formulario. Por favor, inténtalo de nuevo.";

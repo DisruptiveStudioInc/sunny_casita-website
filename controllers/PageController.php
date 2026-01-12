@@ -16,10 +16,11 @@ class PageController extends BaseController {
     $this->view('home', $data);
   }
 
-  public function about($lang) {
-    $this->setup($lang, 'about');
-    $data['page_title'] = $GLOBALS['Journey_title'];
-    $this->view('about', $data);
+  public function join($lang) {
+    $this->setup($lang, 'join');
+     $data = $this->loadPageData('join_data.php');
+    $data['page_title'] = $GLOBALS['PartOf_pageTitle'];
+    $this->view('join', $data);
   }
 
   public function privacy($lang) {

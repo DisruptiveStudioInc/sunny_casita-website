@@ -1,7 +1,8 @@
 <?php
 
 return [
-  'company_name' => "Client",
-  'company_fullname' => "Client full name",
-  'email' => "client@gmail.com"
+  'company_name' => "Sunny Casitas",
+  'company_fullname' => "Sunny Casitas",
+  'email' => "client@gmail.com",
+  'wame'=> "6025617378"
 ];

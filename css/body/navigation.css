@@ -26,15 +26,15 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(9, 25, 48, 0.5);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(9, 25, 48, 0.5);
   transition: padding 0.3s ease, background 0.3s ease;
 }
 .navigation.effect {
   padding: 5px 10px;
-  background: rgba(0, 0, 0, 1);
+  background: rgba(9, 25, 48, 1);
 }
 .navigation ul li,
 .navigation ul li a {
@@ -69,7 +69,7 @@
     right: 0;
     border-radius: 20px 0 0 20px;
     padding: 30px;
-    background: var(--color-100);
+    background: var(--color-sec);
     opacity: 0;
     pointer-events: none;
     visibility: hidden;
@@ -123,7 +123,7 @@
 }
 @media screen and (max-width: 1080px) {
   .navigation {
-    background: rgba(0, 0, 0, 1);
+    background: rgba(9, 25, 48, 1);
     backdrop-filter: none;
     -webkit-backdrop-filter: none;
     border: 0;
@@ -626,7 +626,7 @@ ul.sub li a span {
   cursor: pointer;
   margin: 0;
   display: none;
-  background: var(--color-ter);
+  background: var(--color-pri);
   border-radius: 50%;
 }
 .hamburguer span {

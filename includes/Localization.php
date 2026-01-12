@@ -17,12 +17,12 @@ class Localization {
       ],
       'handler' => 'PageController@home'
     ],
-    'about' => [
+    'join' => [
       'languages' => [
-        'es' => '/nosotros',
-        'en' => '/en/about'
+        'es' => '/forma-parte',
+        'en' => '/en/join-us'
       ],
-      'handler' => 'PageController@about'
+      'handler' => 'PageController@join'
     ],
     'privacy' => [
       'languages' => [
