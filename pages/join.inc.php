@@ -57,18 +57,19 @@
     <h2 class="h1 t-c tc-sec m-0"><?= $PartOf_heroTitle ?></h2>
     <p class="h5 t-balance tc-gray mb-50 med-mb-30"><?= $Form_subtitle ?></p>
     <div class="c-ter p-50 br-20 w-100 med-p-30 small-p-20">
-      <form action="" class="form-grid">
+      <form action="/api/form/join" method="POST" id="contact-form" class="form-grid" data-alerts="<?= $Alerts ?>">
+        <input type="hidden" name="lang" value="<?= $lang ?? 'es' ?>">
         <div class="form-group span-2 med-span-1">
           <label for="name" class="tc-gray mt-0"><?= $Form_name ?></label>
-          <input type="text" id="name" name="name" required class="input tc-gray">
+          <input type="text" id="name" name="name" required class="input tc-gray" autocomplete="name">
         </div>
         <div class="form-group">
           <label for="phone" class="tc-gray mt-0"><?= $Form_phone ?></label>
-          <input type="tel" id="phone" name="phone" required class="input tc-gray">
+          <input type="tel" id="phone" name="phone" required class="input tc-gray" autocomplete="tel">
         </div>
         <div class="form-group">
           <label for="email" class="tc-gray mt-0"><?= $Form_email ?></label>
-          <input type="email" id="email" name="email" required class="input tc-gray">
+          <input type="email" id="email" name="email" required class="input tc-gray" autocomplete="email">
         </div>
         <div class="form-group span-2 med-span-1">
           <p class="tc-gray mt-0"><?= $Form_typeUser ?></p>
@@ -86,7 +87,7 @@
         </div>
         <div class="form-group span-2 med-span-1">
           <label for="message" class="tc-gray mt-0"><?= $Form_message ?></label>
-          <textarea id="message" name="message" rows="4" class="input tc-gray"></textarea>
+          <textarea id="message" name="message" rows="4" class="input tc-gray" placeholder="<?= $Form_messagePlaceholder ?>"></textarea>
         </div>
         <div class="form-group span-2 med-span-1 t-c">
           <button type="submit" class="btn big c-acc br-50 m-center"><?= $Form_btn ?></button>

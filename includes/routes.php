@@ -23,6 +23,12 @@ $router->set404(function() {
   include __DIR__ . '/footer.php';
 });
 
+// Form submission endpoint
+$router->post('/api/form/join', function() {
+  $controller = new Controllers\FormController();
+  $controller->handleJoinSubmission();
+});
+
 // Dynamic Route Registration
 foreach (Localization::$routes as $key => $config) {
   $handler = $config['handler'];

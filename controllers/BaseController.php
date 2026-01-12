@@ -27,6 +27,9 @@ class BaseController {
     // Make user_replica available in view scope
     $user_replica = $GLOBALS['user_replica'] ?? null;
 
+    // Make page-specific scripts available
+    $pageScripts = $data['pageScripts'] ?? [];
+
     // Define views path
     $viewPath = __DIR__ . '/../pages/' . $viewName . '.inc.php';
 

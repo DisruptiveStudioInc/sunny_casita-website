@@ -20,6 +20,7 @@ class PageController extends BaseController {
     $this->setup($lang, 'join');
      $data = $this->loadPageData('join_data.php');
     $data['page_title'] = $GLOBALS['PartOf_pageTitle'];
+    $data['pageScripts'] = ['/js/join.js'];
     $this->view('join', $data);
   }
 

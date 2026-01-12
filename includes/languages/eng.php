@@ -241,3 +241,10 @@ $Form_messagePlaceholder = "Briefly tell us why you're interested";
 $Form_btn = "Submit request";
 $Form_success = "Thank you for contacting us! We will respond soon.";
 $Form_error = "There was an error submitting the form. Please try again.";
+
+$Form_empty = 'This field is required. Please fill it out.';
+$Form_mailInvalid = 'Invalid email.';
+$Form_phoneLength = 'The phone number must be 10 digits long.';
+$Form_onlyNums = 'This field only accepts numbers.';
+$Form_onlyLetters = 'This field only accepts letters and spaces.';
+$Form_processing = 'Processing...';

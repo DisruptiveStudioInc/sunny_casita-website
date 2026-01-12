@@ -1,7 +1,8 @@
 <?php
 
 $Hero_vimeo = "1136718039";
-$Video_vimeo = "1136718039";
+$Video_vimeo_es = '1153673650';
+$Video_vimeo_en = '1153670564';
 
 $sec01 = array(
   [

@@ -67,7 +67,7 @@
     <h2 class="h1 tc-sec mt-0 mb-30 small-mb-20"><?= $Video_title; ?></h2>
 		<div class="w-100">
       <iframe
-        src="https://player.vimeo.com/video/<?= $Video_vimeo; ?>"
+        src="https://player.vimeo.com/video/<?= $Current_lang == 'es' ? $Video_vimeo_es : $Video_vimeo_en ?>"
         frameborder="0"
         allow="fullscreen; picture-in-picture"
         title="Sunny Casitas How Works Video"

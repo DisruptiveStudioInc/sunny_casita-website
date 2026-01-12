@@ -3,6 +3,7 @@
 return [
   'company_name' => "Sunny Casitas",
   'company_fullname' => "Sunny Casitas",
-  'email' => "client@gmail.com",
+  'from_email' => "no-reply@sunnycasita.com",
+  'email' => "sdiaz@disruptivestudio.com",
   'wame'=> "6025617378"
 ];

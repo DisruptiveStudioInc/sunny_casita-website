@@ -28,5 +28,10 @@
 
 <script src="/js/lozad.min.js"></script>
 <script src="/js/script.js"></script>
+<?php if (isset($pageScripts) && is_array($pageScripts)): ?>
+  <?php foreach($pageScripts as $script): ?>
+    <script src="<?= $script ?>"></script>
+  <?php endforeach; ?>
+<?php endif; ?>
 </body>
 </html>

@@ -324,7 +324,7 @@
 .lan,
 .sub,
 .get {
-  background: var(--color-ter);
+  background: var(--color-sec);
   color: var(--color-0);
 }
 @media screen and (max-width: 1080px) {

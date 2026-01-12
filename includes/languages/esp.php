@@ -237,3 +237,10 @@ $Form_messagePlaceholder = "Cuéntanos brevemente por qué te interesa";
 $Form_btn = "Enviar solicitud";
 $Form_success = "¡Gracias por contactarnos! Te responderemos pronto.";
 $Form_error = "Hubo un error al enviar el formulario. Por favor, inténtalo de nuevo.";
+
+$Form_empty = 'Este campo es obligatorio. Por favor llénalo.';
+$Form_mailInvalid = 'Correo inválido.';
+$Form_phoneLength = 'El número de teléfono debe tener 10 dígitos.';
+$Form_onlyNums = 'Este campo sólo acepta números.';
+$Form_onlyLetters = 'Este campo sólo acepta letras y espacios.';
+$Form_processing = 'Procesando...';
