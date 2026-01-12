@@ -1,7 +1,7 @@
 <?php
 
 return [
-  'maintenance_mode' => false,
+  'maintenance_mode' => true,
   'default_lang' => 'es',
   'available_langs' => [
     'es' => 'Esp',
