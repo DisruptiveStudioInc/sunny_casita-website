@@ -83,7 +83,6 @@ class FormController extends BaseController {
   private function sendEmail($name, $phone, $email, $usertype, $message, $constants) {
     $mailer = new PHPMailer(true);
 
-    error_log('Sendgrid key: ' . $_ENV['SENDGRID_KEY']);
     try {
       // SendGrid SMTP configuration
       $mailer->isSMTP();
