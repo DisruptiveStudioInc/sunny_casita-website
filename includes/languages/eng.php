@@ -227,7 +227,7 @@ $PartOf_meaningList4 = "Building relationships based on trust and peace of mind.
 $PartOf_whoTitle = "Who is it for?";
 $PartOf_whoText = "For people who believe in well-done work, human support, and creating a positive impact, one little house at a time.";
 
-$Form_subtitle = "Leave us your details, and let's talk calmly.";
+$Form_subtitle = "Leave us your details, and let's talk.";
 $Form_name = "Name";
 $Form_phone = "Phone / WhatsApp";
 $Form_email = "Email";

@@ -223,7 +223,7 @@ $PartOf_meaningList4 = "Construir relaciones basadas en confianza y tranquilidad
 $PartOf_whoTitle = "¿Para quién es?";
 $PartOf_whoText = "Para personas que creen en el trabajo bien hecho, en el acompañamiento humano y en crear impacto positivo, una casita a la vez.";
 
-$Form_subtitle = "Déjanos tus datos y conversemos con calma.";
+$Form_subtitle = "Déjanos tus datos y conversemos.";
 $Form_name = "Nombre";
 $Form_phone = "Teléfono / WhatsApp";
 $Form_email = "Correo electrónico";
