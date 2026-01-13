@@ -78,7 +78,7 @@ $Video_title = "This is how we work at Sunny Casitas";
 //-------------------------//
 
 $Letters_title_01 = "3 to 6 months <span class='tc-acc'>without payments</span>";
-$Letters_text_01 = "Start without pressure: enjoy up to six months without initial payments peacefully.";
+$Letters_text_01 = "Start without pressure: enjoy up to six months without initial payments.";
 
 $Letters_title_02 = "<span class='tc-acc'>Modern</span> designs";
 $Letters_text_02 = "That optimize space, functionality, and aesthetics for your home.";
@@ -109,7 +109,7 @@ $Vision_04 = "Construction and inspections";
 //-------------------------//
 
 $Slogan_title = "This is more than a little house. It's <span class='tc-pri'>our commitment</span> to your peace of mind.";
-$Slogan_text = "Build with peace of mind.";
+$Slogan_text = "Build without worries.";
 
 //-------------------------//
 // Products
@@ -170,7 +170,7 @@ $Testimonial6 = "Everything was transparent, well explained, and without surpris
 // Truth
 //-------------------------//
 
-$Truth_title = "This is how we fulfill our commitment to building with peace of mind.";
+$Truth_title = "This is how we take care of your building experience.";
 
 $Truth_title_01 = "Peace of mind";
 $Truth_text_01 = "Building without stress or surprises";
@@ -191,13 +191,13 @@ $Truth_text_04 = "Legal and secure process";
 $Spirit_title = "Our process";
 
 $Spirit_title_01 = "Project plan";
-$Spirit_text_01 = "Our construction process begins with a detailed project plan,";
+$Spirit_text_01 = "Our construction process begins with a detailed project plan.";
 $Spirit_title_02 = "Site preparation";
 $Spirit_text_02 = "Process of preparing land for construction.";
 $Spirit_title_03 = "Execution";
-$Spirit_text_03 = "Construction activities that take place on the project site";
+$Spirit_text_03 = "Construction activities that take place on the project site.";
 $Spirit_title_04 = "Deliver complete project";
-$Spirit_text_04 = "Deliver on time but most importantly complete and functional";
+$Spirit_text_04 = "Deliver on time but most importantly complete and functional.";
 
 //-------------------------//
 // Traits

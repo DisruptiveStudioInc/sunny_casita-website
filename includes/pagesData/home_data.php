@@ -152,7 +152,7 @@ $testimonials = array(
   ],
   [
     'id' => 3,
-    'name' => 'Ana y Luis P.',
+    'name' => 'Ana P.',
     'text' => $Testimonial3
   ],
   [
@@ -224,4 +224,12 @@ $sec08 = array(
     'title'=> $Spirit_title_03,
     'text'=> $Spirit_text_03
   ],
+  [
+    'id' => 4,
+    'image' => 'ejecucion.webp',
+    'small_img' => 'ejecucion_circulo.webp',
+    'name' => $Spirit_title_04,
+    'title'=> $Spirit_title_04,
+    'text'=> $Spirit_text_04
+  ]
 );

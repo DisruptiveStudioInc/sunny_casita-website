@@ -74,7 +74,7 @@ $Video_title = "Así trabajamos en Sunny Casitas";
 //-------------------------//
 
 $Letters_title_01 = "De 3 a 6 meses <span class='tc-acc'>sin pagos</span>";
-$Letters_text_01 = "Empieza sin presión: disfruta hasta seis meses sin pagos iniciales tranquilo.";
+$Letters_text_01 = "Empieza sin presión: disfruta hasta seis meses sin pagos iniciales.";
 
 $Letters_title_02 = "Diseños <span class='tc-acc'>modernos</span>";
 $Letters_text_02 = "Que optimizan espacio, funcionalidad y estética para tu hogar.";
@@ -105,7 +105,7 @@ $Vision_04 = "Construcción e inspecciones";
 //-------------------------//
 
 $Slogan_title = "Esto es más que una casita. Es <span class='tc-pri'>nuestro compromiso</span> con tu tranquilidad.";
-$Slogan_text = "Construye con tranquilidad.";
+$Slogan_text = "Construye sin preocupaciones.";
 
 //-------------------------//
 // Products
@@ -166,7 +166,7 @@ $Testimonial6 = "Todo fue transparente, bien explicado y sin sorpresas. Volverí
 // Truth
 //-------------------------//
 
-$Truth_title = "Así cumplimos nuestro compromiso de construir con tranquilidad.";
+$Truth_title = "Así cuidamos tu experiencia al construir.";
 
 $Truth_title_01 = "Tranquilidad";
 $Truth_text_01 = "Construir sin estrés ni sorpresas";
@@ -187,13 +187,13 @@ $Truth_text_04 = "Proceso legal y seguro";
 $Spirit_title = "Nuestro proceso";
 
 $Spirit_title_01 = "Plano del proyecto";
-$Spirit_text_01 = "Nuestro proceso de construcción comienza con un plan de proyecto detallado,";
+$Spirit_text_01 = "Nuestro proceso de construcción comienza con un plan de proyecto detallado.";
 $Spirit_title_02 = "Preparación del sitio";
 $Spirit_text_02 = "Proceso de preparación de un terreno para la construcción.";
 $Spirit_title_03 = "Ejecución";
-$Spirit_text_03 = "Actividades de construcción que tienen lugar en el sitio del proyecto";
+$Spirit_text_03 = "Actividades de construcción que tienen lugar en el sitio del proyecto.";
 $Spirit_title_04 = "Entregar proyecto completo";
-$Spirit_text_04 = "Entregar a tiempo pero lo mas importante completo y funcionando";
+$Spirit_text_04 = "Entregar a tiempo pero lo mas importante completo y funcionando.";
 
 //-------------------------//
 // Traits
