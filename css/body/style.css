@@ -16,6 +16,7 @@
   --color-acc-h: #ba8a0c;
 
   --color-gray: #27466e;
+  --color-ter-l: #ecf5fa;
   --color-ter-s1: #c0dbe7;
 
   --color-basic: #32d5db;
@@ -2126,6 +2127,61 @@ ul.textos li span img {
     flex: 1 1 auto;
     max-width: 100%;
     padding: 10px 0;
+  }
+}
+
+/* ============================================== */
+/* WHATSAPP FLOATING BTN */
+/* ============================================== */
+
+.wa-btn {
+  --size: 56px;
+  --offset: 40px;
+  position: fixed;
+  right: var(--offset);
+  bottom: var(--offset);
+  width: var(--size);
+  height: var(--size);
+  background-color: #25d366;
+  transition: background-color 250ms linear;
+  color: white;
+  z-index: 10;
+  svg {
+    width: calc(var(--size) * 0.7);
+    height: calc(var(--size) * 0.7);
+  }
+  &:hover {
+    background-color: #1daa61;
+  }
+  @media only screen and (max-width: 768px) {
+    --size: 48px;
+    --offset: 20px;
+    &.with-ref {
+      bottom: 30px;
+      z-index: 100;
+    }
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: rgba(37, 211, 102, 0.7);
+    animation: ripple 1.5s infinite;
+    z-index: -1;
+  }
+}
+@keyframes ripple {
+  0% {
+    transform: scale(0.9);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
   }
 }
 

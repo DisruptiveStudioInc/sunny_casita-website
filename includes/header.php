@@ -61,8 +61,8 @@
 </head>
 <body id="page-content">
   <?php if($user_replica): ?>
-    <div class="wrap-get">
-      <a href="<?= $Register; ?>" target="_blank" class="btn-get"><?= $Btn_started; ?></a>
+    <div class="wrap-get small-w-100 small-p-20 small-pt-0 small-pb-0">
+      <a href="<?= $Register; ?>" target="_blank" class="btn-get tc-0"><?= $Btn_started; ?></a>
     </div>
   <?php endif; ?>
 
