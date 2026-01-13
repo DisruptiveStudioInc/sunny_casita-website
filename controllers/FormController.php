@@ -57,8 +57,6 @@ class FormController extends BaseController {
     // Load constants
     $constants = include __DIR__ . '/../includes/constants.php';
 
-    error_log("Submission data:");
-    error_log(print_r($_POST, true));
     // Send email
     $emailSent = $this->sendEmail($name, $phone, $email, $usertype, $message, $constants);
 
@@ -95,7 +93,7 @@ class FormController extends BaseController {
       $mailer->CharSet = 'UTF-8';
 
       // Enable verbose debug output
-      $mailer->SMTPDebug = 2;
+      $mailer->SMTPDebug = 0;
       $mailer->Debugoutput = function($str, $level) {
         error_log("SMTP Debug level $level: $str");
       };
