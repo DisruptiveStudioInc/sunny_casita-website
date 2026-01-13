@@ -1,8 +1,9 @@
 <?php
 
-$Hero_vimeo = "1153727529";
-$Video_vimeo_es = '1153673650';
-$Video_vimeo_en = '1153670564';
+use Includes\Localization;
+
+$Hero_vimeo = "1153774357";
+$Video_vimeo = Localization::getLang() === 'es' ? '1153673650' : '1153670564';
 
 $sec01 = array(
   [
@@ -74,9 +75,9 @@ $homeProducts = array(
   [
     'id' => 1,
     'number' => 'one',
-    'background' => '',
-    'image' => 'adus.webp',
-    'url' => \Includes\Localization::url('product', ['adus']),
+    'background' => 'adus-bg.webp',
+    'image' => Localization::getLang() === 'en' ? 'adus-en.webp' : 'adus.webp',
+    'url' => Localization::url('product', ['adus']),
     'title' => $Product1_title,
     'text' => $Product1_text,
     'phrase' => $Product1_phrase,
@@ -87,9 +88,9 @@ $homeProducts = array(
   [
     'id' => 2,
     'number' => 'two',
-    'background' => '',
-    'image' => 'remodelaciones.webp',
-    'url' => \Includes\Localization::url('product', ['adus']),
+    'background' => 'remodelaciones-bg.webp',
+    'image' => Localization::getLang() === 'en' ? 'remodelaciones-en.webp' : 'remodelaciones.webp',
+    'url' => Localization::url('product', ['adus']),
     'title' => $Product2_title,
     'text' => $Product2_text,
     'phrase' => $Product2_phrase,
@@ -100,9 +101,9 @@ $homeProducts = array(
   [
     'id' => 3,
     'number' => 'three',
-    'background' => '',
-    'image' => 'techos.webp',
-    'url' => \Includes\Localization::url('product', ['adus']),
+    'background' => 'techos-bg.webp',
+    'image' => Localization::getLang() === 'en' ? 'techos-en.webp' : 'techos.webp',
+    'url' => Localization::url('product', ['adus']),
     'title' => $Product3_title,
     'text' => $Product3_text,
     'phrase' => $Product3_phrase,
@@ -113,9 +114,9 @@ $homeProducts = array(
   [
     'id' => 4,
     'number' => 'four',
-    'background' => '',
-    'image' => 'aires.webp',
-    'url' => \Includes\Localization::url('product', ['adus']),
+    'background' => 'aires-bg.webp',
+    'image' => Localization::getLang() === 'en' ? 'aires-en.webp' : 'aires.webp',
+    'url' => Localization::url('product', ['adus']),
     'title' => $Product4_title,
     'text' => $Product4_text,
     'phrase' => $Product4_phrase,
@@ -126,9 +127,9 @@ $homeProducts = array(
   [
     'id' => 5,
     'number' => 'five',
-    'background' => '',
-    'image' => 'mejoras.webp',
-    'url' => \Includes\Localization::url('product', ['adus']),
+    'background' => 'mejoras-bg.webp',
+    'image' => Localization::getLang() === 'en' ? 'mejoras-en.webp' : 'mejoras.webp',
+    'url' => Localization::url('product', ['adus']),
     'title' => $Product5_title,
     'text' => $Product5_text,
     'phrase' => $Product5_phrase,
@@ -174,21 +175,25 @@ $testimonials = array(
 $sec07 = array(
   [
     'id' => 1,
+    'image' => 'tranquilidad.webp',
     'title' => $Truth_title_01,
     'text' => $Truth_text_01
   ],
   [
     'id' => 2,
+    'image' => 'claridad.webp',
     'title' => $Truth_title_02,
     'text' => $Truth_text_02
   ],
   [
     'id' => 3,
+    'image' => 'acompanamiento.webp',
     'title' => $Truth_title_03,
     'text' => $Truth_text_03
   ],
   [
     'id' => 4,
+    'image' => 'seguridad.webp',
     'title' => $Truth_title_04,
     'text' => $Truth_text_04
   ]
@@ -197,22 +202,25 @@ $sec07 = array(
 $sec08 = array(
   [
     'id' => 1,
-    'small_img' => 'revive.webp',
-    'name' => 'revive',
+    'image' => 'plano.webp',
+    'small_img' => 'plano_circulo.webp',
+    'name' => $Spirit_title_01,
     'title'=> $Spirit_title_01,
     'text'=> $Spirit_text_01
   ],
   [
     'id' => 2,
-    'small_img' => 'rejuvenate.webp',
-    'name' => 'rejuvenate',
+    'image' => 'preparacion.webp',
+    'small_img' => 'preparacion_circulo.webp',
+    'name' => $Spirit_title_02,
     'title'=> $Spirit_title_02,
     'text'=> $Spirit_text_02
   ],
   [
     'id' => 3,
-    'small_img' => 'restore.webp',
-    'name' => 'restore',
+    'image' => 'ejecucion.webp',
+    'small_img' => 'ejecucion_circulo.webp',
+    'name' => $Spirit_title_03,
     'title'=> $Spirit_title_03,
     'text'=> $Spirit_text_03
   ],

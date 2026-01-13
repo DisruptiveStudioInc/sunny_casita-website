@@ -9,7 +9,7 @@
       </div>
 
     </div>
-    <img class="full-img-abs" src="/images/body/blank_full.svg" alt="background">
+    <img class="full-img-abs" src="/images/hero/hero.webp" alt="background">
   </div>
 </section>
 
@@ -24,7 +24,7 @@
       </div>
     </div>
     <div class="w-50 med-w-100 rel med-min-h-40dvh">
-      <img src="/images/body/blank_square.svg" alt="" class="background visible">
+      <img src="/images/hero/hero.webp" alt="" class="background visible">
     </div>
   </section>
 
@@ -38,7 +38,7 @@
   <section class="d-flex fd-row med-fd-col">
     <div class="w-50 med-w-100 c-acc-h d-flex jc-end med-jc-center">
       <div class="half inner left rel med-w-60">
-        <img src="/images/body/blank_10_13.svg" alt="" class="image-meaning br-20 abs med-min-h-40dvh med-mt-50">
+        <img src="/images/hero/hero.webp" alt="" class="image-meaning br-20 abs med-min-h-40dvh med-mt-50">
       </div>
     </div>
     <div class="half right med-w-100">
