@@ -73,7 +73,7 @@
   <main class="rel d-flex jc-center ai-center of-h overlay o-30" style="min-height:100dvh;">
     <img src="/images/hero/soon.webp" alt="Placeholder" class="background" style="opacity:1" />
     <div class="d-flex fd-col ai-center rel p-20" style="z-index:10">
-      <h1 class="h1-special t-c m-0"><?= $Soon_Text ?></h1>
+      <h1 class="h1-special t-c tc-0 m-0"><?= $Soon_Text ?></h1>
     </div>
   </main>
 </body>
