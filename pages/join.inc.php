@@ -18,7 +18,7 @@
   <section class="d-flex fd-row med-fd-col jc-end">
     <div class="half med-w-100 left">
       <div class="p-60 all-tc-0 c-pri-h br-believe med-p-30 med-pt-50 med-pb-50">
-        <h2 class="h1 mt-0 mb-20 small-mb-10"><?= $PartOf_text1 ?></h2>
+        <h2 class="h1 mt-0 mb-20 small-mb-10 leading-1"><?= $PartOf_text1 ?></h2>
         <p class="mt-0 mb-20 small-mb-10"><?= $PartOf_text2 ?></p>
         <p class="m-0"><?= $PartOf_text3 ?></p>
       </div>

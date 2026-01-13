@@ -49,7 +49,7 @@ $Footer_link_03 = "Privacy Policy";
 // Hero
 //-------------------------//
 
-$Hero_01 = "We build your dreams into a little house";
+$Hero_01 = "<span class='tc-acc'>We build</span> your dreams into a little house";
 
 //-------------------------//
 // Journey

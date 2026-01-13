@@ -18,7 +18,7 @@
   </div>
 
   <div class="text-hero t-c hero-text">
-    <h1 class="h1-special first m-0"><?= $Hero_01; ?></h1>
+    <h1 class="h1-special first mt-0 mb-0 m-center" style="max-width:18ch"><?= $Hero_01; ?></h1>
   </div>
 
   <div class="section-arrows">
@@ -90,7 +90,7 @@
 		<div class="letter-wrap" style="--item-index:<?= $k; ?>">
       <img class="letter-bg img_0<?= $slide['id']; ?>" src="./images/body/letters/<?= $slide['id']; ?>.webp" alt="<?= $slide['title']; ?>">
       <div class="letter-content word_0<?= $slide['id']; ?> abs w-100 p-40 med-p-10-20 med-pt-50 med-pb-50 t-c">
-        <h2 class="letter-title tc-0"><?= $slide['title']; ?></h2>
+        <h2 class="letter-title tc-0 t-balance"><?= $slide['title']; ?></h2>
         <p class="h4 letter-text t-pretty h3 tc-0"><?= $slide['text']; ?></p>
       </div>
 		</div>
@@ -107,7 +107,7 @@
 	</div>
 
 	<div class="mw-1440 t-c min-h-dvh fd-col jc-center ai-center parallax">
-		<h2 class="h1-special short tc-sec mt-0 mb-50 med-mb-30"><?= $Vision_text; ?></h2>
+		<h2 class="h1-special steps tc-sec mt-0 mb-50 med-mb-30"><?= $Vision_text; ?></h2>
     <ul class="d-flex fw-wrap jc-center mw-1080 g-40 med-g-20 pt-0 pb-0">
       <?php foreach($sec03 as $k => $item): ?>
         <li class="box step rel d-flex fd-col jc-center ai-center g-0 p-30 pt-20 pb-20 br-999 w-100 c-pri box_<?= $item['id']; ?>">
@@ -176,8 +176,8 @@
 	</div>
 
 	<div class="mw-1440 t-c h-100 med-h-0 jc-center fd-col med-pt-100 med-pb-100">
-    <h2 class="h1-special short tc-sec mt-0 mb-40 small-mb-20"><?= $Slogan_title ?></h2>
-    <p class="h3 tc-gray"><?= $Slogan_text; ?></p>
+    <h2 class="h1-special slogan tc-sec mt-0 mb-40 small-mb-20"><?= $Slogan_title ?></h2>
+    <p class="h3 tc-gray serif-italic-font"><?= $Slogan_text; ?></p>
 	</div>
 </section>
 

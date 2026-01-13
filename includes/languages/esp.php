@@ -45,7 +45,7 @@ $Footer_link_01 = "Política de Privacidad";
 // Hero
 //-------------------------//
 
-$Hero_01 = "Construimos tus sueños en una casita";
+$Hero_01 = "<span class='tc-acc'>Construimos</span> tus sueños en una casita";
 
 //-------------------------//
 // Journey

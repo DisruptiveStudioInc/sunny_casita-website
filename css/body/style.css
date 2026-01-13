@@ -28,26 +28,13 @@
 
   /*-- Font Family --*/
 
-  --f-family-h: "AvenirNext", sans-serif;
-  --f-family: "AvenirNext", sans-serif;
+  --f-family-h: "Prompt", sans-serif;
+  --f-family: "Inter", sans-serif;
 
   /*-- Font Size --*/
 
   --fs-base: 1rem;
   --lh-base: 1.5;
-}
-
-@font-face {
-  font-family: "AvenirNext";
-  font-style: normal;
-  font-weight: 400;
-  src: url("../../fonts/AvenirNext-Regular.woff2") format("woff2");
-}
-@font-face {
-  font-family: "AvenirNext";
-  font-style: normal;
-  font-weight: 700;
-  src: url("../../fonts/AvenirNext-Bold.woff2") format("woff2");
 }
 
 @keyframes scaleUpDown {
@@ -102,6 +89,13 @@
 .span-2 {
   grid-column: span 2;
 }
+.serif-italic-font {
+  font-family: "STIX Two Text", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: italic;
+}
+
 @media only screen and (min-width: 1081px) {
   .sticky {
     position: sticky;
@@ -424,14 +418,14 @@ section {
   &.short {
     font-size: 5.5vw;
   }
+  &.steps {
+    font-size: 4.5vw;
+  }
+  &.slogan {
+    font-size: 5vw;
+  }
 }
 
-.h1-special.first span {
-  font-size: 4vw;
-  line-height: 1.1;
-  display: block;
-  width: 100%;
-}
 @media screen and (max-width: 768px) {
   .h1-special.first {
     font-size: 10vw;
@@ -2209,5 +2203,8 @@ ul.textos li span img {
   }
   .br-l-20 {
     border-radius: 0 20px 20px 0;
+  }
+  .leading-1 {
+    line-height: 1.1 !important;
   }
 }
