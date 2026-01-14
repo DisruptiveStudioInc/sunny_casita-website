@@ -272,7 +272,7 @@
   <img src="/images/hero/hero.webp" alt="" class="background" style="opacity:0.1">
 	<div class="mw-1280 t-c big rel banner-padding">
 		<h2 class="h1 m-center tc-0"><?= $Traits_title; ?></h2>
-    <a href="<?= \Includes\Localization::url('join') ?>" class="btn big c-acc br-50 mt-40 small-mt-20"><?= $Btn_connect; ?></a>
+    <a href="https://wa.me/<?= $constants['wame'] ?>" target="_blank" rel="noopener noreferrer" class="btn big c-acc br-50 mt-40 small-mt-20"><?= $Btn_connect; ?></a>
 	</div>
 </section>
 
