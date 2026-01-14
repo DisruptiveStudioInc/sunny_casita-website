@@ -12,22 +12,22 @@ class Localization {
   public static $routes = [
     'home' => [
       'languages' => [
-        'es' => '/',
-        'en' => '/en'
+        'es' => '/es',
+        'en' => '/'
       ],
       'handler' => 'PageController@home'
     ],
     'join' => [
       'languages' => [
-        'es' => '/forma-parte',
-        'en' => '/en/join-us'
+        'es' => '/es/forma-parte',
+        'en' => '/join-us'
       ],
       'handler' => 'PageController@join'
     ],
     'privacy' => [
       'languages' => [
-        'es' => '/politica-de-privacidad',
-        'en' => '/en/privacy-policy'
+        'es' => '/es/politica-de-privacidad',
+        'en' => '/privacy-policy'
       ],
       'handler' => 'PageController@privacy'
     ],

@@ -2,9 +2,9 @@
 
 return [
   'maintenance_mode' => true,
-  'default_lang' => 'es',
+  'default_lang' => 'en',
   'available_langs' => [
-    'es' => 'Esp',
-    'en' => 'Eng'
+    'en' => 'Eng',
+    'es' => 'Esp'
   ],
 ];

@@ -86,8 +86,8 @@ $Letters_text_02 = "That optimize space, functionality, and aesthetics for your 
 $Letters_title_03 = "<span class='tc-acc'>High-quality</span> materials";
 $Letters_text_03 = "Ensure durability, safety, and long-term value.";
 
-$Letters_title_04 = "<span class='tc-acc'>Low or no</span> closing costs";
-$Letters_text_04 = "Make an accessible and secure decision easier.";
+$Letters_title_04 = "<span class='tc-acc'>Close without</span> high costs";
+$Letters_text_04 = "Easier. Clearer. Safer.";
 
 $Letters_title_05 = "<span class='tc-acc'>No initial</span> payments";
 $Letters_text_05 = "Build without an initial payment and take the first step today.";
@@ -216,7 +216,7 @@ $PartOf_heroText = "We build little houses, but above all, we support people.";
 $PartOf_text1 = "We believe that building a little house can be a clear, peaceful, and well-supported process.";
 $PartOf_text2 = "That's why, at Sunny Casitas, we open the door to people who want to grow, help, and build something with purpose.";
 $PartOf_text3 = "Being part of Sunny Casitas means being part of a community that supports families in improving their homes, with legal processes, affordable options, and real support every step of the way.";
-$PartOf_text4 = "Here, it's not just about building. It's about supporting important decisions, building trust, and creating real opportunities for more families.";
+$PartOf_text4 = "<span class='fw-700'>Here, it's not just about building.</span> It's about supporting important decisions, building trust, and creating real opportunities for more families.";
 
 $PartOf_meaningTitle = "What does it mean to be part?";
 $PartOf_meaningList1 = "Supporting people in the process of their little house.";

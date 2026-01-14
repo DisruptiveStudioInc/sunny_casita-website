@@ -32,10 +32,8 @@ $Footer_Rights  = $company_fullname." © ".date("Y").". All rights reserved.";
 // LINKS
 //-------------------------//
 
-// $Register = "https://my.sunnycasitas.com/register/$user_replica";
-// $Login    = "https://my.sunnycasitas.com/login";
-$Register = "#";
-$Login    = "#";
+$Register = "https://my.sunnycasita.com/register/$user_replica";
+$Login    = "https://my.sunnycasita.com/login";
 
 $ref = isset($user_replica) ? "?ref=$user_replica" : '';
 

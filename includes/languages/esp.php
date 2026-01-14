@@ -82,8 +82,8 @@ $Letters_text_02 = "Que optimizan espacio, funcionalidad y estética para tu hog
 $Letters_title_03 = "Materiales de <span class='tc-acc'>alta calidad</span>";
 $Letters_text_03 = "Garantizan durabilidad, seguridad y valor a largo plazo.";
 
-$Letters_title_04 = "<span class='tc-acc'>Bajos o nulos</span> costos de cierre";
-$Letters_text_04 = "Facilitan una decisión accesible segura.";
+$Letters_title_04 = "<span class='tc-acc'>Cierra sin</span> gastos elevados";
+$Letters_text_04 = "Más fácil. Más claro. Más seguro.";
 
 $Letters_title_05 = "<span class='tc-acc'>No pagos</span> de inicio";
 $Letters_text_05 = "Construye sin pago de inicio y da el primer paso hoy.";
