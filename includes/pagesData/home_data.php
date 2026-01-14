@@ -226,8 +226,8 @@ $sec08 = array(
   ],
   [
     'id' => 4,
-    'image' => 'ejecucion.webp',
-    'small_img' => 'ejecucion_circulo.webp',
+    'image' => 'entregar.webp',
+    'small_img' => 'entregar_circulo.webp',
     'name' => $Spirit_title_04,
     'title'=> $Spirit_title_04,
     'text'=> $Spirit_text_04
