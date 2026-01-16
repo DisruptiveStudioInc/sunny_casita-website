@@ -47,7 +47,7 @@
   <link rel="stylesheet" type="text/css" href="/css/min/main.min.css" />
   <link rel="stylesheet" type="text/css" href="/css/min/root.min.css" />
 
-  <link rel="stylesheet" type="text/css" href="/css/body/style.min.css" />
+  <link rel="stylesheet" type="text/css" href="/css/body/style.css" />
   <link rel="stylesheet" type="text/css" href="/css/body/navigation.min.css" />
   <link rel="stylesheet" type="text/css" href="/css/body/slick.min.css" />
 
@@ -60,9 +60,9 @@
 
 </head>
 <body id="page-content">
-  <?php if($user_replica): ?>
+  <?php if(isset($float_button) && $float_button): ?>
     <div class="wrap-get small-w-100 small-p-20 small-pt-0 small-pb-0">
-      <a href="<?= $Register; ?>" target="_blank" class="btn-get tc-0"><?= $Btn_started; ?></a>
+      <a href="<?= \Includes\Localization::url('startnow') ?>" class="btn-get tc-0"><?= $Btn_started; ?></a>
     </div>
   <?php endif; ?>
 

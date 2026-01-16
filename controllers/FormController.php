@@ -9,12 +9,7 @@ use Includes\Localization;
 class FormController extends BaseController {
 
   public function handleJoinSubmission() {
-    header('Content-Type: application/json');
-
-    // Validate request method
-    if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-      http_response_code(405);
-      echo json_encode(['success' => false, 'message' => 'Method not allowed']);
+    if (!$this->validateRequestMethod()) {
       return;
     }
 
@@ -26,23 +21,132 @@ class FormController extends BaseController {
     $message = $_POST['message'] ?? '';
     $lang = $_POST['lang'] ?? 'es';
 
-    // Load language file for messages
-    Localization::setLang($lang);
-    Localization::loadLanguage();
+    // Initialize language
+    $this->initializeLanguage($lang);
 
     // Validate required fields
-    if (empty($name) || empty($phone) || empty($email) || empty($usertype)) {
-      http_response_code(400);
-      echo json_encode([
-        'success' => false,
-        'message' => $lang === 'en'
-          ? 'All required fields must be filled'
-          : 'Todos los campos requeridos deben ser completados'
-      ]);
+    $requiredFields = ['name' => $name, 'phone' => $phone, 'email' => $email, 'usertype' => $usertype];
+    if (!$this->validateRequiredFields($requiredFields, $lang)) {
       return;
     }
 
     // Validate email format
+    if (!$this->validateEmailFormat($email, $lang)) {
+      return;
+    }
+
+    // Load constants
+    $constants = include __DIR__ . '/../includes/constants.php';
+
+    // Send email
+    $emailSent = $this->sendJoinEmail($name, $phone, $email, $usertype, $message, $constants);
+
+    // Send response
+    $this->sendFormResponse($emailSent, $lang);
+  }
+
+  public function handleStartNowSubmission() {
+    if (!$this->validateRequestMethod()) {
+      return;
+    }
+
+    // Get form data
+    $name = $_POST['name'] ?? '';
+    $phone = $_POST['phone'] ?? '';
+    $email = $_POST['email'] ?? '';
+    $city = $_POST['city'] ?? '';
+    $state = $_POST['state'] ?? '';
+    $acceptance = $_POST['acceptance'] ?? '';
+    $lang = $_POST['lang'] ?? 'es';
+
+    // Initialize language
+    $this->initializeLanguage($lang);
+
+    // Validate required fields
+    $requiredFields = ['name' => $name, 'phone' => $phone, 'email' => $email, 'city' => $city, 'state' => $state, 'acceptance' => $acceptance];
+    if (!$this->validateRequiredFields($requiredFields, $lang)) {
+      return;
+    }
+
+    // Validate email format
+    if (!$this->validateEmailFormat($email, $lang)) {
+      return;
+    }
+
+    // Load constants
+    $constants = include __DIR__ . '/../includes/constants.php';
+
+    // Send email
+    $emailSent = $this->sendStartNowEmail($name, $phone, $email, $city, $state, $acceptance, $constants);
+
+    // Send response
+    $this->sendFormResponse($emailSent, $lang);
+  }
+
+  private function sendJoinEmail($name, $phone, $email, $usertype, $message, $constants) {
+    $subject = 'New Join Request - Sunny Casitas';
+    $fields = [
+      'Name' => $name,
+      'Phone' => $phone,
+      'Email' => $email,
+      'User Type' => $usertype,
+    ];
+
+    if (!empty($message)) {
+      $fields['Message'] = $message;
+    }
+
+    return $this->sendEmail($subject, $fields, $email, $name, $constants);
+  }
+
+  private function sendStartNowEmail($name, $phone, $email, $city, $state, $acceptance, $constants) {
+    $subject = 'New Start Now Request - Sunny Casitas';
+    $fields = [
+      'Name' => $name,
+      'Phone' => $phone,
+      'Email' => $email,
+      'City' => $city,
+      'State' => $state,
+      'Acceptance' => $acceptance,
+    ];
+
+    return $this->sendEmail($subject, $fields, $email, $name, $constants);
+  }
+
+  private function validateRequestMethod() {
+    header('Content-Type: application/json');
+
+    if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+      http_response_code(405);
+      echo json_encode(['success' => false, 'message' => 'Method not allowed']);
+      return false;
+    }
+
+    return true;
+  }
+
+  private function initializeLanguage($lang) {
+    Localization::setLang($lang);
+    Localization::loadLanguage();
+  }
+
+  private function validateRequiredFields($fields, $lang) {
+    foreach ($fields as $value) {
+      if (empty($value)) {
+        http_response_code(400);
+        echo json_encode([
+          'success' => false,
+          'message' => $lang === 'en'
+            ? 'All required fields must be filled'
+            : 'Todos los campos requeridos deben ser completados'
+        ]);
+        return false;
+      }
+    }
+    return true;
+  }
+
+  private function validateEmailFormat($email, $lang) {
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
       http_response_code(400);
       echo json_encode([
@@ -51,15 +155,12 @@ class FormController extends BaseController {
           ? 'Invalid email format'
           : 'Formato de correo electrónico inválido'
       ]);
-      return;
+      return false;
     }
+    return true;
+  }
 
-    // Load constants
-    $constants = include __DIR__ . '/../includes/constants.php';
-
-    // Send email
-    $emailSent = $this->sendEmail($name, $phone, $email, $usertype, $message, $constants);
-
+  private function sendFormResponse($emailSent, $lang) {
     if ($emailSent) {
       echo json_encode([
         'success' => true,
@@ -78,7 +179,7 @@ class FormController extends BaseController {
     }
   }
 
-  private function sendEmail($name, $phone, $email, $usertype, $message, $constants) {
+  private function sendEmail($subject, $fields, $replyEmail, $replyName, $constants) {
     $mailer = new PHPMailer(true);
 
     try {
@@ -104,15 +205,15 @@ class FormController extends BaseController {
         $constants['company_name']
       );
       $mailer->addAddress($constants['email']);
-      $mailer->addReplyTo($email, $name);
+      $mailer->addReplyTo($replyEmail, $replyName);
 
       // Email content
       $mailer->isHTML(true);
-      $mailer->Subject = 'New Join Request - Sunny Casitas';
+      $mailer->Subject = $subject;
 
-      $htmlBody = $this->buildEmailTemplate($name, $phone, $email, $usertype, $message);
+      $htmlBody = $this->buildEmailTemplate($subject, $fields);
       $mailer->Body = $htmlBody;
-      $mailer->AltBody = $this->buildPlainTextEmail($name, $phone, $email, $usertype, $message);
+      $mailer->AltBody = $this->buildPlainTextEmail($subject, $fields);
 
       $mailer->send();
       return true;
@@ -123,7 +224,30 @@ class FormController extends BaseController {
     }
   }
 
-  private function buildEmailTemplate($name, $phone, $email, $usertype, $message) {
+  private function buildEmailTemplate($subject, $fields) {
+    $fieldsHtml = '';
+
+    foreach ($fields as $label => $value) {
+      // Check if this is a long text field (like Message)
+      $isLongText = (strlen($value) > 100 || strpos($value, "\n") !== false);
+
+      if ($isLongText) {
+        $fieldsHtml .= "
+            <div class='field'>
+              <span class='label'>" . htmlspecialchars($label) . ":</span>
+              <div style='margin-top: 10px; padding: 10px; background-color: #f8f9fa; border-radius: 5px;'>
+                " . nl2br(htmlspecialchars($value)) . "
+              </div>
+            </div>";
+      } else {
+        $fieldsHtml .= "
+            <div class='field'>
+              <span class='label'>" . htmlspecialchars($label) . ":</span>
+              <span class='value'>" . htmlspecialchars($value) . "</span>
+            </div>";
+      }
+    }
+
     return "
       <!DOCTYPE html>
       <html>
@@ -142,33 +266,10 @@ class FormController extends BaseController {
       <body>
         <div class='container'>
           <div class='header'>
-            <h2 style='margin: 0; color: #495057;'>New Join Request</h2>
+            <h2 style='margin: 0; color: #495057;'>" . htmlspecialchars($subject) . "</h2>
           </div>
           <div class='content'>
-            <div class='field'>
-              <span class='label'>Name:</span>
-              <span class='value'>" . htmlspecialchars($name) . "</span>
-            </div>
-            <div class='field'>
-              <span class='label'>Phone:</span>
-              <span class='value'>" . htmlspecialchars($phone) . "</span>
-            </div>
-            <div class='field'>
-              <span class='label'>Email:</span>
-              <span class='value'>" . htmlspecialchars($email) . "</span>
-            </div>
-            <div class='field'>
-              <span class='label'>User Type:</span>
-              <span class='value'>" . htmlspecialchars($usertype) . "</span>
-            </div>
-            " . (!empty($message) ? "
-            <div class='field'>
-              <span class='label'>Message:</span>
-              <div style='margin-top: 10px; padding: 10px; background-color: #f8f9fa; border-radius: 5px;'>
-                " . nl2br(htmlspecialchars($message)) . "
-              </div>
-            </div>
-            " : "") . "
+            " . $fieldsHtml . "
           </div>
         </div>
       </body>
@@ -176,15 +277,11 @@ class FormController extends BaseController {
     ";
   }
 
-  private function buildPlainTextEmail($name, $phone, $email, $usertype, $message) {
-    $text = "New Join Request - Sunny Casitas\n\n";
-    $text .= "Name: $name\n";
-    $text .= "Phone: $phone\n";
-    $text .= "Email: $email\n";
-    $text .= "User Type: $usertype\n";
+  private function buildPlainTextEmail($subject, $fields) {
+    $text = $subject . "\n\n";
 
-    if (!empty($message)) {
-      $text .= "\nMessage:\n$message\n";
+    foreach ($fields as $label => $value) {
+      $text .= "$label: $value\n";
     }
 
     return $text;

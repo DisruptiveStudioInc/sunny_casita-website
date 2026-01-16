@@ -24,6 +24,13 @@ class Localization {
       ],
       'handler' => 'PageController@join'
     ],
+    'startnow' => [
+      'languages' => [
+        'es' => '/es/empieza-ahora',
+        'en' => '/start-now'
+      ],
+      'handler' => 'PageController@startnow'
+    ],
     'privacy' => [
       'languages' => [
         'es' => '/es/politica-de-privacidad',

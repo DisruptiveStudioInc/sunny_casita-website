@@ -37,19 +37,15 @@ $Soon_Text = "Coming soon";
 // Footer
 //-------------------------//
 
-$Footer_title_01 = "Schedule";
-$Footer_title_02 = "Legal";
-$Footer_title_03 = "About us";
+$Footer_title_01 = "Legal";
 
-$Footer_link_01 = "IBO Terms";
-$Footer_link_02 = "Policies and Procedures";
-$Footer_link_03 = "Privacy Policy";
+$Footer_link_01 = "Privacy Policy";
 
 //-------------------------//
 // Hero
 //-------------------------//
 
-$Hero_01 = "<span class='tc-acc'>We build</span> your dreams into a little house";
+$Hero_01 = "<span class='tc-acc'>We build</span> your dreams into a casita";
 
 //-------------------------//
 // Journey
@@ -108,7 +104,7 @@ $Vision_04 = "Construction and inspections";
 // Slogan
 //-------------------------//
 
-$Slogan_title = "This is more than a little house. It's <span class='tc-pri'>our commitment</span> to your peace of mind.";
+$Slogan_title = "This is more than a casita. It's <span class='tc-pri'>our commitment</span> to your peace of mind.";
 $Slogan_text = "Build without worries.";
 
 //-------------------------//
@@ -116,8 +112,8 @@ $Slogan_text = "Build without worries.";
 //-------------------------//
 
 $Product1_title = "Adus";
-$Product1_phrase = "Build your little house without complications";
-$Product1_text = "We create legal, modern, and affordable little houses for homeowners with available space. We handle plans, permits, and full management, offering flexible options that avoid initial payments and financial pressure, so you can move forward with clarity, confidence, and real support every step of the way.";
+$Product1_phrase = "Build your casita without complications";
+$Product1_text = "We create legal, modern, and affordable casitas for homeowners with available space. We handle plans, permits, and full management, offering flexible options that avoid initial payments and financial pressure, so you can move forward with clarity, confidence, and real support every step of the way.";
 $Product1_list1 = "Plans and permits.";
 $Product1_list2 = "Full management.";
 $Product1_list3 = "Flexible options.";
@@ -159,7 +155,7 @@ $Product5_list4 = "Clear support.";
 // Testimonials
 //-------------------------//
 
-$Testimonial1 = "I thought it would be a complicated process, but Sunny Casitas supported us throughout. Today our little house is a reality.";
+$Testimonial1 = "I thought it would be a complicated process, but Sunny Casitas supported us throughout. Today our casita is a reality.";
 $Testimonial2 = "What I valued most was the clarity. From the beginning, we knew what was next, and we never felt alone.";
 $Testimonial3 = "They helped us with all the legal aspects, and the design turned out just as we imagined. It was a very peaceful experience.";
 $Testimonial4 = "Building without initial payments gave us a lot of peace. Sunny Casitas made something we thought was far away possible.";
@@ -203,7 +199,7 @@ $Spirit_text_04 = "Deliver on time but most importantly complete and functional.
 // Traits
 //-------------------------//
 
-$Traits_title = "<span class='tc-acc'>Your little house starts</span> with a conversation.";
+$Traits_title = "<span class='tc-acc'>Your casita starts</span> with a conversation.";
 
 //-------------------------//
 // Be part of - Inner page
@@ -211,21 +207,21 @@ $Traits_title = "<span class='tc-acc'>Your little house starts</span> with a con
 
 $PartOf_pageTitle = "Join us";
 $PartOf_heroTitle = "Be part of Sunny Casitas";
-$PartOf_heroText = "We build little houses, but above all, we support people.";
+$PartOf_heroText = "We build casitas, but above all, we support people.";
 
-$PartOf_text1 = "We believe that building a little house can be a clear, peaceful, and well-supported process.";
+$PartOf_text1 = "We believe that building a casita can be a clear, peaceful, and well-supported process.";
 $PartOf_text2 = "That's why, at Sunny Casitas, we open the door to people who want to grow, help, and build something with purpose.";
 $PartOf_text3 = "Being part of Sunny Casitas means being part of a community that supports families in improving their homes, with legal processes, affordable options, and real support every step of the way.";
 $PartOf_text4 = "<span class='fw-700'>Here, it's not just about building.</span> It's about supporting important decisions, building trust, and creating real opportunities for more families.";
 
 $PartOf_meaningTitle = "What does it mean to be part?";
-$PartOf_meaningList1 = "Supporting people in the process of their little house.";
+$PartOf_meaningList1 = "Supporting people in the process of their casita.";
 $PartOf_meaningList2 = "Sharing clear and pressure-free information.";
 $PartOf_meaningList3 = "Growing within a community with purpose.";
 $PartOf_meaningList4 = "Building relationships based on trust and peace of mind.";
 
 $PartOf_whoTitle = "Who is it for?";
-$PartOf_whoText = "For people who believe in well-done work, human support, and creating a positive impact, one little house at a time.";
+$PartOf_whoText = "For people who believe in well-done work, human support, and creating a positive impact, one casita at a time.";
 
 $Form_subtitle = "Leave us your details, and let's talk.";
 $Form_name = "Name";
@@ -248,3 +244,16 @@ $Form_phoneLength = 'The phone number must be 10 digits long.';
 $Form_onlyNums = 'This field only accepts numbers.';
 $Form_onlyLetters = 'This field only accepts letters and spaces.';
 $Form_processing = 'Processing...';
+
+//-------------------------//
+// Start now - Inner page
+//-------------------------//
+
+$StartNow_pageTitle = "Start now";
+$StartNow_heroTitle = "Start your project with Sunny Casitas";
+$StartNow_heroText = "Leave us your details and an advisor will contact you to guide you without obligation.";
+$Form_city = "City";
+$Form_state = "State";
+$Form_acceptance = "I agree to be contacted by Sunny Casitas via call or WhatsApp.";
+$StartNow_submit = "I want to start";
+$StartNow_footNote = "Your information is confidential. We only use it to contact you and support you in your process.";

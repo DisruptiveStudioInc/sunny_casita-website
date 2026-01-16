@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
     messageContainer.style.display = "none";
 
     try {
-      const response = await fetch("/api/form/join", {
+      const response = await fetch(form.action, {
         method: "POST",
         body: formData,
       });

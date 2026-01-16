@@ -26,7 +26,7 @@ $isHttps = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ||
   ($_SERVER['HTTP_X_FORWARDED_PROTO'] ?? '') === 'https';
 $protocol = $isHttps ? "https" : "http";
 $Host_Site = $protocol . "://" . $_SERVER["HTTP_HOST"];
-$Footer_Rights  = $company_fullname." © ".date("Y").". All rights reserved.";
+$Footer_Rights  = $company_fullname." © 2025. All rights reserved.";
 
 //-------------------------//
 // LINKS
@@ -43,7 +43,7 @@ $ref = isset($user_replica) ? "?ref=$user_replica" : '';
 
 $Menu = array(
   [
-    'link' => ($Actual_Page === 'home') ? '#home' : \Includes\Localization::url('home'),
+    'link' => ($Actual_Page === 'home') ? '#home' : Localization::url('home'),
     'status' => '',
     'title' => $Menu_01,
     'show' => true,
@@ -64,7 +64,7 @@ $Menu = array(
     'hasSubmenu' => false
   ],
   [
-    'link' => \Includes\Localization::url('join'),
+    'link' => Localization::url('join'),
     'status' => ($Actual_Page === 'join') ? 'active' : '',
     'title' => $Menu_04,
     'show' => true,
@@ -75,7 +75,8 @@ $Menu = array(
 $Footer_menu = array(
   'legal' => array(
     [
-      'link' => Localization::url('privacy'),
+      // 'link' => Localization::url('privacy'),
+      'link' => '#',
       'title' => $Footer_link_01
     ]
   )

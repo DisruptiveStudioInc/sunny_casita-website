@@ -244,3 +244,16 @@ $Form_phoneLength = 'El número de teléfono debe tener 10 dígitos.';
 $Form_onlyNums = 'Este campo sólo acepta números.';
 $Form_onlyLetters = 'Este campo sólo acepta letras y espacios.';
 $Form_processing = 'Procesando...';
+
+//-------------------------//
+// Start now - Inner page
+//-------------------------//
+
+$StartNow_pageTitle = "Empieza ahora";
+$StartNow_heroTitle = "Empieza tu proyecto con Sunny Casitas";
+$StartNow_heroText = "Déjanos tus datos y un asesor se pondrá en contacto contigo para orientarte sin compromiso.";
+$Form_city = "Ciudad";
+$Form_state = "Estado";
+$Form_acceptance = "Acepto ser contactado por Sunny Casitas vía llamada o WhatsApp.";
+$StartNow_submit = "Quiero empezar";
+$StartNow_footNote = "Tu información es confidencial. Solo la usamos para contactarte y acompañarte en tu proceso.";

@@ -13,6 +13,7 @@ class PageController extends BaseController {
   public function home($lang) {
     $this->setup($lang, 'home');
     $data = $this->loadPageData('home_data.php');
+    $data['float_button'] = true;
     $this->view('home', $data);
   }
 
@@ -20,8 +21,16 @@ class PageController extends BaseController {
     $this->setup($lang, 'join');
      $data = $this->loadPageData('join_data.php');
     $data['page_title'] = $GLOBALS['PartOf_pageTitle'];
-    $data['pageScripts'] = ['/js/join.js'];
+    $data['pageScripts'] = ['/js/forms.js'];
     $this->view('join', $data);
+  }
+
+  public function startnow($lang) {
+    $this->setup($lang, 'startnow');
+     $data = $this->loadPageData('startnow_data.php');
+    $data['page_title'] = $GLOBALS['StartNow_pageTitle'];
+    $data['pageScripts'] = ['/js/forms.js'];
+    $this->view('startnow', $data);
   }
 
   public function privacy($lang) {

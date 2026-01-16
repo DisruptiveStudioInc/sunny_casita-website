@@ -28,6 +28,10 @@ $router->post('/api/form/join', function() {
   $controller = new Controllers\FormController();
   $controller->handleJoinSubmission();
 });
+$router->post('/api/form/startnow', function() {
+  $controller = new Controllers\FormController();
+  $controller->handleStartNowSubmission();
+});
 
 // Dynamic Route Registration
 foreach (Localization::$routes as $key => $config) {
