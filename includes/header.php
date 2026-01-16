@@ -47,7 +47,7 @@
   <link rel="stylesheet" type="text/css" href="/css/min/main.min.css" />
   <link rel="stylesheet" type="text/css" href="/css/min/root.min.css" />
 
-  <link rel="stylesheet" type="text/css" href="/css/body/style.css" />
+  <link rel="stylesheet" type="text/css" href="/css/body/style.min.css" />
   <link rel="stylesheet" type="text/css" href="/css/body/navigation.min.css" />
   <link rel="stylesheet" type="text/css" href="/css/body/slick.min.css" />
 
