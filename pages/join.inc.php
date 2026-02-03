@@ -78,6 +78,10 @@
             <input type="email" id="email" name="email" required class="input tc-gray" autocomplete="email">
           </div>
           <div class="form-group span-2 med-span-1">
+            <label for="address" class="tc-gray mt-0"><?= $Form_address ?></label>
+            <input type="text" id="address" name="address" required class="input tc-gray" autocomplete="address-line1">
+          </div>
+          <div class="form-group span-2 med-span-1">
             <p class="tc-gray mt-0"><?= $Form_typeUser ?></p>
             <div class="radio-group d-flex fw-wrap g-20 med-g-10">
               <?php foreach($Form_userType_options as $k => $option): ?>

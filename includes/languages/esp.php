@@ -227,6 +227,7 @@ $Form_subtitle = "Déjanos tus datos y conversemos.";
 $Form_name = "Nombre";
 $Form_phone = "Teléfono / WhatsApp";
 $Form_email = "Correo electrónico";
+$Form_address = "Dirección";
 $Form_typeUser = "¿Cómo te gustaría formar parte?";
 $Form_typeUser_option1 = "Representante";
 $Form_typeUser_option2 = "Colaborador";

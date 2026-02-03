@@ -18,6 +18,10 @@
           <label for="email" class="tc-gray mt-0"><?= $Form_email ?></label>
           <input type="email" id="email" name="email" required class="input tc-gray" autocomplete="email">
         </div>
+        <div class="form-group span-2 med-span-1">
+          <label for="address" class="tc-gray mt-0"><?= $Form_address ?></label>
+          <input type="text" id="address" name="address" required class="input tc-gray" autocomplete="address-line1">
+        </div>
         <div class="form-group">
           <label for="city" class="tc-gray mt-0"><?= $Form_city ?></label>
           <input type="text" id="city" name="city" required class="input tc-gray" autocomplete="address-level2">

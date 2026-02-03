@@ -17,6 +17,7 @@ class FormController extends BaseController {
     $name = $_POST['name'] ?? '';
     $phone = $_POST['phone'] ?? '';
     $email = $_POST['email'] ?? '';
+    $address = $_POST['address'] ?? '';
     $usertype = $_POST['usertype'] ?? '';
     $message = $_POST['message'] ?? '';
     $lang = $_POST['lang'] ?? 'es';
@@ -25,7 +26,7 @@ class FormController extends BaseController {
     $this->initializeLanguage($lang);
 
     // Validate required fields
-    $requiredFields = ['name' => $name, 'phone' => $phone, 'email' => $email, 'usertype' => $usertype];
+    $requiredFields = ['name' => $name, 'phone' => $phone, 'email' => $email, 'usertype' => $usertype, 'address' => $address];
     if (!$this->validateRequiredFields($requiredFields, $lang)) {
       return;
     }
@@ -39,7 +40,7 @@ class FormController extends BaseController {
     $constants = include __DIR__ . '/../includes/constants.php';
 
     // Send email
-    $emailSent = $this->sendJoinEmail($name, $phone, $email, $usertype, $message, $constants);
+    $emailSent = $this->sendJoinEmail($name, $phone, $email, $address, $usertype, $message, $constants);
 
     // Send response
     $this->sendFormResponse($emailSent, $lang);
@@ -54,6 +55,7 @@ class FormController extends BaseController {
     $name = $_POST['name'] ?? '';
     $phone = $_POST['phone'] ?? '';
     $email = $_POST['email'] ?? '';
+    $address = $_POST['address'] ?? '';
     $city = $_POST['city'] ?? '';
     $state = $_POST['state'] ?? '';
     $acceptance = $_POST['acceptance'] ?? '';
@@ -63,7 +65,7 @@ class FormController extends BaseController {
     $this->initializeLanguage($lang);
 
     // Validate required fields
-    $requiredFields = ['name' => $name, 'phone' => $phone, 'email' => $email, 'city' => $city, 'state' => $state, 'acceptance' => $acceptance];
+    $requiredFields = ['name' => $name, 'phone' => $phone, 'email' => $email, 'address' => $address, 'city' => $city, 'state' => $state, 'acceptance' => $acceptance];
     if (!$this->validateRequiredFields($requiredFields, $lang)) {
       return;
     }
@@ -77,18 +79,19 @@ class FormController extends BaseController {
     $constants = include __DIR__ . '/../includes/constants.php';
 
     // Send email
-    $emailSent = $this->sendStartNowEmail($name, $phone, $email, $city, $state, $acceptance, $constants);
+    $emailSent = $this->sendStartNowEmail($name, $phone, $email, $address, $city, $state, $acceptance, $constants);
 
     // Send response
     $this->sendFormResponse($emailSent, $lang);
   }
 
-  private function sendJoinEmail($name, $phone, $email, $usertype, $message, $constants) {
+  private function sendJoinEmail($name, $phone, $email, $address, $usertype, $message, $constants) {
     $subject = 'New Join Request - Sunny Casitas';
     $fields = [
       'Name' => $name,
       'Phone' => $phone,
       'Email' => $email,
+      'Address' => $address,
       'User Type' => $usertype,
     ];
 
@@ -99,12 +102,13 @@ class FormController extends BaseController {
     return $this->sendEmail($subject, $fields, $email, $name, $constants);
   }
 
-  private function sendStartNowEmail($name, $phone, $email, $city, $state, $acceptance, $constants) {
+  private function sendStartNowEmail($name, $phone, $email, $address, $city, $state, $acceptance, $constants) {
     $subject = 'New Start Now Request - Sunny Casitas';
     $fields = [
       'Name' => $name,
       'Phone' => $phone,
       'Email' => $email,
+      'Address' => $address,
       'City' => $city,
       'State' => $state,
       'Acceptance' => $acceptance,
