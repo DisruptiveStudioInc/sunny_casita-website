@@ -151,6 +151,14 @@ $Product5_list2 = "Mejora funcional.";
 $Product5_list3 = "Ejecución ordenada.";
 $Product5_list4 = "Acompañamiento claro.";
 
+$Product6_title = "Energías renovables";
+$Product6_phrase = "Energía y respaldo para tu hogar";
+$Product6_text = "Instalamos Tesla Powerwall 3 para almacenar energía y brindar mayor respaldo y control en tu hogar. Te acompañamos en la selección e instalación del sistema, asegurando un proceso claro, ordenado y confiable para que aproveches tu energía de manera eficiente y estés mejor preparado ante interrupciones eléctricas.";
+$Product6_list1 = "Tesla Powerwall 3.";
+$Product6_list2 = "Respaldo de energía.";
+$Product6_list3 = "Instalación profesional.";
+$Product6_list4 = "Mayor control energético.";
+
 //-------------------------//
 // Testimonials
 //-------------------------//

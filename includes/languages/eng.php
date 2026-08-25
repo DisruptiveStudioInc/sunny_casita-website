@@ -151,6 +151,14 @@ $Product5_list2 = "Functional improvement.";
 $Product5_list3 = "Orderly execution.";
 $Product5_list4 = "Clear support.";
 
+$Product6_title = "Renewable energy";
+$Product6_phrase = "Energy and backup power for your home";
+$Product6_text = "We install Tesla Powerwall 3 to store energy and provide greater backup power and control for your home. We guide you through the system selection and installation process, ensuring a clear, organized, and reliable experience so you can use your energy more efficiently and be better prepared for power outages.";
+$Product6_list1 = "Tesla Powerwall 3.";
+$Product6_list2 = "Energy backup.";
+$Product6_list3 = "Professional installation.";
+$Product6_list4 = "Greater energy control.";
+
 //-------------------------//
 // Testimonials
 //-------------------------//

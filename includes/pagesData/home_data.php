@@ -136,6 +136,19 @@ $homeProducts = array(
     'list' => [
       $Product5_list1, $Product5_list2, $Product5_list3, $Product5_list4
     ]
+  ],
+  [
+    'id' => 6,
+    'number' => 'six',
+    'background' => 'renovables-bg.webp',
+    'image' => Localization::getLang() === 'en' ? 'renovables-en.webp' : 'renovables.webp',
+    'url' => Localization::url('product', ['adus']),
+    'title' => $Product6_title,
+    'text' => $Product6_text,
+    'phrase' => $Product6_phrase,
+    'list' => [
+      $Product6_list1, $Product6_list2, $Product6_list3, $Product6_list4
+    ]
   ]
 );
 

@@ -703,11 +703,12 @@ section {
     --prod-size: 300px;
     &.img-one,
     &.img-two,
-    &.img-four {
+    &.img-four,
+    &.img-five {
       left: calc(var(--x) - var(--prod-size) * 0.5);
     }
     &.img-three,
-    &.img-five {
+    &.img-six {
       right: calc(var(--x) - var(--prod-size) * 0.5);
     }
   }
@@ -741,11 +742,14 @@ section {
 }
 .wrap_products.fade-in .box_product.img-four {
   --y: 70%;
-  --x: 35%;
+  --x: 20%;
 }
 .wrap_products.fade-in .box_product.img-five {
   --y: 70%;
-  --x: 35%;
+}
+.wrap_products.fade-in .box_product.img-six {
+  --y: 70%;
+  --x: 20%;
 }
 
 .product {
@@ -876,6 +880,9 @@ section {
     transform: none;
   }
 
+  .content-scroll .box_product.img-six {
+    background-image: url("./../../images/body/subpage/renovables-bg.webp");
+  }
   .content-scroll .box_product.img-five {
     background-image: url("./../../images/body/subpage/mejoras-bg.webp");
   }
@@ -1224,7 +1231,9 @@ section {
   opacity: 0;
   transform: translateY(10px);
   pointer-events: none;
-  transition: opacity 0.5s ease, transform 0.5s ease;
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease;
   position: relative;
   display: none;
   font-size: 3rem;
@@ -1323,7 +1332,9 @@ ul.textos li span {
   opacity: 0;
   z-index: 7;
   transform: translate(-50%, -45%);
-  transition: opacity 0.5s ease, transform 0.5s ease;
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease;
 }
 
 ul.textos li:hover {
@@ -1346,7 +1357,9 @@ ul.textos li span img {
   margin: 10px 0;
   box-shadow: 0 20px 30px rgba(0, 0, 0, 0.5);
   border-radius: 50%;
-  transition: transform 0.2s ease-out, opacity 0.3s ease-out;
+  transition:
+    transform 0.2s ease-out,
+    opacity 0.3s ease-out;
   transition-delay: 0.5s;
   opacity: 0;
   object-fit: cover;
@@ -1428,7 +1441,9 @@ ul.textos li span img {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
   overflow-y: auto;
 }
 
