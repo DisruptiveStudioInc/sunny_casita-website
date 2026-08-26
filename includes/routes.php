@@ -33,6 +33,11 @@ $router->post('/api/form/startnow', function() {
   $controller->handleStartNowSubmission();
 });
 
+$router->get('/sitemap.xml', function() {
+  $controller = new Controllers\SitemapController();
+  $controller->index();
+});
+
 // Dynamic Route Registration
 foreach (Localization::$routes as $key => $config) {
   $handler = $config['handler'];

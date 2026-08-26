@@ -11,6 +11,7 @@ $Menu_01 = "Inicio";
 $Menu_02 = $company_name;
 $Menu_03 = "Soluciones";
 $Menu_04 = "Forma parte";
+$Menu_05 = "Blog";
 
 $Menu_log = "Login";
 $Menu_reg = "Regístrate";
@@ -267,3 +268,23 @@ $Form_state = "Estado";
 $Form_acceptance = "Acepto ser contactado por Sunny Casitas vía llamada o WhatsApp.";
 $StartNow_submit = "Quiero empezar";
 $StartNow_footNote = "Tu información es confidencial. Solo la usamos para contactarte y acompañarte en tu proceso.";
+
+
+//-------------------------//
+// Blog
+//-------------------------//
+
+$Blog_title = "Ideas para un mejor hogar";
+$Blog_description = "Guías prácticas, inspiración y consejos claros para construir y mejorar tu hogar.";
+$Blog_all_posts = "Todos los artículos";
+$Blog_categories = "Explora temas";
+$Blog_empty = "Todavía no hay artículos disponibles.";
+$Blog_error = "No pudimos cargar el blog en este momento.";
+$Blog_read_more = "Leer artículo";
+$Blog_previous = "Anterior";
+$Blog_next = "Siguiente";
+$Blog_page = "Páginas del blog";
+$Blog_related = "Sigue explorando";
+$Blog_back = "Volver al blog";
+$Blog_published = "Publicado";
+$Blog_by = "Por";
