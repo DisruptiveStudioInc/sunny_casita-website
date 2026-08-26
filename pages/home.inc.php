@@ -132,6 +132,9 @@
           <li class="p-10 br-10 c-ter tc-gray t-c"><?= $li; ?></li>
         <?php endforeach; ?>
       </ul>
+      <?php if(isset($item['video'])): ?>
+        <button type="button" class="btn c-pri br-30 mt-20 js-product-video" data-video="<?= htmlspecialchars($item['video'], ENT_QUOTES, 'UTF-8'); ?>"><?= $Btn_video; ?></button>
+      <?php endif; ?>
     </div>
 	</div>
 <?php endforeach; ?>

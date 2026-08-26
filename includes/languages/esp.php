@@ -26,6 +26,7 @@ $Btn_store = "Visita nuestra tienda";
 $Btn_connect = "Hablemos ahora";
 $Btn_part = "Trasciende HOY";
 $Btn_started = "Comienza AHORA";
+$Btn_video = "Ver video";
 
 //-------------------------//
 // Coming Soon

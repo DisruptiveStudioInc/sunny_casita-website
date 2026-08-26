@@ -15,6 +15,9 @@ function closeModal(modalId) {
   var modal = document.getElementById(modalId);
   if (modal) {
     modal.classList.remove("open"); // Oculta el modal
+    if (modal.classList.contains("modal-video")) {
+      modal.querySelector(".modal-video-player").replaceChildren();
+    }
     checkModalsOpen(); // Verifica si hay otros modales abiertos
   }
 }
@@ -38,6 +41,79 @@ window.onclick = function (event) {
 };
 
 document.addEventListener("DOMContentLoaded", function () {
+  /* ============================================== */
+  /* PRODUCT VIDEO MODAL */
+  /* ============================================== */
+
+  function getVideoModal() {
+    var modal = document.getElementById("productVideoModal");
+
+    if (modal) {
+      return modal;
+    }
+
+    modal = document.createElement("div");
+    modal.id = "productVideoModal";
+    modal.className = "modal modal-video";
+    modal.setAttribute("role", "dialog");
+    modal.setAttribute("aria-modal", "true");
+    modal.setAttribute("aria-label", "Product video");
+
+    var content = document.createElement("div");
+    content.className = "modal-content modal-video-content rel";
+
+    var closeButton = document.createElement("button");
+    closeButton.type = "button";
+    closeButton.className = "v-white c-pri icon icon-close";
+    closeButton.setAttribute("aria-label", "Close video");
+    closeButton.addEventListener("click", function () {
+      closeModal(modal.id);
+    });
+
+    var player = document.createElement("div");
+    player.className = "modal-video-player";
+
+    content.append(closeButton, player);
+    modal.appendChild(content);
+    document.body.appendChild(modal);
+
+    return modal;
+  }
+
+  function openProductVideo(videoId) {
+    if (!videoId) {
+      return;
+    }
+
+    var modal = getVideoModal();
+    var player = modal.querySelector(".modal-video-player");
+    var iframe = document.createElement("iframe");
+
+    iframe.src = "https://player.vimeo.com/video/" + encodeURIComponent(videoId) + "?autoplay=1";
+    iframe.setAttribute("allow", "autoplay; fullscreen; picture-in-picture");
+    iframe.setAttribute("allowfullscreen", "");
+    iframe.title = "Product video";
+
+    player.replaceChildren(iframe);
+    modal.classList.add("open");
+    document.body.classList.add("no-scroll");
+  }
+
+  document.querySelectorAll(".js-product-video").forEach(function (button) {
+    button.addEventListener("click", function () {
+      openProductVideo(button.dataset.video);
+    });
+  });
+
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape") {
+      var videoModal = document.getElementById("productVideoModal");
+      if (videoModal && videoModal.classList.contains("open")) {
+        closeModal(videoModal.id);
+      }
+    }
+  });
+
   /* ============================================== */
   /* VIDEO HERO */
   /* ============================================== */

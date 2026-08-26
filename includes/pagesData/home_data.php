@@ -148,7 +148,8 @@ $homeProducts = array(
     'phrase' => $Product6_phrase,
     'list' => [
       $Product6_list1, $Product6_list2, $Product6_list3, $Product6_list4
-    ]
+    ],
+    'video' => Localization::getLang() === 'en' ? NULL : '1221517207'
   ]
 );
 

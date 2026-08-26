@@ -26,6 +26,7 @@ $Btn_store = "Visit our store";
 $Btn_connect = "Let's talk now";
 $Btn_part = "Transcend TODAY";
 $Btn_started = "Start NOW";
+$Btn_video = "Watch video";
 
 //-------------------------//
 // Coming Soon
