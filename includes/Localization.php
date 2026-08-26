@@ -45,6 +45,20 @@ class Localization {
       ],
       'handler' => 'PageController@terms'
     ],
+    'blog' => [
+      'languages' => [
+        'es' => '/es/blog',
+        'en' => '/blog'
+      ],
+      'handler' => 'BlogController@index'
+    ],
+    'blog_post' => [
+      'languages' => [
+        'es' => '/es/blog/{slug}',
+        'en' => '/blog/{slug}'
+      ],
+      'handler' => 'BlogController@show'
+    ],
     'product' => [
       'languages' => [
         'es' => '/producto/{id}',

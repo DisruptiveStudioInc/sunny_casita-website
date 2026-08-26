@@ -1,41 +1,67 @@
 <?php
   include("info.php");
-  $page_title = ($page_title) ? "$company_name | $page_title" : $company_name;
+  $page_title = !empty($page_title) ? "$company_name | $page_title" : $company_name;
   $page_description = $page_description ?? $Description_Site;
   $page_keywords = $page_keywords ?? $Keywords_Site;
   $page_type = $page_type ?? 'website';
+  $page_image = $page_image ?? '/images/facebook/facebook.jpg';
+  $page_image_alt = $page_image_alt ?? $page_title;
+  $requestPath = parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH);
+  $page_canonical_path = $page_canonical_path ?? (is_string($requestPath) ? $requestPath : '/');
+  $page_url = preg_match('#^https?://#', $page_canonical_path)
+    ? $page_canonical_path
+    : $Host_Site . '/' . ltrim($page_canonical_path, '/');
+  $page_image_url = preg_match('#^https?://#', $page_image)
+    ? $page_image
+    : $Host_Site . '/' . ltrim($page_image, '/');
+  $languageUrls = $languageUrls ?? [];
+  $absoluteLanguageUrls = [];
+  foreach ($languageUrls as $languageCode => $languageUrl) {
+    $absoluteLanguageUrls[$languageCode] = preg_match('#^https?://#', $languageUrl)
+      ? $languageUrl
+      : $Host_Site . '/' . ltrim($languageUrl, '/');
+  }
   $availableLangs = getConfig('available_langs');
 ?>
 
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="<?= $Lang; ?>" xml:lang="<?= $Lang; ?>">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="<?= e($Lang); ?>" xml:lang="<?= e($Lang); ?>">
 
 <head>
 
-  <meta name="twitter:card"        content="summary">
-  <meta name="twitter:site"        content="<?= $Host_Site; ?>">
-  <meta name="twitter:title"       content="<?= $page_title; ?>">
-  <meta name="twitter:description" content="<?= $page_description; ?>">
-  <meta name="twitter:creator"     content="<?= $company_name; ?>">
-  <meta name="twitter:image"       content="<?= $Host_Site; ?>/images/facebook/facebook.jpg">
+  <meta name="twitter:card"        content="<?= $page_type === 'article' ? 'summary_large_image' : 'summary'; ?>">
+  <meta name="twitter:site"        content="<?= e($Host_Site); ?>">
+  <meta name="twitter:title"       content="<?= e($page_title); ?>">
+  <meta name="twitter:description" content="<?= e($page_description); ?>">
+  <meta name="twitter:creator"     content="<?= e($company_name); ?>">
+  <meta name="twitter:image"       content="<?= e($page_image_url); ?>">
+  <meta name="twitter:image:alt"   content="<?= e($page_image_alt); ?>">
 
-  <meta property="og:site_name"    content="<?= $company_name; ?>" />
-  <meta property="og:url"          content="<?= $Host_Site; ?>" />
-  <meta property="og:title"        content="<?= $page_title; ?>" />
-  <meta property="og:type"         content="<?= $page_type; ?>" />
-  <meta property="og:description"  content="<?= $page_description; ?>" />
-  <meta property="og:image"        content="<?= $Host_Site; ?>/images/facebook/facebook.jpg" />
+  <meta property="og:site_name"    content="<?= e($company_name); ?>" />
+  <meta property="og:url"          content="<?= e($page_url); ?>" />
+  <meta property="og:title"        content="<?= e($page_title); ?>" />
+  <meta property="og:type"         content="<?= e($page_type); ?>" />
+  <meta property="og:description"  content="<?= e($page_description); ?>" />
+  <meta property="og:image"        content="<?= e($page_image_url); ?>" />
+  <meta property="og:image:alt"    content="<?= e($page_image_alt); ?>" />
   <meta property="og:image:width"  content="1200" />
   <meta property="og:image:height" content="675" />
 
   <meta name="viewport"            content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="Content-Type"  content="text/html; charset=UTF-8" />
-  <meta name="description"         content="<?= $page_description; ?>" />
-  <meta name="keywords"            content="<?= $page_keywords; ?>" />
-  <meta name="autor"               content="<?= $company_name; ?>" />
-  <link rel="canonical" href="<?= $Host_Site . parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH); ?>" />
+  <meta name="description"         content="<?= e($page_description); ?>" />
+  <meta name="keywords"            content="<?= e($page_keywords); ?>" />
+  <meta name="author"              content="<?= e($company_name); ?>" />
+  <meta name="robots"              content="index, follow, max-image-preview:large" />
+  <link rel="canonical" href="<?= e($page_url); ?>" />
+  <?php foreach ($absoluteLanguageUrls as $languageCode => $languageUrl): ?>
+    <link rel="alternate" hreflang="<?= e((string) $languageCode); ?>" href="<?= e((string) $languageUrl); ?>" />
+  <?php endforeach; ?>
+  <?php if (!empty($absoluteLanguageUrls)): ?>
+    <link rel="alternate" hreflang="x-default" href="<?= e((string) ($absoluteLanguageUrls['en'] ?? reset($absoluteLanguageUrls))); ?>" />
+  <?php endif; ?>
 
-  <title><?= $page_title; ?></title>
+  <title><?= e($page_title); ?></title>
 
   <!-- Google fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -95,7 +121,7 @@
                 foreach ($availableLangs as $langCode => $label) {
                   $activeClass = (\Includes\Localization::getLang() === $langCode) ? 'selected' : '';
                   $flag = strtolower($label);
-                  $url = \Includes\Localization::getCurrentUrl($langCode);
+                  $url = $languageUrls[$langCode] ?? \Includes\Localization::getCurrentUrl($langCode);
                   echo "<a class='$flag $activeClass' href='$url'>$label</a>";
                 }
               ?>

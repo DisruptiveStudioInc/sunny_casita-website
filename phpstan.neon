@@ -1,0 +1,12 @@
+parameters:
+  level: 9
+  paths:
+    - models/BlogPost.php
+    - services/BlogRepository.php
+    - services/BlogService.php
+    - services/MarkdownRenderer.php
+    - services/SitemapService.php
+    - controllers/BlogController.php
+    - controllers/SitemapController.php
+  tmpDir: /tmp/sunny-casitas-phpstan
+  treatPhpDocTypesAsCertain: true

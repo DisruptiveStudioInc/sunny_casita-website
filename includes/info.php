@@ -64,6 +64,13 @@ $Menu = array(
     'hasSubmenu' => false
   ],
   [
+    'link' => Localization::url('blog'),
+    'status' => in_array($Actual_Page, ['blog', 'blog_post'], true) ? 'active' : '',
+    'title' => $Menu_05,
+    'show' => true,
+    'hasSubmenu' => false
+  ],
+  [
     'link' => Localization::url('join'),
     'status' => ($Actual_Page === 'join') ? 'active' : '',
     'title' => $Menu_04,

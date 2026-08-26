@@ -11,6 +11,7 @@ $Menu_01 = "Home";
 $Menu_02 = $company_name;
 $Menu_03 = "Solutions";
 $Menu_04 = "Join us";
+$Menu_05 = "Blog";
 
 $Menu_log = "Login";
 $Menu_reg = "Register";
@@ -267,3 +268,23 @@ $Form_state = "State";
 $Form_acceptance = "I agree to be contacted by Sunny Casitas via call or WhatsApp.";
 $StartNow_submit = "I want to start";
 $StartNow_footNote = "Your information is confidential. We only use it to contact you and support you in your process.";
+
+
+//-------------------------//
+// Blog
+//-------------------------//
+
+$Blog_title = "Ideas for a better home";
+$Blog_description = "Practical guides, inspiration, and clear advice for building and improving your home.";
+$Blog_all_posts = "All articles";
+$Blog_categories = "Explore topics";
+$Blog_empty = "There are no articles available yet.";
+$Blog_error = "We could not load the blog right now.";
+$Blog_read_more = "Read article";
+$Blog_previous = "Previous";
+$Blog_next = "Next";
+$Blog_page = "Blog pages";
+$Blog_related = "Keep exploring";
+$Blog_back = "Back to blog";
+$Blog_published = "Published";
+$Blog_by = "By";
