@@ -1,6 +1,7 @@
 .env
 nginx.conf
 node_modules/
+performance/
 pnpm-lock.yaml
 .DS_Store
 .phpunit.cache/
