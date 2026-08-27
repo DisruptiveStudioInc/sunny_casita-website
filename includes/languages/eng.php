@@ -274,8 +274,8 @@ $StartNow_footNote = "Your information is confidential. We only use it to contac
 // Blog
 //-------------------------//
 
-$Blog_title = "Ideas for a better home";
-$Blog_description = "Practical guides, inspiration, and clear advice for building and improving your home.";
+$Blog_title = "Let's talk about improving your home";
+$Blog_description = "A space to explore new ways to build, renovate, and make your home work better for you.";
 $Blog_all_posts = "All articles";
 $Blog_categories = "Explore topics";
 $Blog_empty = "There are no articles available yet.";
