@@ -162,8 +162,3 @@
     <?php endif; ?>
   </div>
 </section>
-
-<script src="/js/product.js"></script>
-
-
-

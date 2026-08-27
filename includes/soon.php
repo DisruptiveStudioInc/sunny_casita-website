@@ -71,7 +71,7 @@
 </head>
 <body id="page-content">
   <main class="rel d-flex jc-center ai-center of-h overlay o-30" style="min-height:100dvh;">
-    <img src="/images/hero/soon.webp" alt="Placeholder" class="background" style="opacity:1" />
+    <img src="/images/hero/soon-960.webp" srcset="/images/hero/soon-640.webp 640w, /images/hero/soon-960.webp 960w, /images/hero/soon-1280.webp 1280w, /images/hero/soon-1920.webp 1920w" sizes="100vw" width="1920" height="1080" fetchpriority="high" decoding="sync" alt="" class="background" style="opacity:1" />
     <div class="d-flex fd-col ai-center rel p-20" style="z-index:10">
       <h1 class="h1-special t-c tc-0 m-0"><?= $Soon_Text ?></h1>
     </div>

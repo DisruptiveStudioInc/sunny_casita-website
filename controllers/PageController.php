@@ -14,6 +14,13 @@ class PageController extends BaseController {
     $this->setup($lang, 'home');
     $data = $this->loadPageData('home_data.php');
     $data['float_button'] = true;
+    $data['pagePreloadImage'] = [
+      'href' => '/images/hero/hero-960.avif',
+      'srcset' => '/images/hero/hero-640.avif 640w, /images/hero/hero-960.avif 960w, /images/hero/hero-1280.avif 1280w, /images/hero/hero-1920.avif 1920w',
+      'sizes' => '100vw',
+      'type' => 'image/avif',
+    ];
+    $data['pageScripts'] = ['/js/slider.js', '/js/home.js'];
     $this->view('home', $data);
   }
 
@@ -22,6 +29,12 @@ class PageController extends BaseController {
      $data = $this->loadPageData('join_data.php');
     $data['page_title'] = $GLOBALS['PartOf_pageTitle'];
     $data['pageScripts'] = ['/js/forms.js'];
+    $data['pagePreloadImage'] = [
+      'href' => '/images/body/letters/2-960.webp',
+      'srcset' => '/images/body/letters/2-640.webp 640w, /images/body/letters/2-960.webp 960w, /images/body/letters/2-1440.webp 1440w, /images/body/letters/2-1920.webp 1920w',
+      'sizes' => '100vw',
+      'type' => 'image/webp',
+    ];
     $this->view('join', $data);
   }
 

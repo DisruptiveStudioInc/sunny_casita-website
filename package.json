@@ -1,0 +1,16 @@
+{
+  "name": "sunny-casitas-assets",
+  "private": true,
+  "scripts": {
+    "build": "npm run build:css && npm run build:images",
+    "build:css": "esbuild css/site.entry.css --bundle --minify --outfile=dist/site.min.css --loader:.svg=file --loader:.webp=file --asset-names=assets/[name]-[hash] --external:/fonts/*",
+    "build:images": "node scripts/build-images.mjs",
+    "audit:mobile": "lighthouse http://127.0.0.1:8090/ --quiet --output=json --output-path=/tmp/sunny-lighthouse-mobile.json --chrome-path=/snap/bin/chromium --chrome-flags='--headless --no-sandbox'",
+    "audit:desktop": "lighthouse http://127.0.0.1:8090/ --quiet --preset=desktop --output=json --output-path=/tmp/sunny-lighthouse-desktop.json --chrome-path=/snap/bin/chromium --chrome-flags='--headless --no-sandbox'"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.9",
+    "lighthouse": "^13.4.1",
+    "sharp": "^0.35.4"
+  }
+}

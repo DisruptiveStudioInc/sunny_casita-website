@@ -4,17 +4,18 @@
 
   <div class="dh of-h rel">
     <div class="video-placeholder h-full">
-      <img class="background visible" src="/images/hero/hero.webp" alt="Placeholder" />
+      <picture>
+        <source type="image/avif" srcset="/images/hero/hero-640.avif 640w, /images/hero/hero-960.avif 960w, /images/hero/hero-1280.avif 1280w, /images/hero/hero-1920.avif 1920w" sizes="100vw">
+        <source type="image/webp" srcset="/images/hero/hero-640.webp 640w, /images/hero/hero-960.webp 960w, /images/hero/hero-1280.webp 1280w, /images/hero/hero-1920.webp 1920w" sizes="100vw">
+        <img class="background visible" src="<?= e(assetUrl('/images/hero/hero.webp')); ?>" width="1920" height="1080" fetchpriority="high" decoding="sync" alt="">
+      </picture>
     </div>
 
-    <div class="video-iframe-wrapper">
-      <iframe
-        src="https://player.vimeo.com/video/<?= $Hero_vimeo; ?>?background=1&autoplay=1&muted=1&loop=1"
-        frameborder="0"
-        allow="autoplay; fullscreen; picture-in-picture"
-        title="Sunny Casitas Video">
-      </iframe>
-    </div>
+    <div
+      class="video-iframe-wrapper"
+      data-vimeo-id="<?= e((string) $Hero_vimeo); ?>"
+      aria-hidden="true"
+    ></div>
   </div>
 
   <div class="text-hero t-c hero-text">
@@ -66,14 +67,19 @@
   <div class="mw-1440 fd-col jc-center ai-center min-h-dvh t-c">
     <h2 class="h1 tc-sec mt-0 mb-30 small-mb-20"><?= $Video_title; ?></h2>
 		<div class="w-100">
-      <iframe
-        src="https://player.vimeo.com/video/<?= $Video_vimeo ?>"
-        frameborder="0"
-        allow="fullscreen; picture-in-picture"
-        title="Sunny Casitas How Works Video"
-        style="width:100%;height:auto;aspect-ratio:16/9;max-width:1200px;"
-        class="br-10">
-      </iframe>
+      <button
+        type="button"
+        class="video-facade js-vimeo-facade br-10"
+        data-vimeo-id="<?= e((string) $Video_vimeo); ?>"
+        aria-label="<?= e($Video_title); ?>"
+      >
+        <picture>
+          <source type="image/avif" srcset="/images/body/video/cover-video-640.avif 640w, /images/body/video/cover-video-960.avif 960w, /images/body/video/cover-video-1280.avif 1280w" sizes="(max-width: 1080px) calc(100vw - 40px), 1080px">
+          <source type="image/webp" srcset="/images/body/video/cover-video-640.webp 640w, /images/body/video/cover-video-960.webp 960w, /images/body/video/cover-video-1280.webp 1280w" sizes="(max-width: 1080px) calc(100vw - 40px), 1080px">
+          <img src="<?= e(assetUrl('/images/body/video/cover-video.webp')); ?>" width="1280" height="720" loading="lazy" decoding="async" alt="">
+        </picture>
+        <span class="video-facade-play" aria-hidden="true"></span>
+      </button>
 		</div>
 	</div>
 </section>
@@ -88,7 +94,7 @@
     </div>
     <?php foreach($verticalSlides as $k => $slide): ?>
 		<div class="letter-wrap" style="--item-index:<?= $k; ?>">
-      <img class="letter-bg img_0<?= $slide['id']; ?>" src="./images/body/letters/<?= $slide['id']; ?>.webp" alt="<?= $slide['title']; ?>">
+      <img class="letter-bg img_0<?= $slide['id']; ?>" src="/images/body/letters/<?= $slide['id']; ?>-960.webp" srcset="/images/body/letters/<?= $slide['id']; ?>-640.webp 640w, /images/body/letters/<?= $slide['id']; ?>-960.webp 960w, /images/body/letters/<?= $slide['id']; ?>-1440.webp 1440w, /images/body/letters/<?= $slide['id']; ?>-1920.webp 1920w" sizes="100vw" width="1920" height="1080" loading="lazy" decoding="async" alt="<?= e($slide['title']); ?>">
       <div class="letter-content word_0<?= $slide['id']; ?> abs w-100 p-40 med-p-10-20 med-pt-50 med-pb-50 t-c">
         <h2 class="letter-title tc-0 t-balance"><?= $slide['title']; ?></h2>
         <p class="h4 letter-text t-pretty h3 tc-0"><?= $slide['text']; ?></p>
@@ -152,8 +158,13 @@
 
     <?php foreach($homeProducts as $item): ?>
       <div class="box_product img-<?= $item['number']; ?> rel flex ai-center jc-center fd-col">
-        <div class="rel t-c">
-          <img src="/images/body/products/<?= $item['image']; ?>" class="product m-center cursor-pointer" alt="<?= $item['title']; ?>" onclick="openModal('Modal<?= $item['id']; ?>')"/>
+        <picture class="product-mobile-background" aria-hidden="true">
+          <source type="image/avif" srcset="/images/body/subpage/<?= pathinfo($item['background'], PATHINFO_FILENAME); ?>-640.avif 640w, /images/body/subpage/<?= pathinfo($item['background'], PATHINFO_FILENAME); ?>-960.avif 960w" sizes="100vw">
+          <source type="image/webp" srcset="/images/body/subpage/<?= pathinfo($item['background'], PATHINFO_FILENAME); ?>-640.webp 640w, /images/body/subpage/<?= pathinfo($item['background'], PATHINFO_FILENAME); ?>-960.webp 960w" sizes="100vw">
+          <img src="/images/body/subpage/<?= $item['background']; ?>" width="1920" height="1080" loading="lazy" decoding="async" alt="">
+        </picture>
+        <div class="rel t-c z-index-2">
+          <img src="/images/body/products/<?= $item['image']; ?>" srcset="/images/body/products/<?= pathinfo($item['image'], PATHINFO_FILENAME); ?>-350.webp 350w, /images/body/products/<?= pathinfo($item['image'], PATHINFO_FILENAME); ?>-700.webp 700w" sizes="(max-width: 1080px) 70vw, 370px" width="700" height="400" loading="lazy" decoding="async" class="product m-center cursor-pointer" alt="<?= e($item['title']); ?>" onclick="openModal('Modal<?= $item['id']; ?>')"/>
           <div class="abs product-plus-wrap d-flex fd-col ai-center g-20">
             <button type="button" class="v-white c-pri icon br-50 icon-more pointer-e-none"></button>
             <?php if(false): ?>
@@ -165,7 +176,7 @@
     <?php endforeach; ?>
 
     <?php foreach($homeProducts as $item): ?>
-      <img class="background anim-scale med-d-none img_product_<?= $item['number']; ?>" src="/images/body/subpage/<?= $item['background']; ?>" alt="<?= $item['title']; ?> background">
+      <img class="background anim-scale med-d-none img_product_<?= $item['number']; ?>" src="/images/body/subpage/<?= pathinfo($item['background'], PATHINFO_FILENAME); ?>-1440.webp" srcset="/images/body/subpage/<?= pathinfo($item['background'], PATHINFO_FILENAME); ?>-960.webp 960w, /images/body/subpage/<?= pathinfo($item['background'], PATHINFO_FILENAME); ?>-1440.webp 1440w, /images/body/subpage/<?= pathinfo($item['background'], PATHINFO_FILENAME); ?>-1920.webp 1920w" sizes="100vw" width="1920" height="1080" loading="lazy" decoding="async" alt="<?= e($item['title']); ?> background">
     <?php endforeach; ?>
 
 	</div>
@@ -192,7 +203,7 @@
         foreach ($testimonials as $k => $item):
       ?>
         <li class='item c-0 p-20 br-10' style="--item-index:<?= $k + 1; ?>">
-          <img src='/images/body/evolvers/<?= $item['id']; ?>.webp' alt='<?= $item['name']; ?>'>
+          <img src='/images/body/evolvers/<?= $item['id']; ?>.webp' width="100" height="100" loading="lazy" decoding="async" alt='<?= e($item['name']); ?>'>
           <p class="tc-gray h5 mt-0 mb-10"><?= $item['text']; ?></p>
           <h5 class="m-0"><?= $item['name']; ?></h5>
         </li>
@@ -218,7 +229,7 @@
         <li>
           <h2 class="h1 tc-sec"><?= $item['title']; ?></h2>
           <span>
-            <img src="./images/body/truth/<?= $item['image']; ?>" alt="<?= $item['title']; ?>" class="" loading="lazy"/>
+            <img src="/images/body/truth/<?= $item['image']; ?>" width="400" height="300" alt="<?= e($item['title']); ?>" loading="lazy" decoding="async"/>
             <p class="h3 t-pretty tc-sec"><?= $item['text']; ?></p>
           </span>
         </li>
@@ -241,14 +252,14 @@
         <?php foreach($sec08 as $item): ?>
 				<span class="img_product">
 					<div class="product_wrapper">
-						<img src="/images/body/the_spirit/circle/<?= $item['small_img']?>" class="img_reference" alt="<?= $item['name']?>" loading="lazy"/>
-						<img src="/images/body/the_spirit/<?= $item['image']?>" class="product" alt="<?= $item['name']?>" loading="lazy"/>
+						<img src="/images/body/the_spirit/circle/<?= $item['small_img']?>" width="400" height="400" class="img_reference" alt="<?= e($item['name']); ?>" loading="lazy" decoding="async"/>
+						<img src="/images/body/the_spirit/<?= $item['image']?>" width="400" height="520" class="product" alt="<?= e($item['name']); ?>" loading="lazy" decoding="async"/>
 					</div>
 				</span>
         <?php endforeach; ?>
 			</div>
 
-			<img src="/images/body/the_spirit/plano.webp" class="mw-300 br-20 m-center med-d-block d-none" alt="all products" loading="lazy"/>
+			<img src="/images/body/the_spirit/plano.webp" width="400" height="520" class="mw-300 br-20 m-center med-d-block d-none" alt="all products" loading="lazy" decoding="async"/>
 
 			<!-- Textos -->
 			<div class="text_spirit" id="text-spirit-wrap">
@@ -272,12 +283,9 @@
     <button class="arrow up"></button>
 	</div>
 
-  <img src="/images/hero/hero.webp" alt="" class="background" style="opacity:0.1">
+  <img src="/images/hero/hero-960.webp" srcset="/images/hero/hero-640.webp 640w, /images/hero/hero-960.webp 960w, /images/hero/hero-1280.webp 1280w" sizes="100vw" width="1920" height="1080" loading="lazy" decoding="async" alt="" class="background" style="opacity:0.1">
 	<div class="mw-1280 t-c big rel banner-padding">
 		<h2 class="h1 m-center tc-0"><?= $Traits_title; ?></h2>
     <a href="https://wa.me/<?= $constants['wame'] ?>" target="_blank" rel="noopener noreferrer" class="btn big c-acc br-50 mt-40 small-mt-20"><?= $Btn_connect; ?></a>
 	</div>
 </section>
-
-<script src="/js/slider.js"></script>
-<script src="/js/home.js"></script>

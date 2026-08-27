@@ -118,16 +118,65 @@ document.addEventListener("DOMContentLoaded", function () {
   /* VIDEO HERO */
   /* ============================================== */
 
-  document.addEventListener("DOMContentLoaded", function () {
-    const iframe = document.querySelector(".video-iframe-wrapper iframe");
-    const player = new Vimeo.Player(iframe);
-    const placeholder = document.querySelector(".video-placeholder");
+  const desktopMotion = window.matchMedia(
+    "(min-width: 1081px) and (prefers-reduced-motion: no-preference)"
+  );
+  const heroVideo = document.querySelector(".video-iframe-wrapper[data-vimeo-id]");
+  const heroPlaceholder = document.querySelector(".video-placeholder");
 
-    // Cuando el video empieza a reproducirse, ocultamos el placeholder
-    player.on("play", function () {
-      placeholder.style.transition = "opacity 0.8s ease";
-      placeholder.style.opacity = "0";
-      setTimeout(() => (placeholder.style.display = "none"), 800);
+  if (desktopMotion.matches && heroVideo) {
+    const loadHeroVideo = () => {
+      const iframe = document.createElement("iframe");
+      iframe.id = "hero-video";
+      iframe.src = `https://player.vimeo.com/video/${encodeURIComponent(heroVideo.dataset.vimeoId)}?background=1&autoplay=1&muted=1&loop=1&dnt=1&api=1&player_id=hero-video`;
+      iframe.allow = "autoplay; fullscreen; picture-in-picture";
+      iframe.title = "Sunny Casitas Video";
+      iframe.tabIndex = -1;
+
+      let revealFallback;
+      const revealVideo = () => {
+        window.clearTimeout(revealFallback);
+        window.removeEventListener("message", onVimeoMessage);
+        heroPlaceholder?.classList.add("is-playing");
+      };
+      const subscribeToPlayback = () => {
+        iframe.contentWindow?.postMessage(
+          { method: "addEventListener", value: "play" },
+          "https://player.vimeo.com"
+        );
+      };
+      const onVimeoMessage = (event) => {
+        if (event.origin !== "https://player.vimeo.com" || event.source !== iframe.contentWindow) return;
+        let data = event.data;
+        if (typeof data === "string") {
+          try { data = JSON.parse(data); } catch { return; }
+        }
+        if (data?.event === "ready") subscribeToPlayback();
+        if (data?.event === "play") revealVideo();
+      };
+
+      window.addEventListener("message", onVimeoMessage);
+      iframe.addEventListener("load", () => {
+        subscribeToPlayback();
+        revealFallback = window.setTimeout(revealVideo, 3000);
+      }, { once: true });
+      heroVideo.appendChild(iframe);
+    };
+
+    // Let the browser paint the local hero first, then start Vimeo immediately.
+    window.requestAnimationFrame(() => window.requestAnimationFrame(loadHeroVideo));
+  }
+
+  document.querySelectorAll(".js-vimeo-facade").forEach((facade) => {
+    facade.addEventListener("click", () => {
+      if (facade.classList.contains("is-playing")) return;
+      const iframe = document.createElement("iframe");
+      iframe.src = `https://player.vimeo.com/video/${encodeURIComponent(facade.dataset.vimeoId)}?autoplay=1&dnt=1`;
+      iframe.allow = "autoplay; fullscreen; picture-in-picture";
+      iframe.allowFullscreen = true;
+      iframe.title = facade.getAttribute("aria-label") || "Video";
+      facade.classList.add("is-playing");
+      facade.replaceChildren(iframe);
     });
   });
 
@@ -183,7 +232,7 @@ document.addEventListener("DOMContentLoaded", function () {
   /* ==============================================
        SCROLL-MAGIC SOLO DESKTOP
     ============================================== */
-  if (window.innerWidth >= 1080) {
+  if (desktopMotion.matches) {
     function loadScript(src) {
       return new Promise((resolve, reject) => {
         const script = document.createElement("script");
@@ -207,9 +256,6 @@ document.addEventListener("DOMContentLoaded", function () {
         Promise.all([
           loadScript(
             "https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/plugins/animation.gsap.min.js"
-          ),
-          loadScript(
-            "https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"
           ),
         ])
       )
@@ -431,22 +477,19 @@ document.addEventListener("DOMContentLoaded", function () {
           .setTween(licensesTimeline)
           .addTo(controller);
 
-        // ========== CONTENT SCROLL (jQuery solo si existe)
-        if (window.jQuery) {
-          $(".products").each(function () {
-            var productsElement = this.querySelector(".wrap_products");
+        // ========== CONTENT SCROLL
+        document.querySelectorAll(".products").forEach((productsSection) => {
+            var productsElement = productsSection.querySelector(".wrap_products");
             if (productsElement) {
               new ScrollMagic.Scene({
-                triggerElement: this,
+                triggerElement: productsSection,
                 triggerHook: 0.2,
                 duration: "80%",
               })
                 .setClassToggle(productsElement, "fade-in")
-                //.addIndicators()
                 .addTo(controller);
             }
-          });
-        }
+        });
 
         // ========== EVOLVERS
         var EVO = new TimelineMax();
