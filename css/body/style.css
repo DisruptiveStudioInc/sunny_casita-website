@@ -2802,6 +2802,12 @@ ul.textos li span img {
   }
 }
 
+#page-content > header,
+#page-content > main,
+#page-content > footer {
+  min-width: 0;
+}
+
 /* ============================================== */
 /* PERFORMANCE                                    */
 /* ============================================== */
@@ -2899,6 +2905,15 @@ ul.textos li span img {
 }
 
 @media screen and (max-width: 1080px) {
+  .hero-pin,
+  .hero-pin .dh,
+  .hero-pin .video-placeholder {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    overflow: hidden;
+  }
+
   #preloader,
   .video-iframe-wrapper {
     display: none;
@@ -2930,6 +2945,13 @@ ul.textos li span img {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     scroll-behavior: auto !important;
+  }
+}
+
+@media screen and (max-width: 1080px) and (prefers-reduced-motion: no-preference) {
+  .people .item {
+    animation-duration: 64s !important;
+    animation-iteration-count: infinite !important;
   }
 }
 

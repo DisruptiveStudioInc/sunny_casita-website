@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var player = modal.querySelector(".modal-video-player");
     var iframe = document.createElement("iframe");
 
-    iframe.src = "https://player.vimeo.com/video/" + encodeURIComponent(videoId) + "?autoplay=1";
+    iframe.src = "https://player.vimeo.com/video/" + encodeURIComponent(videoId) + "?autoplay=1&autopause=0";
     iframe.setAttribute("allow", "autoplay; fullscreen; picture-in-picture");
     iframe.setAttribute("allowfullscreen", "");
     iframe.title = "Product video";
@@ -128,37 +128,22 @@ document.addEventListener("DOMContentLoaded", function () {
     const loadHeroVideo = () => {
       const iframe = document.createElement("iframe");
       iframe.id = "hero-video";
-      iframe.src = `https://player.vimeo.com/video/${encodeURIComponent(heroVideo.dataset.vimeoId)}?background=1&autoplay=1&muted=1&loop=1&dnt=1&api=1&player_id=hero-video`;
+      iframe.src = `https://player.vimeo.com/video/${encodeURIComponent(heroVideo.dataset.vimeoId)}?background=1&autoplay=1&muted=1&loop=1&dnt=1&autopause=0`;
       iframe.allow = "autoplay; fullscreen; picture-in-picture";
       iframe.title = "Sunny Casitas Video";
       iframe.tabIndex = -1;
 
-      let revealFallback;
+      let videoRevealed = false;
       const revealVideo = () => {
-        window.clearTimeout(revealFallback);
-        window.removeEventListener("message", onVimeoMessage);
+        if (videoRevealed) return;
+        videoRevealed = true;
         heroPlaceholder?.classList.add("is-playing");
       };
-      const subscribeToPlayback = () => {
-        iframe.contentWindow?.postMessage(
-          { method: "addEventListener", value: "play" },
-          "https://player.vimeo.com"
-        );
-      };
-      const onVimeoMessage = (event) => {
-        if (event.origin !== "https://player.vimeo.com" || event.source !== iframe.contentWindow) return;
-        let data = event.data;
-        if (typeof data === "string") {
-          try { data = JSON.parse(data); } catch { return; }
-        }
-        if (data?.event === "ready") subscribeToPlayback();
-        if (data?.event === "play") revealVideo();
-      };
 
-      window.addEventListener("message", onVimeoMessage);
+      // Vimeo has no cross-origin first-frame signal for background players.
+      // Hold the local poster through the player bootstrap, then crossfade.
       iframe.addEventListener("load", () => {
-        subscribeToPlayback();
-        revealFallback = window.setTimeout(revealVideo, 3000);
+        window.setTimeout(revealVideo, 1500);
       }, { once: true });
       heroVideo.appendChild(iframe);
     };
@@ -171,7 +156,7 @@ document.addEventListener("DOMContentLoaded", function () {
     facade.addEventListener("click", () => {
       if (facade.classList.contains("is-playing")) return;
       const iframe = document.createElement("iframe");
-      iframe.src = `https://player.vimeo.com/video/${encodeURIComponent(facade.dataset.vimeoId)}?autoplay=1&dnt=1`;
+      iframe.src = `https://player.vimeo.com/video/${encodeURIComponent(facade.dataset.vimeoId)}?autoplay=1&dnt=1&autopause=0`;
       iframe.allow = "autoplay; fullscreen; picture-in-picture";
       iframe.allowFullscreen = true;
       iframe.title = facade.getAttribute("aria-label") || "Video";

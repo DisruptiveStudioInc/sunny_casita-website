@@ -109,7 +109,7 @@
 
         <div class="jc-center ai-center g-20">
           <div class="logo">
-            <a href="/"><img src="<?= e(assetUrl('/images/logo/logo.svg')); ?>" width="199" height="84" alt="<?= e($company_name); ?>"></a>
+            <a href="<?= e(\Includes\Localization::url('home')); ?>"><img src="<?= e(assetUrl('/images/logo/logo.svg')); ?>" width="199" height="84" alt="<?= e($company_name); ?>"></a>
           </div>
           <div class="rel">
             <div class="btn-lan <?= strtolower($availableLangs[$Current_lang]); ?>"><?= $availableLangs[$Current_lang]; ?></div>
