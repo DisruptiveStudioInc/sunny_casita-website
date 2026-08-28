@@ -4,7 +4,9 @@
 
 document.addEventListener("DOMContentLoaded", function () {
   // Solo ejecutar si ancho >= 1080px
-  if (window.innerWidth >= 1080) {
+  if (window.matchMedia(
+    "(min-width: 1081px) and (prefers-reduced-motion: no-preference)"
+  ).matches) {
     // Función para cargar scripts dinámicamente
     function loadScript(src) {
       return new Promise((resolve, reject) => {
@@ -30,9 +32,6 @@ document.addEventListener("DOMContentLoaded", function () {
           loadScript(
             "https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/plugins/animation.gsap.min.js"
           ),
-          loadScript(
-            "https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"
-          ),
         ])
       )
       .then(() => {
@@ -41,16 +40,15 @@ document.addEventListener("DOMContentLoaded", function () {
         var animationLinear = Power3.easeInOut;
         var animationIn = Expo.easeIn;
 
-        $(".ingredients_wrap").each(function () {
-          var ingredientsElement = this.querySelector(".ingredients");
+        document.querySelectorAll(".ingredients_wrap").forEach((wrapper) => {
+          var ingredientsElement = wrapper.querySelector(".ingredients");
           if (ingredientsElement) {
-            var scene = new ScrollMagic.Scene({
-              triggerElement: this,
+            new ScrollMagic.Scene({
+              triggerElement: wrapper,
               triggerHook: 0.8,
               duration: "80%",
             })
               .setClassToggle(ingredientsElement, "fade-in")
-              //.addIndicators()
               .addTo(controller);
           }
         });

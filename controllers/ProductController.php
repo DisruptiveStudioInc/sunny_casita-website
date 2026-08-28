@@ -40,7 +40,8 @@ class ProductController extends BaseController {
 
     $this->view('product', [
       'product' => $productContent[$id],
-      'productContent' => $productContent
+      'productContent' => $productContent,
+      'pageScripts' => ['/js/product.js'],
     ]);
   }
 

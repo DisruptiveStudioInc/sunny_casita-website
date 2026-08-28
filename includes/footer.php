@@ -5,7 +5,7 @@
 
     <div class="med-fd-col ai-start jc-center">
       <div class="w-100 fd-col ai-start med-ai-center med-mb-40">
-        <img src="/images/logo/logo.svg" class="mw-200 med-m-center" alt="<?= $company_name; ?>">
+        <img src="<?= e(assetUrl('/images/logo/logo.svg')); ?>" width="199" height="84" class="mw-200 med-m-center" loading="lazy" decoding="async" alt="<?= e($company_name); ?>">
         <ul class="fw-wrap med-jc-center g-10 mt-20">
           <li><a target="_blank" href="https://www.facebook.com/share/1BqMqwCSw6/?mibextid=wwXIfr" rel="noopener noreferrer" class="v-white icon small br-2 icon-facebook"></a></li>
           <li><a target="_blank" href="https://www.instagram.com/sunny_casita" rel="noopener noreferrer" class="v-white icon small br-2 icon-instagram"></a></li>
@@ -33,11 +33,10 @@
   </div>
 </footer>
 
-<script src="/js/lozad.min.js"></script>
-<script src="/js/script.js"></script>
+<script src="<?= e(assetUrl('/js/site.js')); ?>" defer></script>
 <?php if (isset($pageScripts) && is_array($pageScripts)): ?>
   <?php foreach($pageScripts as $script): ?>
-    <script src="<?= $script ?>"></script>
+    <script src="<?= e(assetUrl((string) $script)); ?>" defer></script>
   <?php endforeach; ?>
 <?php endif; ?>
 </body>

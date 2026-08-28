@@ -105,6 +105,7 @@ final class BlogController extends BaseController
                 'page_type' => 'article',
                 'page_image' => $post->coverUrl(),
                 'page_image_alt' => $post->coverAlt,
+                'pagePreloadImage' => $post->coverUrl(),
                 'page_canonical_path' => $url,
                 'languageUrls' => $languageUrls,
                 'labels' => $labels,

@@ -9,7 +9,7 @@
       </div>
 
     </div>
-    <img class="full-img-abs" src="/images/body/letters/2.webp" alt="background">
+    <img class="full-img-abs" src="/images/body/letters/2-960.webp" srcset="/images/body/letters/2-640.webp 640w, /images/body/letters/2-960.webp 960w, /images/body/letters/2-1440.webp 1440w, /images/body/letters/2-1920.webp 1920w" sizes="100vw" width="1920" height="1080" fetchpriority="high" decoding="sync" alt="">
   </div>
 </section>
 
@@ -24,7 +24,7 @@
       </div>
     </div>
     <div class="w-50 med-w-100 rel med-min-h-40dvh">
-      <img src="/images/body/join/join-1.webp" alt="" class="background visible">
+      <img src="/images/body/join/join-1-720.webp" srcset="/images/body/join/join-1-480.webp 480w, /images/body/join/join-1-720.webp 720w, /images/body/join/join-1-960.webp 960w" sizes="(max-width: 1080px) 100vw, 50vw" width="960" height="600" loading="lazy" decoding="async" alt="" class="background visible">
     </div>
   </section>
 
@@ -38,7 +38,7 @@
   <section class="d-flex fd-row med-fd-col">
     <div class="w-50 med-w-100 c-acc-h d-flex jc-end med-jc-center">
       <div class="half inner left rel med-w-60">
-        <img src="/images/body/join/join-2.webp" alt="" class="image-meaning br-20 abs med-min-h-40dvh med-mt-50">
+        <img src="/images/body/join/join-2-480.webp" srcset="/images/body/join/join-2-480.webp 480w, /images/body/join/join-2-720.webp 720w" sizes="(max-width: 1080px) 60vw, 50vw" width="720" height="880" loading="lazy" decoding="async" alt="" class="image-meaning br-20 abs med-min-h-40dvh med-mt-50">
       </div>
     </div>
     <div class="half right med-w-100">

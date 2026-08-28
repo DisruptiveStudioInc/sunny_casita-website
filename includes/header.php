@@ -63,26 +63,23 @@
 
   <title><?= e($page_title); ?></title>
 
-  <!-- Google fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,400..700;1,14..32,400..700&family=Prompt:wght@600;700&family=STIX+Two+Text:ital@1&display=swap" rel="stylesheet">
+  <?php if (!empty($pagePreloadImage)): ?>
+    <?php
+      $preload = is_array($pagePreloadImage)
+        ? $pagePreloadImage
+        : ['href' => (string) $pagePreloadImage];
+    ?>
+    <link rel="preload" as="image" href="<?= e((string) $preload['href']); ?>"<?php if (!empty($preload['srcset'])): ?> imagesrcset="<?= e((string) $preload['srcset']); ?>"<?php endif; ?><?php if (!empty($preload['sizes'])): ?> imagesizes="<?= e((string) $preload['sizes']); ?>"<?php endif; ?><?php if (!empty($preload['type'])): ?> type="<?= e((string) $preload['type']); ?>"<?php endif; ?> fetchpriority="high">
+  <?php endif; ?>
+
+  <link rel="preload" href="/fonts/Inter-roman-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/Prompt-600-latin.woff2" as="font" type="font/woff2" crossorigin>
 
   <!-- STYLES-->
-  <link rel="stylesheet" type="text/css" href="/css/min/reset.min.css" />
-  <link rel="stylesheet" type="text/css" href="/css/min/main.min.css" />
-  <link rel="stylesheet" type="text/css" href="/css/min/root.min.css" />
-
-  <link rel="stylesheet" type="text/css" href="/css/body/style.min.css" />
-  <link rel="stylesheet" type="text/css" href="/css/body/navigation.min.css" />
-  <link rel="stylesheet" type="text/css" href="/css/body/slick.min.css" />
+  <link rel="stylesheet" href="<?= e(assetUrl('/dist/site.min.css')); ?>">
 
   <!-- FAVICON -->
   <link rel="icon" type="image/svg+xml" href="/images/logo/favicon.svg">
-
-  <!-- jQuery y Slick -->
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 
 </head>
 <body id="page-content">
@@ -96,7 +93,7 @@
   <!-- PRELOADER -->
   <!-- ============================================== -->
 
-  <div id="preloader">
+  <div id="preloader" aria-hidden="true">
     <div id="progress">
       <span id="data">0%</span>
     </div>
@@ -112,7 +109,7 @@
 
         <div class="jc-center ai-center g-20">
           <div class="logo">
-            <a href="/"><img src="/images/logo/logo.svg" alt="<?= $company_name; ?>"></a>
+            <a href="<?= e(\Includes\Localization::url('home')); ?>"><img src="<?= e(assetUrl('/images/logo/logo.svg')); ?>" width="199" height="84" alt="<?= e($company_name); ?>"></a>
           </div>
           <div class="rel">
             <div class="btn-lan <?= strtolower($availableLangs[$Current_lang]); ?>"><?= $availableLangs[$Current_lang]; ?></div>
