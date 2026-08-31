@@ -1,0 +1,4 @@
+interface:
+  display_name: "Blog Entry Creator"
+  short_description: "Create bilingual blog posts from DOCX files"
+  default_prompt: "Create bilingual Sunny Casita blog posts from the supplied DOCX file."

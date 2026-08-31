@@ -5,3 +5,4 @@ performance/
 pnpm-lock.yaml
 .DS_Store
 .phpunit.cache/
+*.docx
