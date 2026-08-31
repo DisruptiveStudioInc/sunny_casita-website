@@ -1,7 +1,7 @@
 <section class="blog-hero c-b-dark">
   <div class="mw-1440 med blog-hero-inner">
-    <p class="blog-kicker tc-acc uppercase m-0">Sunny Casitas</p>
-    <h1 class="h1-special blog-title tc-0 t-balance"><?= e($labels['title']); ?></h1>
+    <p class="blog-kicker tc-acc uppercase m-0"><?= e($company_name); ?></p>
+    <h1 class="h1-special blog-title tc-0 t-balance"><?= $labels['title']; ?></h1>
     <p class="h4 tc-0 t-pretty blog-intro"><?= e($labels['description']); ?></p>
   </div>
 </section>

@@ -274,7 +274,7 @@ $StartNow_footNote = "Your information is confidential. We only use it to contac
 // Blog
 //-------------------------//
 
-$Blog_title = "Let's talk about improving your home";
+$Blog_title = "Let's talk about improving <span class='tc-acc'>your home</span>";
 $Blog_description = "A space to explore new ways to build, renovate, and make your home work better for you.";
 $Blog_all_posts = "All articles";
 $Blog_categories = "Explore topics";

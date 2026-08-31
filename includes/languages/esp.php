@@ -274,7 +274,7 @@ $StartNow_footNote = "Tu información es confidencial. Solo la usamos para conta
 // Blog
 //-------------------------//
 
-$Blog_title = "Hablemos de cómo mejorar tu hogar";
+$Blog_title = "Hablemos de cómo mejorar <span class='tc-acc'>tu hogar</span>";
 $Blog_description = "Un espacio para explorar nuevas formas de construir, renovar y hacer que tu hogar funcione mejor para ti.";
 $Blog_all_posts = "Todos los artículos";
 $Blog_categories = "Explora temas";
