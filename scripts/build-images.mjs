@@ -1,6 +1,18 @@
-import { access, mkdir } from "node:fs/promises";
+import { access, mkdir, readdir } from "node:fs/promises";
 import path from "node:path";
 import sharp from "sharp";
+
+const blogDirectory = "images/body/blog";
+const blogWidths = [480, 960, 1600];
+const blogSources = (await readdir(blogDirectory, { withFileTypes: true }))
+  .filter(
+    (entry) =>
+      entry.isFile() &&
+      /^\d{3}-.+\.webp$/i.test(entry.name) &&
+      !blogWidths.some((width) => entry.name.endsWith("-" + width + ".webp")),
+  )
+  .map((entry) => path.join(blogDirectory, entry.name))
+  .sort();
 
 const sources = [
   ["images/hero/hero.webp", [640, 960, 1280, 1920]],
@@ -35,7 +47,7 @@ const sources = [
     "renovables",
     "renovables-en",
   ].map((name) => [`images/body/products/${name}.webp`, [350, 700]]),
-  ["images/body/blog/001-adu-planning.webp", [480, 960, 1600]],
+  ...blogSources.map((source) => [source, blogWidths]),
   ['images/body/video/cover-video.webp', [640, 960, 1280]],
 ];
 
