@@ -3,3 +3,4 @@
 003-home-renovation.webp
 004-home-maintenance.webp
 005-adu-family.webp
+006-powerwall-outage.webp
