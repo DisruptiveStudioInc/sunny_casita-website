@@ -12,10 +12,16 @@ Create one realistic blog-cover image from the user's scene description. The des
 Use this prompt, replacing `<insert_scene_here>` with the scene description verbatim:
 
 ```text
-Create a realistic image of <insert_scene_here>. If the image requires a power wall, use the tesla powerwall always, which you can see con it looks in this file: `assets/tesla-powerwall-reference.png`. Make the aspect ratio 16:9. The image dimensions must be 1672px wide by 941px high
+Create a realistic image of <insert_scene_here>. If the image requires a Powerwall, always use the Tesla Powerwall shown in the supplied reference image. Make the aspect ratio 16:9. The image dimensions must be 1672px wide by 941px high.
 ```
 
-If the scene includes or clearly implies a Powerwall, provide the local reference image at `assets/tesla-powerwall-reference.png` to the image-generation tool. Do not add a Powerwall when the scene does not call for one.
+If the scene includes or clearly implies a Powerwall:
+
+- Treat `assets/tesla-powerwall-reference.png` as relative to the directory containing this `SKILL.md`, never relative to the session's working directory or repository root.
+- Resolve that location to an absolute filesystem path and verify that the file exists before calling the image-generation tool.
+- Pass the absolute path to the image-generation tool in `referenced_image_paths`. Do not pass the relative `assets/tesla-powerwall-reference.png` path to the tool.
+
+Do not add a Powerwall or provide the reference image when the scene does not call for one.
 
 ## Store the finished cover
 
