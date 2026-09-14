@@ -4,3 +4,4 @@
 004-home-maintenance.webp
 005-adu-family.webp
 006-powerwall-outage.webp
+007-home-adaptation.webp
