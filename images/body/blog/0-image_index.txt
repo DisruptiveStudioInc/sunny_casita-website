@@ -5,3 +5,4 @@
 005-adu-family.webp
 006-powerwall-outage.webp
 007-home-adaptation.webp
+008-roof-air-conditioning.webp
