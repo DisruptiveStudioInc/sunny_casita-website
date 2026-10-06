@@ -6,5 +6,5 @@
 006-powerwall-outage.webp
 007-home-adaptation.webp
 008-roof-air-conditioning.webp
-
 009-adu-flexibility.webp
+010-home-energy-management.webp
