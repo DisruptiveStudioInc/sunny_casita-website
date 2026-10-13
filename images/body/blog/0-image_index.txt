@@ -9,3 +9,4 @@
 009-adu-flexibility.webp
 010-home-energy-management.webp
 011-kitchen-improvements.webp
+012-roof-cooling.webp
