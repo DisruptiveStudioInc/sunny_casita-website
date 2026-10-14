@@ -10,3 +10,4 @@
 010-home-energy-management.webp
 011-kitchen-improvements.webp
 012-roof-cooling.webp
+014-adu-gable-roof.webp
