@@ -321,7 +321,7 @@ The repository has no Dockerfile or Compose file, so local Docker deployment dep
 
 Production deployment is defined by `azure-pipelines.yml`:
 
-1. Validate locally.
+1. Validate locally
 2. Run `npm run build` and commit `dist/` plus responsive images.
 3. Commit code, lockfiles, and tracked Composer dependencies when changed.
 4. Push or merge to `main`.
